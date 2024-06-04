@@ -15,16 +15,23 @@ const App = () => {
       setVisibleSections(entries.filter(entry => entry.isIntersecting).map(entry => entry.target.id));
     });
 
-    // Add refs to observer
+    // Add refs to observer initially
     observer.observe(skillsRef.current);
     observer.observe(projectsRef.current);
     observer.observe(contactRef.current);
 
-    // Cleanup function to remove observers on unmount
+    // Add event listener for scroll events
+    window.addEventListener('scroll', () => {
+      const entries = observer.takeRecords(); // Get updated intersection data
+      setVisibleSections(entries.filter(entry => entry.isIntersecting).map(entry => entry.target.id));
+    });
+
+    // Cleanup function
     return () => {
       observer.unobserve(skillsRef.current);
       observer.unobserve(projectsRef.current);
       observer.unobserve(contactRef.current);
+      window.removeEventListener('scroll', () => { }); // Remove scroll listener
     };
   }, []);
 
@@ -42,9 +49,9 @@ const App = () => {
       <div className="links-container">
         <nav id="nav">
           <ul>
-            <li><a ref={skillsRef}href="#skills">Skills</a></li>
-            <li><a ref={projectsRef}href="#projects">Projects</a></li>
-            <li><a ref={contactRef}href="#contact">Contact</a></li>
+            <li><a ref={skillsRef} href="#skills">Skills</a></li>
+            <li><a ref={projectsRef} href="#projects">Projects</a></li>
+            <li><a ref={contactRef} href="#contact">Contact</a></li>
             <li><a href="Resume_Cole_Rabe.pdf" download className="resume-button">Download Resume</a></li>
           </ul>
         </nav>
