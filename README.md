@@ -1,8 +1,14 @@
-# React + Vite
+# Rabe 2024 Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi there! I'm Cole Rabe, a Mechanical Engineer/Electrical Engineer with a passion for problem solving and learning new concepts in order to further my knowledge on various core topics. This website serves as my online portfolio, showcasing my skills and experience (while also being a project in itself). I built it using React and Vite to learn these platforms and also to easily provide an up-to-date version of my portfolio.
 
-Currently, two official plugins are available:
+This portfolio website provides the following features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project Showcase: A well-structured presentation of my past projects with descriptions and links.
+Skills & Experience: A clear overview of my technical skills and professional background.
+Contact Information: Easy ways for potential employers or clients to reach out.
+Technologies Used
+This website is built using the following technologies:
+
+Front-end: React
+Build Tool: Vite
