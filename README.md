@@ -4,10 +4,10 @@ Hi there! I'm Cole Rabe, a Mechanical Engineer/Electrical Engineer with a passio
 
 This portfolio website provides the following features:
 
-Project Showcase: A well-structured presentation of my past projects with descriptions and links.
-Skills & Experience: A clear overview of my technical skills and professional background.
-Contact Information: Easy ways for potential employers or clients to reach out.
-Technologies Used
+**Project Showcase:** A well-structured presentation of my past projects with descriptions and links.<br />
+**Skills & Experience:** A clear overview of my technical skills and professional background.
+Contact Information: Easy ways for potential employers or clients to reach out.<br />
+# Technologies Used
 This website is built using the following technologies:
 
 Front-end: React
