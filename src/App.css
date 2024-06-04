@@ -33,6 +33,14 @@ body {
   width: auto;
 }
 
+.contact-text{
+  font-weight:bold;
+}
+
+.projdiv{
+  width:40%;
+}
+
 /* Sticky Nav */
 .sticky-nav {
   position: fixed;
