@@ -5,6 +5,7 @@ import './App.css';
 const App = () => {
 
 return (
+  <>
   <div className="body-container">
     <div className="spacer"></div>
     <div className="background-container">
@@ -19,34 +20,34 @@ return (
       <nav id="nav">
         <ul>
           <li>
-            <NavLink to="#skills" className="active" isActive={({ isActive }) => (isActive ? 'active' : '')}>
+            {/* <NavLink to="#skills">
               Skills
             </NavLink>
           </li>
           <li>
-            <NavLink to="#projects" className="active" isActive={({ isActive }) => (isActive ? 'active' : '')}>
+            <NavLink to="#projects">
               Projects
             </NavLink>
           </li>
           <li>
-            <NavLink to="#contact" className="active" isActive={({ isActive }) => (isActive ? 'active' : '')}>
+            <NavLink to="#contact">
               Contact
             </NavLink>
           </li>
           <li>
-            <NavLink ref={contactRef} to="Resume_Cole_Rabe.pdf" download className="resume-button">
+            <NavLink to="Resume_Cole_Rabe.pdf" download className="resume-button">
               Download Resume
-            </NavLink>
+            </NavLink> */}
           </li>
         </ul>
       </nav>
     </div>
     <div className="spacer">
-      <a href="#skills" className="scroll-arrow"><img src="Icons/scroll_arrow.png" alt="Scroll Arrow" className="shrink-arrow" /></a>
+      <a href="#skills" className="scroll-arrow"><img src="/src/Assets/Icons/scroll_arrow.png" alt="Scroll Arrow" className="shrink-arrow" /></a>
     </div>
     <div className="skill-container">
       <div className="wave1-background"></div>
-      <section ref={skillsRef} id="skills">
+      <section id="skills">
         <h1 className="section-title skill-title parallax-slow">Skills</h1>
         <div className="skill-categories">
           <div className="sksoftware">
@@ -92,10 +93,10 @@ return (
       </section>
     </div>
     <div className="project-container">
-      <section ref={projectsRef} id="projects">
+      <section id="projects">
         <h1 className="section-title">Projects</h1>
         <div className="project">
-          <img src="/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
+          <img src="/src/Assets/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
           <div className="project-description">
             <h3>Placeholder Project 1</h3>
             <p>Description of Placeholder project 1.</p>
@@ -107,13 +108,13 @@ return (
             <h3>Placeholder Project 1</h3>
             <p>Description of Placeholder project 1.</p>
           </div>
-          <img src="/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
+          <img src="/src/Assets/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
         </div>
       </section>
     </div>
     <div className="contact-container">
       <hr />
-      <section ref={contactRef} id="contact">
+      <section id="contact">
         <h1 className="section-title">Contact</h1>
         <ul className="contact-items">
           <li>
@@ -132,6 +133,7 @@ return (
       </section>
     </div>
   </div>
+  </>
 );
 };
 
