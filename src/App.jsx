@@ -42,9 +42,9 @@ const App = () => {
       <div className="links-container">
         <nav id="nav">
           <ul>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a ref={skillsRef}href="#skills">Skills</a></li>
+            <li><a ref={projectsRef}href="#projects">Projects</a></li>
+            <li><a ref={contactRef}href="#contact">Contact</a></li>
             <li><a href="Resume_Cole_Rabe.pdf" download className="resume-button">Download Resume</a></li>
           </ul>
         </nav>
