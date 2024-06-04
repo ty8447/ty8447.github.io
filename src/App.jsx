@@ -49,9 +49,9 @@ const App = () => {
       <div className="links-container">
         <nav id="nav">
           <ul>
-            <li><a ref={skillsRef} href="#skills">Skills</a></li>
-            <li><a ref={projectsRef} href="#projects">Projects</a></li>
-            <li><a ref={contactRef} href="#contact">Contact</a></li>
+          <li><a ref={skillsRef} href="#skills" className={visibleSections.includes('skills') ? 'active' : ''}>Skills</a></li>
+            <li><a ref={projectsRef} href="#projects"className={visibleSections.includes('projects') ? 'active' : ''}>Projects</a></li>
+            <li><a ref={contactRef} href="#contact"className={visibleSections.includes('contact') ? 'active' : ''}>Contact</a></li>
             <li><a href="Resume_Cole_Rabe.pdf" download className="resume-button">Download Resume</a></li>
           </ul>
         </nav>
