@@ -32,17 +32,17 @@ sections.forEach(section => {
 });
 
 // Function to adjust arrow position
-function adjustArrowPosition() {
-  let hasScrollbar = window.innerWidth > document.documentElement.clientWidth;
-  let arrow = document.querySelector('.shrink-arrow');
-  if (hasScrollbar) {
-    arrow.style.setProperty('--arrow-left', 'calc(50% - 7.5px)');
-    console.log('Scrollbar detected, arrow adjusted.');
-  } else {
-    arrow.style.setProperty('--arrow-left', '50%');
-    console.log('No scrollbar, arrow centered.');
-  }
-}
+// function adjustArrowPosition() {
+//   let hasScrollbar = window.innerWidth > document.documentElement.clientWidth;
+//   let arrow = document.querySelector('.shrink-arrow');
+//   if (hasScrollbar) {
+//     arrow.style.setProperty('--arrow-left', 'calc(50% - 7.5px)');
+//     console.log('Scrollbar detected, arrow adjusted.');
+//   } else {
+//     arrow.style.setProperty('--arrow-left', '50%');
+//     console.log('No scrollbar, arrow centered.');
+//   }
+// }
 
 // Function to handle sticky navigation for section titles
 function handleStickyNavigation() {
@@ -96,7 +96,7 @@ function handleSkillsSectionIntersection(entries) {
 }
 
 // Event listeners
-adjustArrowPosition();
+// adjustArrowPosition();
 window.addEventListener('resize', adjustArrowPosition);
 window.addEventListener('scroll', handleStickyNavigation);
 window.addEventListener('scroll', handleScrollAnimation);
