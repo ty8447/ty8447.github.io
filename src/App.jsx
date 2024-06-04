@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import './Scripts.js'
 
 const App = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -28,7 +27,7 @@ const App = () => {
       observer.unobserve(contactRef.current);
     };
   }, []);
-  
+
   return (
     <div className="body-container">
       <div className="spacer"></div>
