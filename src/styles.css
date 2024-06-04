@@ -1,0 +1,538 @@
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #eeaf9e;
+    border-radius: 6px;
+    border: 3px solid transparent;
+}
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(217, 155, 103);
+    color: #FFF;
+    box-sizing: border-box;
+}
+
+.body-container {
+    position: relative;
+    width: auto;
+}
+
+/* Sticky Nav */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.name-profession-container {
+    position: relative;
+    z-index: 1002;
+    pointer-events: none;
+    text-align: center;
+}
+
+.shrink-arrow {
+    width: 4vw;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    left: var(--arrow-left, 50%); /* Default center */
+    transform: translateX(-50%);  /* Default center */
+    transition: transform 0.3s 0.1s;
+}
+
+.shrink-arrow:hover {
+    left: var(--arrow-left, 50%); /* Default center */
+    transform: translate(-50%,20%);  /* Default center */
+}
+
+/* Links Container */
+.links-container {
+    position: sticky;
+    top: 0;
+    z-index: 1002;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    background-color: rgb(24, 35, 54);
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.links-container nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.links-container a {
+    transition: color 0.3s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.links-container a.active {
+    color: rgb(235, 156, 134);
+}
+
+.links-container a:hover {
+    color: rgb(235, 156, 134);
+}
+
+.spacer {
+    height: 40vh;
+    position: relative;
+    z-index: 1001;
+    background-color: rgb(24, 35, 54);
+    text-align: center;
+    flex-direction: column;
+}
+
+.background-container {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    background-color: rgb(24, 35, 54);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-bottom {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    z-index: 1001;
+}
+
+
+
+.wave1-background {
+    position: sticky;
+    top: -1px;
+    width: 100%;
+    height: 150px;
+    background-image: url('Waves/wave1.svg');
+    background-size: cover;
+    
+    transform: rotate(180deg);
+    z-index: 1000;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.content p {
+    font-size: 1.5em;
+    margin: 5px 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+nav ul li a.resume-button {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+nav ul li a.resume-button:hover {
+    background-color: #555;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #FFF;
+    padding: 80px 0;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+section {
+    padding-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#skills {
+    position: relative;
+    text-align: center;
+    flex-direction: row;
+    z-index: 1;
+    padding-top:10vh
+}
+
+@media(prefers-reduced-motion: no-preference){
+#skills h1 {
+    opacity:0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: contain 30% cover 65%;
+
+}
+
+.section-title {
+    font-size: 3rem;
+    pointer-events: none;
+    transition: position 0.3s ease-in-out, top 0.3s ease-in-out;
+
+}
+
+.section-title.sticky {
+    position: fixed;
+    top: 50%; /* Center of the viewport */
+    transform: translateY(-50%);
+    z-index: 1000;
+
+}
+
+.skill-title {
+    transition: position 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.skill-title.sticky {
+    position: fixed;
+    top: 50%; /* Center of the viewport */
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+#skills h2 {
+    animation: fade-in linear ease-in 1s;
+    pointer-events: none;
+}
+}
+
+.icons-column {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width:20vw;
+    display: flex;
+}
+
+.icon {
+    position:relative;
+    width:4vw;
+    max-width: 3vw;
+    height:auto;
+    display: flex;
+    padding: 3px 5px;
+}
+
+.icon img, .icon svg {
+    width: 100%; /* Ensure the image or svg fills the icon container */
+    height: 100%; /* Ensure the image or svg fills the icon container */
+    object-fit: contain; /* Ensure the content is contained within the icon box */
+}
+
+.icon:before{
+    content: attr(title); /* Use the title attribute for tooltip content */
+    position: absolute;
+    left: 50%; /* Horizontally center the tooltip */
+    bottom: 100%; /* Position the tooltip above the icon */
+    transform: translateX(-50%) translateY(-15px); /* Center and add space between the icon and tooltip */
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s;
+    white-space: nowrap; /* Prevent the tooltip text from wrapping */
+    pointer-events: none; /* Ensure the tooltip does not interfere with hover */
+    z-index: 10; /* Ensure the tooltip appears above other elements */
+
+}
+
+.icon:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(5px);
+    border: 10px solid transparent;
+    border-color: #000 transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+  .icon:hover:before, .icon:hover:after {
+    display:block;
+    opacity: 1;
+  }
+
+.skill-categories {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+    position: relative;
+    flex-direction: row;
+}
+
+.sksoftware {
+    padding-bottom: 20px;
+
+}
+
+.sklanguages {
+    padding-bottom: 20px;
+
+}
+
+.sktraining {
+    padding-bottom: 20px;
+
+}
+
+
+
+.skill-container {
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+    padding-bottom: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-shadow: 0 0 6px black;
+}
+
+.parallax-slow {
+    --parallax-speed: 300;
+
+}
+
+.project-container {
+    text-align: center;
+
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+.project-description {
+    flex: 1;
+    padding: 20px;
+}
+
+#contact {
+    text-align: center;
+}
+
+.contact-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0px;
+    vertical-align: center;
+}
+
+.contact-items li {
+    margin: 0 10px;
+    padding-right: 10px;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+    width: auto; /* Ensure the image or svg fills the icon container */
+    height: 100%; /* Ensure the image or svg fills the icon container */
+    object-fit: contain; /* Ensure the content is contained within the icon box */
+}
+
+.contact-items li a {
+    color: #333;
+    text-decoration: none;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 1vw 2vw; /* Scale padding with viewport width */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.contact-items li a img {
+    width: 3vw; /* Scale icon size with viewport width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1vw; /* Space between icon and text */
+}
+
+.footer{
+    text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+    .shrink_arrow {
+        width: 4vw; /* Slightly larger arrow */   
+    }
+    
+    .contact-items li a img {
+        width: 3vw; /* Scale icon size with viewport width */
+    }
+
+    .sksoftware {
+    font-size: 2vw;
+    }
+    
+    .sklanguages {
+    font-size: 2vw;
+    }
+    
+    .sktraining {
+    font-size: 2vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .shrink_arrow {
+        width: 6vw; /* Larger arrow */
+    }
+    .contact-items li a {
+        font-size: 20px;
+    }
+    
+    .contact-items li a img {
+        width: 3vw; /* Scale icon size with viewport width */
+    }
+
+    .sksoftware {
+    font-size: 2vw;
+    }
+        
+    .sklanguages {
+    font-size: 2vw;
+    }
+        
+    .sktraining {
+    font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .shrink_arrow {
+        width: 8vw; /* Even larger arrow */
+    }
+    .contact-items li a {
+        font-size: 3vw; /* Scale font size with viewport width */
+    }
+    
+    .contact-items li a img {
+        width: 3vw; /* Scale icon size with viewport width */
+    }
+
+    .sksoftware {
+    font-size: 2vw;
+    }
+        
+    .sklanguages {
+    font-size: 2vw;
+    }
+        
+    .sktraining {
+    font-size: 2vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .shrink_arrow {
+        width: 10vw; /* Maximum arrow size for smallest screens */
+    }
+    .contact-items li a {
+        font-size: 3vw; /* Scale font size with viewport width */
+    }
+    
+    .contact-items li a img {
+        width: 3vw; /* Scale icon size with viewport width */
+    }
+
+    .sksoftware {
+    font-size: 2vw;
+    }
+        
+    .sklanguages {
+    font-size: 2vw;
+    }
+        
+    .sktraining {
+    font-size: 2vw;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        transform: translateY(150vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(calc(var(--parallax-speed) * 2px));
+        opacity: 1;
+    }
+
+}
