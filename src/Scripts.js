@@ -97,7 +97,7 @@ function handleSkillsSectionIntersection(entries) {
 
 // Event listeners
 // adjustArrowPosition();
-window.addEventListener('resize', adjustArrowPosition);
+// window.addEventListener('resize', adjustArrowPosition);
 window.addEventListener('scroll', handleStickyNavigation);
 window.addEventListener('scroll', handleScrollAnimation);
 setCurrentYear();
