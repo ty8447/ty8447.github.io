@@ -12,8 +12,14 @@ const App = () => {
   // Intersection observer setup
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
+      console.log('Intersection Entries:', entries);
       setVisibleSections(entries.filter(entry => entry.isIntersecting).map(entry => entry.target.id));
+      console.log('Visible Sections 1:', visibleSections);
     });
+  
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
 
     // Add refs to observer initially
     observer.observe(skillsRef.current);
@@ -22,8 +28,10 @@ const App = () => {
 
     // Add event listener for scroll events
     window.addEventListener('scroll', () => {
+      console.log('Scrolling Detected!');
       const entries = observer.takeRecords(); // Get updated intersection data
       setVisibleSections(entries.filter(entry => entry.isIntersecting).map(entry => entry.target.id));
+      console.log('Visible Sections 2:', visibleSections);
     });
 
     // Cleanup function
@@ -49,10 +57,10 @@ const App = () => {
       <div className="links-container">
         <nav id="nav">
           <ul>
-          <li><a ref={skillsRef} href="#skills" className={visibleSections.includes('skills') ? 'active' : ''}>Skills</a></li>
-            <li><a ref={projectsRef} href="#projects"className={visibleSections.includes('projects') ? 'active' : ''}>Projects</a></li>
-            <li><a ref={contactRef} href="#contact"className={visibleSections.includes('contact') ? 'active' : ''}>Contact</a></li>
-            <li><a href="Resume_Cole_Rabe.pdf" download className="resume-button">Download Resume</a></li>
+          <li><a href="#skills" className={visibleSections.includes('skills') ? 'active' : ''}>Skills</a></li>
+            <li><a ref={skillsRef} href="#projects"className={visibleSections.includes('projects') ? 'active' : ''}>Projects</a></li>
+            <li><a ref={projectsRef} href="#contact"className={visibleSections.includes('contact') ? 'active' : ''}>Contact</a></li>
+            <li><a ref={contactRef} href="Resume_Cole_Rabe.pdf" download className="resume-button">Download Resume</a></li>
           </ul>
         </nav>
       </div>
@@ -61,7 +69,7 @@ const App = () => {
       </div>
       <div className="skill-container">
         <div className="wave1-background"></div>
-        <section id="skills">
+        <section ref={skillsRef} id="skills">
           <h1 className="section-title skill-title parallax-slow">Skills</h1>
           <div className="skill-categories">
             <div className="sksoftware">
@@ -107,21 +115,28 @@ const App = () => {
         </section>
       </div>
       <div className="project-container">
-        <section id="projects">
+        <section ref={projectsRef} id="projects">
           <h1 className="section-title">Projects</h1>
           <div className="project">
-            <img src="project1.jpg" alt="Placeholder Project 1" />
+            <img src="/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
             <div className="project-description">
               <h3>Placeholder Project 1</h3>
               <p>Description of Placeholder project 1.</p>
             </div>
           </div>
           <hr className="projdiv" />
+          <div className="project-rev">
+          <div className="project-description">
+              <h3>Placeholder Project 1</h3>
+              <p>Description of Placeholder project 1.</p>
+            </div>
+            <img src="/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
+          </div>
         </section>
       </div>
       <div className="contact-container">
         <hr />
-        <section id="contact">
+        <section ref={contactRef} id="contact">
           <h1 className="section-title">Contact</h1>
           <ul className="contact-items">
             <li>
