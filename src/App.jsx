@@ -3,6 +3,32 @@ import './App.css';
 import './Scripts.js'
 
 const App = () => {
+  const [visibleSections, setVisibleSections] = useState([]);
+
+  // Refs for linked sections (optimized for performance)
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Intersection observer setup
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      setVisibleSections(entries.filter(entry => entry.isIntersecting).map(entry => entry.target.id));
+    });
+
+    // Add refs to observer
+    observer.observe(skillsRef.current);
+    observer.observe(projectsRef.current);
+    observer.observe(contactRef.current);
+
+    // Cleanup function to remove observers on unmount
+    return () => {
+      observer.unobserve(skillsRef.current);
+      observer.unobserve(projectsRef.current);
+      observer.unobserve(contactRef.current);
+    };
+  }, []);
+  
   return (
     <div className="body-container">
       <div className="spacer"></div>
