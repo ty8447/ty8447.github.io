@@ -37,6 +37,10 @@ body {
   font-weight: bold;
 }
 
+.active {
+  color: red; /* Or your desired color */
+}
+
 .projdiv {
   width: 40%;
 }
