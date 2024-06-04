@@ -71,10 +71,10 @@ function handleScrollAnimation() {
 }
 
 // Function to set the current year
-function setCurrentYear() {
-  const currentYear = new Date().getFullYear();
-  document.getElementById('currentYear').textContent = currentYear;
-}
+// function setCurrentYear() {
+//   const currentYear = new Date().getFullYear();
+//   document.getElementById('currentYear').textContent = currentYear;
+// }
 
 // Function to handle skills section intersection observer
 function handleSkillsSectionIntersection(entries) {
@@ -100,7 +100,7 @@ function handleSkillsSectionIntersection(entries) {
 // window.addEventListener('resize', adjustArrowPosition);
 window.addEventListener('scroll', handleStickyNavigation);
 window.addEventListener('scroll', handleScrollAnimation);
-setCurrentYear();
+// setCurrentYear();
 
 // Intersection Observer for skills section
 const observerOptionsSkills = {
