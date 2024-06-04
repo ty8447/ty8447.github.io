@@ -33,12 +33,12 @@ body {
   width: auto;
 }
 
-.contact-text{
-  font-weight:bold;
+.contact-text {
+  font-weight: bold;
 }
 
-.projdiv{
-  width:40%;
+.projdiv {
+  width: 40%;
 }
 
 /* Sticky Nav */
@@ -61,14 +61,18 @@ body {
   position: absolute;
   height: auto;
   bottom: 0;
-  left: var(--arrow-left, 50%); /* Default center */
-  transform: translateX(-50%);  /* Default center */
+  left: var(--arrow-left, 50%);
+  /* Default center */
+  transform: translateX(-50%);
+  /* Default center */
   transition: transform 0.3s 0.1s;
 }
 
 .shrink-arrow:hover {
-  left: var(--arrow-left, 50%); /* Default center */
-  transform: translate(-50%,20%);  /* Default center */
+  left: var(--arrow-left, 50%);
+  /* Default center */
+  transform: translate(-50%, 20%);
+  /* Default center */
 }
 
 /* Links Container */
@@ -97,7 +101,8 @@ body {
 }
 
 .links-container a {
-  transition: color 0.3s ease-in-out; /* Adjust the duration and timing function as needed */
+  transition: color 0.3s ease-in-out;
+  /* Adjust the duration and timing function as needed */
 }
 
 .links-container a.active {
@@ -152,7 +157,7 @@ body {
   height: 150px;
   background-image: url('/public/Waves/wave1.svg');
   background-size: cover;
-  
+
   transform: rotate(180deg);
   z-index: 1000;
 }
@@ -224,79 +229,89 @@ section {
   text-align: center;
   flex-direction: row;
   z-index: 1;
-  padding-top:10vh
+  padding-top: 10vh
 }
 
-@media(prefers-reduced-motion: no-preference){
-#skills h1 {
-  opacity:0;
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: contain 30% cover 65%;
+@media(prefers-reduced-motion: no-preference) {
+  #skills h1 {
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: contain 30% cover 65%;
 
-}
+  }
 
-.section-title {
-  font-size: 3rem;
-  pointer-events: none;
-  transition: position 0.3s ease-in-out, top 0.3s ease-in-out;
+  .section-title {
+    font-size: 3rem;
+    pointer-events: none;
+    transition: position 0.3s ease-in-out, top 0.3s ease-in-out;
 
-}
+  }
 
-.section-title.sticky {
-  position: fixed;
-  top: 50%; /* Center of the viewport */
-  transform: translateY(-50%);
-  z-index: 1000;
+  .section-title.sticky {
+    position: fixed;
+    top: 50%;
+    /* Center of the viewport */
+    transform: translateY(-50%);
+    z-index: 1000;
 
-}
+  }
 
-.skill-title {
-  transition: position 0.3s ease-in-out, top 0.3s ease-in-out;
-}
+  .skill-title {
+    transition: position 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
 
-.skill-title.sticky {
-  position: fixed;
-  top: 50%; /* Center of the viewport */
-  transform: translateY(-50%);
-  z-index: 1000;
-}
+  .skill-title.sticky {
+    position: fixed;
+    top: 50%;
+    /* Center of the viewport */
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
 
-#skills h2 {
-  animation: fade-in linear ease-in 1s;
-  pointer-events: none;
-}
+  #skills h2 {
+    animation: fade-in linear ease-in 1s;
+    pointer-events: none;
+  }
 }
 
 .icons-column {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width:20vw;
+  max-width: 20vw;
   display: flex;
 }
 
 .icon {
-  position:relative;
-  width:4vw;
+  position: relative;
+  width: 4vw;
   max-width: 3vw;
-  height:auto;
+  height: auto;
   display: flex;
   padding: 3px 5px;
 }
 
-.icon img, .icon svg {
-  width: 100%; /* Ensure the image or svg fills the icon container */
-  height: 100%; /* Ensure the image or svg fills the icon container */
-  object-fit: contain; /* Ensure the content is contained within the icon box */
+.icon img,
+.icon svg {
+  width: 100%;
+  /* Ensure the image or svg fills the icon container */
+  height: 100%;
+  /* Ensure the image or svg fills the icon container */
+  object-fit: contain;
+  /* Ensure the content is contained within the icon box */
 }
 
-.icon:before{
-  content: attr(title); /* Use the title attribute for tooltip content */
+.icon:before {
+  content: attr(title);
+  /* Use the title attribute for tooltip content */
   position: absolute;
-  left: 50%; /* Horizontally center the tooltip */
-  bottom: 100%; /* Position the tooltip above the icon */
-  transform: translateX(-50%) translateY(-15px); /* Center and add space between the icon and tooltip */
+  left: 50%;
+  /* Horizontally center the tooltip */
+  bottom: 100%;
+  /* Position the tooltip above the icon */
+  transform: translateX(-50%) translateY(-15px);
+  /* Center and add space between the icon and tooltip */
   width: auto;
   padding: 10px;
   border-radius: 10px;
@@ -305,9 +320,12 @@ section {
   text-align: center;
   opacity: 0;
   transition: opacity 0.6s;
-  white-space: nowrap; /* Prevent the tooltip text from wrapping */
-  pointer-events: none; /* Ensure the tooltip does not interfere with hover */
-  z-index: 10; /* Ensure the tooltip appears above other elements */
+  white-space: nowrap;
+  /* Prevent the tooltip text from wrapping */
+  pointer-events: none;
+  /* Ensure the tooltip does not interfere with hover */
+  z-index: 10;
+  /* Ensure the tooltip appears above other elements */
 
 }
 
@@ -322,8 +340,10 @@ section {
   opacity: 0;
   transition: opacity 0.6s;
 }
-.icon:hover:before, .icon:hover:after {
-  display:block;
+
+.icon:hover:before,
+.icon:hover:after {
+  display: block;
   opacity: 1;
 }
 
@@ -409,138 +429,162 @@ section {
   vertical-align: center;
   display: flex;
   align-items: center;
-  width: auto; /* Ensure the image or svg fills the icon container */
-  height: 100%; /* Ensure the image or svg fills the icon container */
-  object-fit: contain; /* Ensure the content is contained within the icon box */
+  width: auto;
+  /* Ensure the image or svg fills the icon container */
+  height: 100%;
+  /* Ensure the image or svg fills the icon container */
+  object-fit: contain;
+  /* Ensure the content is contained within the icon box */
 }
 
 .contact-items li a {
   color: #333;
   text-decoration: none;
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center items vertically */
-  padding: 1vw 2vw; /* Scale padding with viewport width */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  display: flex;
+  /* Use flexbox for alignment */
+  align-items: center;
+  /* Center items vertically */
+  padding: 1vw 2vw;
+  /* Scale padding with viewport width */
+  border-radius: 5px;
+  /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Smooth transition for hover effects */
 }
 
 .contact-items li a img {
-  width: 3vw; /* Scale icon size with viewport width */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 1vw; /* Space between icon and text */
+  width: 3vw;
+  /* Scale icon size with viewport width */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 1vw;
+  /* Space between icon and text */
 }
 
-.footer{
+.footer {
   text-align: center;
 }
 
 
 @media (max-width: 1200px) {
   .shrink_arrow {
-      width: 4vw; /* Slightly larger arrow */   
+    width: 4vw;
+    /* Slightly larger arrow */
   }
-  
+
   .contact-items li a img {
-      width: 3vw; /* Scale icon size with viewport width */
+    width: 3vw;
+    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-  
+
   .sklanguages {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-  
+
   .sktraining {
-  font-size: 2vw;
+    font-size: 2vw;
   }
 }
 
 @media (max-width: 992px) {
   .shrink_arrow {
-      width: 6vw; /* Larger arrow */
+    width: 6vw;
+    /* Larger arrow */
   }
+
   .contact-items li a {
-      font-size: 20px;
+    font-size: 20px;
   }
-  
+
   .contact-items li a img {
-      width: 3vw; /* Scale icon size with viewport width */
+    width: 3vw;
+    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-      
+
   .sklanguages {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-      
+
   .sktraining {
-  font-size: 2vw;
+    font-size: 2vw;
   }
 }
 
 @media (max-width: 768px) {
   .shrink_arrow {
-      width: 8vw; /* Even larger arrow */
+    width: 8vw;
+    /* Even larger arrow */
   }
+
   .contact-items li a {
-      font-size: 3vw; /* Scale font size with viewport width */
+    font-size: 3vw;
+    /* Scale font size with viewport width */
   }
-  
+
   .contact-items li a img {
-      width: 3vw; /* Scale icon size with viewport width */
+    width: 3vw;
+    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-      
+
   .sklanguages {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-      
+
   .sktraining {
-  font-size: 2vw;
+    font-size: 2vw;
   }
 }
 
 @media (max-width: 576px) {
   .shrink_arrow {
-      width: 10vw; /* Maximum arrow size for smallest screens */
+    width: 10vw;
+    /* Maximum arrow size for smallest screens */
   }
+
   .contact-items li a {
-      font-size: 3vw; /* Scale font size with viewport width */
+    font-size: 3vw;
+    /* Scale font size with viewport width */
   }
-  
+
   .contact-items li a img {
-      width: 3vw; /* Scale icon size with viewport width */
+    width: 3vw;
+    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-      
+
   .sklanguages {
-  font-size: 2vw;
+    font-size: 2vw;
   }
-      
+
   .sktraining {
-  font-size: 2vw;
+    font-size: 2vw;
   }
 }
 
 @keyframes fade-in {
   from {
-      transform: translateY(150vh);
-      opacity: 0;
+    transform: translateY(150vh);
+    opacity: 0;
   }
 
   to {
-      transform: translateY(calc(var(--parallax-speed) * 2px));
-      opacity: 1;
+    transform: translateY(calc(var(--parallax-speed) * 2px));
+    opacity: 1;
   }
 
 }
