@@ -1,5 +1,5 @@
-import React, {Router, Route, useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, {useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 // import Wireframe from './Wireframe';
 import './App.css';
 
@@ -12,22 +12,24 @@ const links = [
     path: '#skills',
     label: 'Skills',
     exact: true
-  },{
+  },
+  {
     path: '#projects',
-    label: 'Skills',
+    label: 'Projects',
     exact: true
-  },{
+  },
+  {
     path: '#contact',
-    label: 'Skills',
+    label: 'Contact',
     exact: true
   }
 ];
 
 const Nav = () => (
   <ul>
-    {links.map(({ path, label, exact}) => (
+    {links.map(({ path, label, exact }) => (
       <li key={label}>
-        <NavLink to={path} exact={exact}>
+        <NavLink to={path} exact={exact ? 'true' : 'false'}>
           {label}
         </NavLink>
       </li>
@@ -38,7 +40,7 @@ const Nav = () => (
 const App = () => {
 
 return (
-  <>
+  <Router>
   <div className="body-container">
     <div className="spacer"></div>
     <div className="background-container">
@@ -52,34 +54,10 @@ return (
     </div>
     <div className="links-container">
       <nav id="nav">
-        {/* <Router>
           <Nav />
-          <Route exact path="#skills" component={Skills} />
-          <Route exact path="#projects" component={Projects} />
-          <Route exact path="#contact" component={Contact} />
-        </Router> */}
-        {/* <ul>
-          <li>
-            <NavLink to="#skills" activeClassName="active">
-              Skills
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="#projects" activeClassName="active">
-              Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="#contact" activeClassName="active">
-              Contact
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="Resume_Cole_Rabe.pdf" download className="resume-button">
+            {/* <NavLink to="Resume_Cole_Rabe.pdf" download className="resume-button">
               Download Resume
-            </NavLink>
-          </li>
-        </ul> */}
+            </NavLink> */}
       </nav>
     </div>
     <div className="spacer">
@@ -172,8 +150,13 @@ return (
         </ul>
       </section>
     </div>
+    <Routes>
+        <Route exact path="#skills" component={Skills} />
+        <Route exact path="#projects" component={Projects} />
+        <Route exact path="#contact" component={Contact} />
+    </Routes>
   </div>
-  </>
+  </Router>
 );
 };
 
