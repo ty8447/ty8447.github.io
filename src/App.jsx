@@ -79,14 +79,11 @@ const App = () => {
     <Router>
       <div className="body-container">
         <ScrollToSection />
-        <div className="spacer"></div>
-        <div className="background-container">
+        <div className="title-container">
           {/* <Wireframe /> */}
           <div className="name-profession-container">
-            <div className="content">
               <h1>Cole Rabe</h1>
               <p>Mechanical Engineer | Electrical Engineer</p>
-            </div>
           </div>
         </div>
         <div className="links-container">
@@ -97,9 +94,7 @@ const App = () => {
               </NavLink> */}
           </nav>
         </div>
-        <div className="spacer">
           <a href="#skills" className="scroll-arrow"><img src="Icons/scroll_arrow.png" alt="Scroll Arrow" className="shrink-arrow" /></a>
-        </div>
         <div className="skill-container">
           <div className="wave1-background"></div>
           <section id="skills">

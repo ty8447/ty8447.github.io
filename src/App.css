@@ -32,6 +32,7 @@ body {
 .body-container {
   position: relative;
   width: auto;
+  z-index: 1;
 }
 
 .contact-text {
@@ -55,6 +56,21 @@ body {
   z-index: 1002;
   pointer-events: none;
   text-align: center;
+  background-color: rgb(25, 34, 54);
+}
+
+.name-profession-container h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.name-profession-container p {
+  font-size: 1.5em;
+  margin: 5px 0 20px;
+}
+
+.scroll-arrow{
+  z-index: 1003;
 }
 
 .shrink-arrow {
@@ -74,16 +90,21 @@ body {
 
 /* Links Container */
 .links-container {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1002;
   text-align: center;
   padding: 10px 0;
   width: 100%;
-  background-color: rgb(24, 35, 54);
-  height: auto;
   display: flex;
+  align-items: center;
+  background-color: rgb(24, 35, 54);
   justify-content: center;
+}
+
+.links-container .links {
+  /* No changes needed */
 }
 
 .links-container nav ul {
@@ -97,8 +118,6 @@ body {
   max-width: 1200px;
 }
 
-
-
 .links-container a {
   transition: color 0.3s ease-in-out;
 }
@@ -111,27 +130,28 @@ body {
   color: rgb(235, 156, 134);
 }
 
-.spacer {
+/* .spacer {
   height: 40vh;
   position: relative;
   z-index: 1001;
   background-color: rgb(24, 35, 54);
   text-align: center;
   flex-direction: column;
-}
+} */
 
-.background-container {
+.title-container {
   position: relative;
   background-attachment: fixed;
   background-position: center 50%;
   background-repeat: no-repeat;
   width: auto;
-  height: auto;
+  height: 100vh;
   background-color: rgb(24, 35, 54);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .header-bottom {
@@ -157,20 +177,6 @@ body {
   background-size: cover;
   transform: rotate(180deg);
   z-index: 1000;
-}
-
-.content {
-  text-align: center;
-}
-
-.content h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-.content p {
-  font-size: 1.5em;
-  margin: 5px 0 20px;
 }
 
 nav ul {
