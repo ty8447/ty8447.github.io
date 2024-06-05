@@ -1,6 +1,7 @@
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 12px;
+  position:fixed;
 }
 
 ::-webkit-scrollbar-track {
@@ -31,7 +32,6 @@ body {
 .body-container {
   position: relative;
   width: auto;
-  overflow: auto;
 }
 
 .contact-text {
