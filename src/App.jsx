@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+// import Wireframe from './Wireframe';
 import './App.css';
 
 const App = () => {
@@ -9,6 +10,7 @@ return (
   <div className="body-container">
     <div className="spacer"></div>
     <div className="background-container">
+      {/* <Wireframe /> */}
       <div className="name-profession-container">
         <div className="content">
           <h1>Cole Rabe</h1>
@@ -43,7 +45,7 @@ return (
       </nav>
     </div>
     <div className="spacer">
-      <a href="#skills" className="scroll-arrow"><img src="/src/Assets/Icons/scroll_arrow.png" alt="Scroll Arrow" className="shrink-arrow" /></a>
+      <a href="#skills" className="scroll-arrow"><img src="Icons/scroll_arrow.png" alt="Scroll Arrow" className="shrink-arrow" /></a>
     </div>
     <div className="skill-container">
       <div className="wave1-background"></div>
@@ -96,7 +98,7 @@ return (
       <section id="projects">
         <h1 className="section-title">Projects</h1>
         <div className="project">
-          <img src="/src/Assets/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
+          <img src="Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
           <div className="project-description">
             <h3>Placeholder Project 1</h3>
             <p>Description of Placeholder project 1.</p>
@@ -108,7 +110,7 @@ return (
             <h3>Placeholder Project 1</h3>
             <p>Description of Placeholder project 1.</p>
           </div>
-          <img src="/src/Assets/Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
+          <img src="Proj_Images/Proj_Bracket.jpg" alt="Placeholder Project 1" />
         </div>
       </section>
     </div>
