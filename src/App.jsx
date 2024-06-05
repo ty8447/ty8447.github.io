@@ -1,7 +1,39 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {Router, Route, useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 // import Wireframe from './Wireframe';
 import './App.css';
+
+const Skills = () => <h1>Skills</h1>;
+const Projects = () => <h1>Projects</h1>;
+const Contact = () => <h1>Contact</h1>;
+
+const links = [
+  {
+    path: '#skills',
+    label: 'Skills',
+    exact: true
+  },{
+    path: '#projects',
+    label: 'Skills',
+    exact: true
+  },{
+    path: '#contact',
+    label: 'Skills',
+    exact: true
+  }
+];
+
+const Nav = () => (
+  <ul>
+    {links.map(({ path, label, exact}) => (
+      <li key={label}>
+        <NavLink to={path} exact={exact}>
+          {label}
+        </NavLink>
+      </li>
+    ))}
+  </ul>
+);
 
 const App = () => {
 
@@ -20,28 +52,34 @@ return (
     </div>
     <div className="links-container">
       <nav id="nav">
-        <ul>
+        {/* <Router>
+          <Nav />
+          <Route exact path="#skills" component={Skills} />
+          <Route exact path="#projects" component={Projects} />
+          <Route exact path="#contact" component={Contact} />
+        </Router> */}
+        {/* <ul>
           <li>
-            {/* <NavLink to="#skills">
+            <NavLink to="#skills" activeClassName="active">
               Skills
             </NavLink>
           </li>
           <li>
-            <NavLink to="#projects">
+            <NavLink to="#projects" activeClassName="active">
               Projects
             </NavLink>
           </li>
           <li>
-            <NavLink to="#contact">
+            <NavLink to="#contact" activeClassName="active">
               Contact
             </NavLink>
           </li>
           <li>
             <NavLink to="Resume_Cole_Rabe.pdf" download className="resume-button">
               Download Resume
-            </NavLink> */}
+            </NavLink>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </div>
     <div className="spacer">
@@ -68,9 +106,9 @@ return (
               <div className="icon" title="Solidworks"><svg fill="#FFF" width="30px" height="30px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g id="2069a460dcf28295e231f3111e04100d"><path display="inline" d="M511.48,198.149c-0.49,3.747-4.809,5.925-25.622,5.771c-101.008-0.876-113.669,14.367-113.669,14.367s-8.52,4.931-2.677,16.214c6.242,12.035,82.003,100.599,98.417,131.066c10.66,19.771,25.618,54.013-33.825,74.291c-58.168,20.261-167.269,0.19-167.989,0c-26.44-6.646-25.8-11.16-25.505-13.111c0.521-3.737,4.763-5.752,25.564-5.743c95.817,0.082,142.136-6.687,153.346-13.687c6.868-4.251,8.021-10.774,7.386-16.5c-1.393-12.493-31.066-48.904-55.587-77.575c-25.174-29.497-78.751-80.96-42.631-112.189c43.325-37.454,138.793-20.986,157.465-16.967C505.95,188.322,511.894,195.055,511.48,198.149z M198.447,35.444c42.177-0.055,74.967,2.69,97.415,6.714c45.665,8.243,34.913,31.289,21.935,53.346c-31.493,53.7-116.545,114.113-121.486,117.525c-6.483,4.464-2.936,7.067,2.735,4.963c68.965-25.65,138.458-69.891,166.525-123.631c23.804-45.583,6.741-67.205-29.547-77.394c-64.791-18.228-131.965-1.529-137.618,0.136c-8.057,2.363-24.293,6.832-22.924,12.757C176.363,33.652,179.588,35.458,198.447,35.444z M239.589,253.051c-67.224-19.875-140.508-2.595-151.694,0.363c-16.922,4.491-26.834,9.014-26.14,14.317c0.521,3.919,4.85,6.614,25.645,6.088c49.571-1.198,90.642,0.485,116.604,7.748c32.15,8.982,36.11,25.541,20.188,58.068c-7.363,15.034-18.246,30.567-34.736,47.09c-32.913,33.026-74.056,54.512-97.233,66.243c-22.533,11.441-30.776,5.362-28.276-5.925c3.085-13.81,67.015-124.438,67.015-124.438c4.813-8.401,5.661-16.286,0-18.649c-4.845-2.064-13.633,4.745-22.76,15.306C70.892,362.601,2.063,494.456,0.783,498.784c-1.252,4.142,1.982,4.668,3.216,4.695c29.134-0.227,208.016-53.133,265.736-161.267C300.13,285.274,284.746,266.429,239.589,253.051z"></path></g></svg></div>
               <div className="icon" title="Photoshop"><svg fill="#FFF" width="30px" height="30px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g id="2069a460dcf28295e231f3111e037552"><path display="inline" d="M426.333,0.5H85.667C38.825,0.5,0.5,38.825,0.5,85.667v340.667c0,46.842,38.325,85.167,85.167,85.167h340.667c46.842,0,85.167-38.325,85.167-85.167V85.667C511.5,38.825,473.175,0.5,426.333,0.5z M245.329,260.524c-17.736,17.736-45.611,26.065-77.103,26.065c-8.326,0-15.927-0.365-21.72-1.451v91.945h-44.159V136.363c15.927-2.895,38.009-5.069,68.05-5.069c32.582,0,56.473,6.878,72.039,19.911c14.48,11.947,23.89,31.131,23.89,53.936C266.325,228.309,259.086,247.492,245.329,260.524z M337.981,380.706c-21.358,0-40.542-5.069-53.574-12.31l8.687-32.216c10.135,6.154,29.322,12.671,45.249,12.671c19.545,0,28.236-7.964,28.236-19.549c0-11.943-7.239-18.099-28.96-25.7c-34.391-11.947-48.866-30.769-48.505-51.403c0-31.131,25.7-55.383,66.604-55.383c19.549,0,36.562,5.069,46.695,10.496l-8.687,31.493c-7.602-4.342-21.721-10.135-37.285-10.135c-15.928,0-24.615,7.602-24.615,18.46c0,11.224,8.326,16.655,30.77,24.618c31.854,11.582,46.696,27.871,47.058,53.937C409.653,357.539,384.678,380.706,337.981,380.706z M221.8,206.95c0,28.598-20.273,44.887-53.574,44.887c-9.049,0-16.289-0.362-21.72-1.809v-82.534c4.708-1.085,13.395-2.171,25.704-2.171C202.979,165.323,221.8,179.803,221.8,206.95z"></path></g></svg></div>
               <div className="icon" title="Audacity"><svg fill="#FFF" width="30px" height="30px" viewBox="0 0 256 256" ><g fill-rule="evenodd"><path d="M61.264 122.309c0-3.998.603-29.443.603-34.157 0-4.714 3.124-12.91 13-22.55 9.877-9.641 19.451-11.343 30.057-14.97 10.606-3.625 14.1-2.743 23.508-2.743 9.407 0 9.79-.342 23.76 3.533 13.97 3.875 23.794 10.105 31.89 17.047s7.9 13.254 9.522 19.46c1.62 6.208 1.62 21.313 1.62 34.157 12.556 11.611 14.366 17.133 14.366 38.821 0 21.689-11.056 37.037-18.988 42.863-7.933 5.825-4.441 4.586-9.018 5.078-4.577.491-9.639-3.075-9.639-3.075l-.183-80.164 7.312-4.511s.998-24.812.998-29.657c0-4.844-4.225-12.684-6.765-16.199-2.54-3.514-10.434-6.773-19.471-9.64-9.037-2.868-13.725-3.533-25.404-3.487-11.68.047-15.175.015-27.09 3.487-11.915 3.471-10.543 3.688-16.764 9.64-6.22 5.952-8.713 11.33-8.56 16.506.152 5.176.804 30.703.804 30.703l9.14 5.281-1.384 75.297s-3.958 4.19-8.408 4.86c-4.45.67-7.615-1.718-14.906-6.995-7.291-5.278-14.742-17.096-14.742-38.16 0-21.063.044-29.037 14.742-40.425z" /><path d="M92.731 155.314l7.613-23.496 15.719 45.975 12.555-62.277 10.81 62.45 15.869-45.726 9.202 22.975-.778 29.69-7.743-28.322-15.685 45.376-11.98-45.711-11.762 45.583-15.436-45.686-8.447 28.612z" /></g></svg></div>
-              <div className="icon" title="Microsoft Powerpoint"><svg fill="#FFF" width="30px" height="30px" viewBox="0 0 24 24" ><title>microsoft_powerpoint</title><rect width="24" height="24" fill="none" /><path d="M14,5V7.78A3,3,0,0,1,16,7v3h3a3,3,0,0,1-5,2.22V14h6v1H14v1h6v1H14v2h8V5Zm3,4V6a3,3,0,0,1,3,3Z" /><g><path d="M2,4.8V19.21L14,21V3.08ZM9.6,12.61a3.4,3.4,0,0,1-2.5.72l-.89,0v3.34l-1.4-.18V7.89L7.27,7.6a3.11,3.11,0,0,1,2.41.47,2.71,2.71,0,0,1,.8,2.17A3,3,0,0,1,9.6,12.61Z" /><path d="M7.18,8.86l-1,.08v3.14H7a2.43,2.43,0,0,0,1.58-.41A1.61,1.61,0,0,0,9,10.35a1.48,1.48,0,0,0-.45-1.2A1.94,1.94,0,0,0,7.18,8.86Z" /></g></svg></div>
-              {/* <div className ="icon"title="Microsoft Excel"><svg width="30px" height="30px" viewBox="0 0 192 192" fill="none"><path d="M56 30c0-1.662 1.338-3 3-3h108c1.662 0 3 1.338 3 3v132c0 1.662-1.338 3-3 3H59c-1.662 0-3-1.338-3-3v-32m0-68V30" style="fill-opacity:.402658;stroke:#FFF;stroke-width:12;stroke-linecap:round;paint-order:stroke fill markers"/><rect width="68" height="68" x="-58.1" y="40.3" rx="3" style="fill:none;fill-opacity:.402658;stroke:#FFF;stroke-width:12;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" transform="translate(80.1 21.7)"/><path d="M138.79 164.725V27.175M56.175 58.792H170M170 96H90.328M169 133.21H56.175M44.5 82l23 28m0-28-23 28" style="fill:none;stroke:#FFF;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"/></svg></div> */}
-              {/* <div className ="icon"title="Microsoft Word"><svg width="30px" height="30px" viewBox="0 0 192 192" fill="none"><path d="M56 30c0-1.662 1.338-3 3-3h108c1.662 0 3 1.338 3 3v132c0 1.662-1.338 3-3 3H59c-1.662 0-3-1.338-3-3v-32m0-68V30" style="fill-opacity:.402658;stroke:#FFF;stroke-width:12;stroke-linecap:round;paint-order:stroke fill markers"/><rect width="68" height="68" x="-58.1" y="40.3" rx="3" style="fill:none;fill-opacity:.402658;stroke:#FFF;stroke-width:12;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" transform="translate(80.1 21.7)"/><path d="M55.944 58.791H170M170 96H90.328M169 133.21H55.944" style="fill:none;stroke:#FFF;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"/><path d="m73 82-8.5 28m0 0L56 82l-8.5 28M39 82l8.5 28" style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#FFF;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000"/></svg></div> */}
+              <div className="icon" title="Microsoft Powerpoint"><svg fill="#FFF" width="30px" height="30px" viewBox="0 0 24 24" ><rect width="24" height="24" fill="none" /><path d="M14,5V7.78A3,3,0,0,1,16,7v3h3a3,3,0,0,1-5,2.22V14h6v1H14v1h6v1H14v2h8V5Zm3,4V6a3,3,0,0,1,3,3Z" /><g><path d="M2,4.8V19.21L14,21V3.08ZM9.6,12.61a3.4,3.4,0,0,1-2.5.72l-.89,0v3.34l-1.4-.18V7.89L7.27,7.6a3.11,3.11,0,0,1,2.41.47,2.71,2.71,0,0,1,.8,2.17A3,3,0,0,1,9.6,12.61Z" /><path d="M7.18,8.86l-1,.08v3.14H7a2.43,2.43,0,0,0,1.58-.41A1.61,1.61,0,0,0,9,10.35a1.48,1.48,0,0,0-.45-1.2A1.94,1.94,0,0,0,7.18,8.86Z" /></g></svg></div>
+              <div className="icon" title="Microsoft Excel"><svg width="800px" height="800px" viewBox="0 0 192 192" fill="none"><path d="M56 30c0-1.662 1.338-3 3-3h108c1.662 0 3 1.338 3 3v132c0 1.662-1.338 3-3 3H59c-1.662 0-3-1.338-3-3v-32m0-68V30" style={{fillOpacity:".402658",stroke:"#FFF",strokeWidth:"12",strokeLinecap:"round",paintOrder:"stroke fill markers"}}/><rect width="68" height="68" x="-58.1" y="40.3" rx="3" style={{fill:"none",fillOpacity:".402658",stroke:"#FFF",strokeWidth:"12",strokeLinecap:"round",strokeLinejoin:"miter",strokeDasharray:"none",strokeOpacity:"1",paintOrder:"stroke fill markers"}} transform="translate(80.1 21.7)"/><path d="M138.79 164.725V27.175M56.175 58.792H170M170 96H90.328M169 133.21H56.175M44.5 82l23 28m0-28-23 28" style={{fill:"none", stroke:"#FFF",strokeWidth:"12",strokeLinecap:"round",strokeLinejoin:"round",strokeDasharray:"none",strokeOpacity:"1"}}/></svg></div>
+              <div className="icon" title="Microsoft Word"><svg width="30px" height="30px" viewBox="0 0 192 192" fill="none"><path d="M56 30c0-1.662 1.338-3 3-3h108c1.662 0 3 1.338 3 3v132c0 1.662-1.338 3-3 3H59c-1.662 0-3-1.338-3-3v-32m0-68V30" style={{fillOpacity: "0.402658", stroke: "#FFF", strokeWidth: "12", strokeLinecap: "round", paintOrder: "stroke fill markers"}}/><rect width="68" height="68" x="-58.1" y="40.3" rx="3" transform="translate(80.1 21.7)" style={{fill: "none", fillOpacity: "0.402658", stroke: "#FFF", strokeWidth: "12", strokeLinecap: "round", strokeLinejoin: "miter", strokeDasharray: "none", strokeOpacity: "1", paintOrder: "stroke fill markers"}}/><path d="M55.944 58.791H170M170 96H90.328M169 133.21H55.944" style={{fill: "none", stroke: '#FFF', strokeWidth: '12', strokeLinecap: 'round', strokeLinejoin: 'round', strokeDasharray: 'none', strokeOpacity: '1'}}/><path d="m73 82-8.5 28m0 0L56 82l-8.5 28M39 82l8.5 28" style={{fontVariationSettings: "normal", vectorEffect: "none", fill: "none", fillOpacity: "1", stroke: "#FFF", strokeWidth: "12", strokeLinecap: "round", strokeLinejoin: "round", strokeMiterlimit: "4", strokeDasharray: "none", strokeDashoffset: "0", strokeOpacity: "1", inkscapeStroke: "none", stopColor: "#000"}}/></svg></div>
               <div className="icon" title="Pycharm"><svg fill="#FFF" width="30px" height="30px" viewBox="0 0 24 24" role="img"><title>PyCharm icon</title><path d="M7.833 6.666v-.055c0-1-.667-1.5-1.778-1.5H4.389v3.055h1.723c1.111 0 1.721-.666 1.721-1.5zM0 0v24h24V0H0zm2.223 3.167h4c2.389 0 3.833 1.389 3.833 3.445v.055c0 2.278-1.778 3.5-4.001 3.5H4.389v2.945H2.223V3.167zM11.277 21h-9v-1.5h9V21zm4.779-7.777c-2.944.055-5.111-2.223-5.111-5.057C10.944 5.333 13.056 3 16.111 3c1.889 0 3 .611 3.944 1.556l-1.389 1.61c-.778-.722-1.556-1.111-2.556-1.111-1.658 0-2.873 1.375-2.887 3.084.014 1.709 1.174 3.083 2.887 3.083 1.111 0 1.833-.445 2.61-1.167l1.39 1.389c-.999 1.112-2.166 1.779-4.054 1.779z" /></svg></div>
               <div className="icon" title="Matlab"><svg fill="#FFF" width="30px" height="30px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g id="5151e0c8492e5103c096af88a51fbe2a"><path display="inline" d="M343.158,24.759l0.009-0.74c-0.096,0-0.191-0.004-0.287-0.004c-1.318,0-2.604,0.116-3.867,0.312c-2.013,0.108-3.984,0.665-5.931,1.68c-14.695,6.03-26.281,25.28-40.275,48.589c-20.493,34.142-45.993,76.629-89.724,87.313c-17.25,4.208-37.639,28.647-57.046,53.32c-1.771,2.245-3.402,4.316-4.857,6.138l-0.482,0.599L0.5,279.95l113.657,80.011c47.719-22.41,62.32,20.51,101.834,128.024c79.515-8.925,132.87-136.009,177.182-144.359c54.955-10.351,59.563,31.729,118.327,67.983C452.449,283.864,389.775,36.669,343.158,24.759z M172.019,316.313l-56.789,28.785l-88.381-62.224L145.99,233.6l23.125,17.184l35.397,26.847C194.62,291.332,183.845,304.365,172.019,316.313z M212.078,266.797l-35.264-26.206l-21.595-16.381c0.283-0.357,0.565-0.72,0.856-1.085c12.451-15.832,35.63-45.291,50.04-48.81c40.188-9.817,65.588-41.959,85.416-73.182C272.418,149.307,248.71,212.35,212.078,266.797z"></path></g></svg></div>
             </div>
