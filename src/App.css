@@ -31,14 +31,11 @@ body {
 .body-container {
   position: relative;
   width: auto;
+  overflow: auto;
 }
 
 .contact-text {
   font-weight: bold;
-}
-
-.active {
-  color: red; /* Or your desired color */
 }
 
 .projdiv {
@@ -66,17 +63,13 @@ body {
   height: auto;
   bottom: 0;
   left: var(--arrow-left, 50%);
-  /* Default center */
   transform: translateX(-50%);
-  /* Default center */
   transition: transform 0.3s 0.1s;
 }
 
 .shrink-arrow:hover {
   left: var(--arrow-left, 50%);
-  /* Default center */
   transform: translate(-50%, 20%);
-  /* Default center */
 }
 
 /* Links Container */
@@ -108,7 +101,6 @@ body {
 
 .links-container a {
   transition: color 0.3s ease-in-out;
-  /* Adjust the duration and timing function as needed */
 }
 
 .links-container a.active {
@@ -158,12 +150,11 @@ body {
 
 .wave1-background {
   position: sticky;
-  top: -1px;
+  top: 0;
   width: 100%;
   height: 150px;
   background-image: url('/src/Assets/Waves/wave1.svg');
   background-size: cover;
-
   transform: rotate(180deg);
   z-index: 1000;
 }
@@ -197,10 +188,6 @@ nav ul li a {
   text-decoration: none;
   padding: 10px 15px;
   white-space: nowrap;
-}
-
-nav ul li a.active {
-  color: red;
 }
 
 nav ul li a.resume-button {
@@ -261,7 +248,6 @@ section {
   .section-title.sticky {
     position: fixed;
     top: 50%;
-    /* Center of the viewport */
     transform: translateY(-50%);
     z-index: 1000;
 
@@ -274,7 +260,6 @@ section {
   .skill-title.sticky {
     position: fixed;
     top: 50%;
-    /* Center of the viewport */
     transform: translateY(-50%);
     z-index: 1000;
   }
@@ -305,23 +290,16 @@ section {
 .icon img,
 .icon svg {
   width: 100%;
-  /* Ensure the image or svg fills the icon container */
   height: 100%;
-  /* Ensure the image or svg fills the icon container */
   object-fit: contain;
-  /* Ensure the content is contained within the icon box */
 }
 
 .icon:before {
   content: attr(title);
-  /* Use the title attribute for tooltip content */
   position: absolute;
   left: 50%;
-  /* Horizontally center the tooltip */
   bottom: 100%;
-  /* Position the tooltip above the icon */
   transform: translateX(-50%) translateY(-15px);
-  /* Center and add space between the icon and tooltip */
   width: auto;
   padding: 10px;
   border-radius: 10px;
@@ -331,11 +309,8 @@ section {
   opacity: 0;
   transition: opacity 0.6s;
   white-space: nowrap;
-  /* Prevent the tooltip text from wrapping */
   pointer-events: none;
-  /* Ensure the tooltip does not interfere with hover */
   z-index: 10;
-  /* Ensure the tooltip appears above other elements */
 
 }
 
@@ -454,35 +429,24 @@ section {
   display: flex;
   align-items: center;
   width: auto;
-  /* Ensure the image or svg fills the icon container */
   height: 100%;
-  /* Ensure the image or svg fills the icon container */
   object-fit: contain;
-  /* Ensure the content is contained within the icon box */
 }
 
 .contact-items li a {
   color: #333;
   text-decoration: none;
   display: flex;
-  /* Use flexbox for alignment */
   align-items: center;
-  /* Center items vertically */
   padding: 1vw 2vw;
-  /* Scale padding with viewport width */
   border-radius: 5px;
-  /* Rounded corners */
   transition: background-color 0.3s, transform 0.3s;
-  /* Smooth transition for hover effects */
 }
 
 .contact-items li a img {
   width: 3vw;
-  /* Scale icon size with viewport width */
   height: auto;
-  /* Maintain aspect ratio */
   margin-right: 1vw;
-  /* Space between icon and text */
 }
 
 .footer {
@@ -493,12 +457,10 @@ section {
 @media (max-width: 1200px) {
   .shrink_arrow {
     width: 4vw;
-    /* Slightly larger arrow */
   }
 
   .contact-items li a img {
     width: 3vw;
-    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
@@ -517,7 +479,6 @@ section {
 @media (max-width: 992px) {
   .shrink_arrow {
     width: 6vw;
-    /* Larger arrow */
   }
 
   .contact-items li a {
@@ -526,7 +487,6 @@ section {
 
   .contact-items li a img {
     width: 3vw;
-    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
@@ -545,17 +505,14 @@ section {
 @media (max-width: 768px) {
   .shrink_arrow {
     width: 8vw;
-    /* Even larger arrow */
   }
 
   .contact-items li a {
     font-size: 3vw;
-    /* Scale font size with viewport width */
   }
 
   .contact-items li a img {
     width: 3vw;
-    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
@@ -574,17 +531,14 @@ section {
 @media (max-width: 576px) {
   .shrink_arrow {
     width: 10vw;
-    /* Maximum arrow size for smallest screens */
   }
 
   .contact-items li a {
     font-size: 3vw;
-    /* Scale font size with viewport width */
   }
 
   .contact-items li a img {
     width: 3vw;
-    /* Scale icon size with viewport width */
   }
 
   .sksoftware {
