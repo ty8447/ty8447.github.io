@@ -19,6 +19,11 @@ const links = [
   {
     path: '#contact',
     label: 'Contact',
+  },
+  {
+    path: 'Resume_Cole_Rabe.pdf',
+    label: 'Download Resume',
+    isDownload: true
   }
 ];
 
@@ -40,18 +45,24 @@ const Nav = () => {
 
   return (
     <ul>
-      {links.map(({ path, label }) => (
+      {links.map(({ path, label, isDownload }) => (
         <li key={label}>
-          <a
-            href={path}
-            className={hash === path ? 'active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick(path);
-            }}
-          >
-            {label}
-          </a>
+          {isDownload ? (
+            <a href={path} download className="resume-button">
+              {label}
+            </a>
+          ) : (
+            <a
+              href={path}
+              className={hash === path ? 'active' : ''}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(path);
+              }}
+            >
+              {label}
+            </a>
+          )}
         </li>
       ))}
     </ul>
@@ -89,9 +100,6 @@ const App = () => {
         <div className="links-container">
           <nav id="nav">
             <Nav />
-            {/* <NavLink to="Resume_Cole_Rabe.pdf" download className="resume-button">
-                Download Resume
-              </NavLink> */}
           </nav>
         </div>
           <a href="#skills" className="scroll-arrow"><img src="Icons/scroll_arrow.png" alt="Scroll Arrow" className="shrink-arrow" /></a>
