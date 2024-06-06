@@ -11,7 +11,8 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #eeaf9e;
-  border-radius: 6px;
+  width: 10px;
+  border-radius: 10px;
   border: 3px solid transparent;
 }
 
@@ -515,7 +516,7 @@ section {
     width: 3vw;
   }
 
-  .sksoftware {
+  /* .sksoftware {
     font-size: 2.5vw;
   }
 
@@ -525,7 +526,7 @@ section {
 
   .sktraining {
     font-size: 2.5vw;
-  }
+  } */
 }
 
 @media (max-width: 992px) {
@@ -541,7 +542,7 @@ section {
     width: 3vw;
   }
 
-  .sksoftware {
+  /* .sksoftware {
     font-size: 2.5vw;
   }
 
@@ -551,7 +552,7 @@ section {
 
   .sktraining {
     font-size: 2.5vw;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
@@ -567,7 +568,7 @@ section {
     width: 3vw;
   }
 
-  .sksoftware {
+  /* .sksoftware {
     font-size: 2vw;
   }
 
@@ -577,7 +578,7 @@ section {
 
   .sktraining {
     font-size: 2vw;
-  }
+  } */
 }
 
 @media (max-width: 576px) {
@@ -593,7 +594,7 @@ section {
     width: 3vw;
   }
 
-  .sksoftware {
+  /* .sksoftware {
     font-size: 3vw;
   }
 
@@ -603,18 +604,5 @@ section {
 
   .sktraining {
     font-size: 3vw;
-  }
+  } */
 }
-
-/* @keyframes fade-in {
-  from {
-    transform: translateY(150vh);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(calc(var(--parallax-speed) * 2px));
-    opacity: 1;
-  }
-
-} */
