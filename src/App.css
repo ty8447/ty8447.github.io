@@ -594,15 +594,8 @@ section {
     width: 3vw;
   }
 
-  .sksoftware {
-    font-size: 2.5vw;
-  }
+  .skill-categories{
+    font-size: 1.5rem;
 
-  .sklanguages {
-    font-size: 2.5vw;
-  }
-
-  .sktraining {
-    font-size: 2.5vw;
   }
 }
