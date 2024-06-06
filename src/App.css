@@ -94,8 +94,8 @@ body {
 
 /* Links Container */
 .links-container {
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 0;
   z-index: 1002;
   text-align: center;
   padding: 10px 0;
