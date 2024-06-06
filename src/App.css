@@ -361,6 +361,7 @@ section {
 
 .skill-categories {
   display: flex;
+  font-size:1.5rem;
   justify-content: space-between;
   padding: 0 5vw;
   position: relative;
