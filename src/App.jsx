@@ -1,15 +1,15 @@
 // import Wireframe from './Wireframe';
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  NavLink,
   useLocation,
   useNavigate,
 } from "react-router-dom";
 import "./App.css";
 import ProjectCard from './ProjectCard';
+import ProjectModal from './ProjectModal';
 
 const Skills = () => <h1>Skills</h1>;
 const Projects = () => <h1>Projects</h1>;
@@ -93,6 +93,9 @@ const ScrollToSection = () => {
 };
 
 const App = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedCardRef, setSelectedCardRef] = useState(null);
+
   const projectData = [
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -132,6 +135,16 @@ const App = () => {
     },
     // Add more projects here as needed
   ];
+
+  const handleLearnMore = (project, cardRef) => {
+    setSelectedProject(project);
+    setSelectedCardRef(cardRef);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+    setSelectedCardRef(null);
+  };
 
   return (
     <Router>
@@ -593,10 +606,12 @@ const App = () => {
                   title={project.title}
                   description={project.description}
                   date={project.date}
+                  onLearnMore={(cardRef) => handleLearnMore(project, cardRef)}
                 />
               ))}
             </div>
           </section>
+          <ProjectModal project={selectedProject} onClose={handleCloseModal} cardRef={selectedCardRef} />
         </div>
         <div className="contact-container">
           <div className="wave3-background"></div>
