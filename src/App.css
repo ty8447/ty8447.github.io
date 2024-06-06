@@ -130,15 +130,6 @@ body {
   color: rgb(235, 156, 134);
 }
 
-/* .spacer {
-  height: 40vh;
-  position: relative;
-  z-index: 1001;
-  background-color: rgb(24, 35, 54);
-  text-align: center;
-  flex-direction: column;
-} */
-
 .title-container {
   position: relative;
   background-attachment: fixed;
@@ -175,6 +166,31 @@ body {
   height: 150px;
   background-image: url('/src/Assets/Waves/wave1.svg');
   background-size: cover;
+  display:flex;
+  transform: rotate(180deg);
+  z-index: 1000;
+}
+
+.wave2-background {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url('/src/Assets/Waves/wave2.svg');
+  background-size: cover;
+  display:flex;
+  transform: rotate(180deg);
+  z-index: 1000;
+}
+
+.wave3-background {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url('/src/Assets/Waves/wave3.svg');
+  background-size: cover;
+  display:flex;
   transform: rotate(180deg);
   z-index: 1000;
 }
@@ -254,7 +270,6 @@ section {
   .section-title.sticky {
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 1000;
 
   }
@@ -266,7 +281,6 @@ section {
   .skill-title.sticky {
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 1000;
   }
 
@@ -370,7 +384,7 @@ section {
   padding-bottom: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  text-shadow: 0 0 6px black;
+  background-color: rgb(215, 157, 104);
 }
 
 .parallax-slow {
@@ -380,6 +394,7 @@ section {
 
 .project-container {
   text-align: center;
+  background-color: #FFBC63;
 
 }
 
@@ -412,6 +427,10 @@ section {
 .project-description {
   flex: 1;
   padding: 20px;
+}
+
+.contact-container {
+  background-color: #4D69B0;
 }
 
 #contact {

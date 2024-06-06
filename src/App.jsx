@@ -118,7 +118,7 @@ const App = () => {
         <div className="skill-container">
           <div className="wave1-background"></div>
           <section id="skills">
-            <h1 className="section-title skill-title parallax-slow">Skills</h1>
+            <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
               <div className="sksoftware">
                 <h2>Software</h2>
@@ -541,6 +541,7 @@ const App = () => {
           </section>
         </div>
         <div className="project-container">
+        <div className="wave2-background"></div>
           <section id="projects">
             <h1 className="section-title">Projects</h1>
             <div className="project">
@@ -567,6 +568,7 @@ const App = () => {
           </section>
         </div>
         <div className="contact-container">
+        <div className="wave3-background"></div>
           <hr />
           <section id="contact">
             <h1 className="section-title">Contact</h1>
