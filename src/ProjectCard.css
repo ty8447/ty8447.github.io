@@ -34,6 +34,12 @@
   .project-info p {
     color: #666;
   }
+
+  .project-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+  }
   
   .project-date {
     font-size: 0.9em;
