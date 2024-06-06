@@ -1,34 +1,65 @@
 .nav-container {
     position: relative;
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .nav-container ul {
+    justify-content: center;
+}
+
+.nav-container ul {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .nav-container li {
+}
+
+.nav-container li {
     margin-right: 20px;
-  }
-  
-  .nav-container a {
+}
+
+.nav-container a {
     position: relative;
     text-decoration: none;
     color: white;
-  }
-  
-  .active-pill {
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-item a {
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    /* Ensure the text is above the pill */
+    text-decoration: none;
+    color: #000;
+    /* Adjust as needed */
+}
+
+.nav-item .active {
+    color: #fff;
+    /* Adjust as needed */
+}
+
+.resume-button {
+    text-decoration: none;
+    color: #000;
+    /* Adjust as needed */
+}
+
+.active-pill {
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
-    width: 100px; /* Adjust width as needed */
-    height: 3px; /* Adjust height as needed */
-    background-color: blue; /* Adjust color as needed */
-    transition: left 0.3s ease; /* Smooth transition */
-    border-radius: 10px; /* Make it pill-shaped */
-  }
-  
+    height: 30px;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    z-index: 0;
+}

@@ -60,7 +60,7 @@ body {
   z-index: 1002;
   pointer-events: none;
   text-align: center;
-  background-color: rgb(25, 34, 54);
+  background-color: #0e2b52;
 }
 
 .name-profession-container h1 {
@@ -94,9 +94,8 @@ body {
 
 /* Links Container */
 .links-container {
-  position: -webkit-sticky;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 10%;
   z-index: 1002;
   text-align: center;
   padding: 10px 0;
@@ -106,6 +105,14 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.links-container.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1002;
 }
 
 .links-container nav ul {
@@ -118,18 +125,15 @@ body {
   width: 100%;
   max-width: 1200px;
   color: white;
+  z-index: 30;
 }
 
 .links-container a {
   transition: color 0.3s ease-in-out;
 }
 
-.links-container a.active {
-  color: red;
-}
-
 .links-container a:hover {
-  color: red;
+  color: #b9897c;
 }
 
 .title-container {
@@ -139,7 +143,8 @@ body {
   background-repeat: no-repeat;
   width: auto;
   height: 100vh;
-  background-color: rgb(24, 35, 54);
+  /* background-color: rgb(24, 35, 54); */
+  background-color: #0e2b52;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -383,12 +388,14 @@ section {
   vertical-align: center;
   height: auto;
   position: relative;
-  background-color: rgb(215, 157, 104);
+  /* background-color: rgb(215, 157, 104); */
+  background-color: #256f89;
 }
 
 .project-container {
   text-align: center;
-  background-color: #FFBC63;
+  /* background-color: #FFBC63; */
+  background-color: #88ada4;
 }
 
 .projects-grid {
@@ -431,7 +438,8 @@ section {
 }
 
 .contact-container {
-  background-color: #4D69B0;
+  /* background-color: #4D69B0; */
+  background-color: #e3d8ad;
 }
 
 #contact {
@@ -460,7 +468,7 @@ section {
 }
 
 .contact-items li a {
-  color: #f1f1f1;
+  color: #132852;
   text-decoration: none;
   display: flex;
   align-items: center;

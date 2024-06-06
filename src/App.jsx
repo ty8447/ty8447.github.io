@@ -19,7 +19,6 @@ const ScrollToSection = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
-    console.log("useEffect triggered");
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
@@ -35,6 +34,9 @@ const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCardRef, setSelectedCardRef] = useState(null);
   const [activeLink, setActiveLink] = useState("#skills");
+  const [isSticky, setIsSticky] = useState(false);
+  const linksContainerRef = useRef(null);
+  const titleContainerRef = useRef(null);
 
   const projectRef = useRef(null);
   const skillRef = useRef(null);
@@ -46,7 +48,6 @@ const App = () => {
       { id: "#projects", ref: projectRef },
       { id: "#contact", ref: contactRef },
     ];
-
     const observer = new IntersectionObserver(
       (entries) => {
         console.log("Intersection Observer Triggered");
@@ -60,7 +61,7 @@ const App = () => {
       },
       { threshold: 0.2 }
     );
-
+  
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
         console.log("Observing:", id, ref.current);
@@ -69,7 +70,20 @@ const App = () => {
         console.log("Ref not set for:", id);
       }
     });
-
+  
+    const handleScroll = () => {
+      if (linksContainerRef.current && titleContainerRef.current) {
+        const titleContainerBottom = titleContainerRef.current.getBoundingClientRect().bottom;
+        const linksContainerTop = linksContainerRef.current.getBoundingClientRect().top;
+        if (titleContainerBottom <= 0 && linksContainerTop <= 0) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
     return () => {
       sections.forEach(({ id, ref }) => {
         if (ref.current) {
@@ -79,8 +93,9 @@ const App = () => {
           console.log("Ref not set for:", id);
         }
       });
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []);  
 
   const projectData = [
     {
@@ -142,7 +157,7 @@ const App = () => {
     <Router>
       <div className="body-container">
         <ScrollToSection />
-        <div className="title-container">
+        <div className="title-container" ref={titleContainerRef}>
           {/* <Wireframe /> */}
           <div className="name-profession-container">
             <h1>Cole Rabe</h1>
@@ -156,7 +171,8 @@ const App = () => {
             />
           </a>
         </div>
-        <div className="links-container">
+        <div className={`links-container ${isSticky ? "sticky" : ""}`}
+        ref={linksContainerRef}>
           <nav id="nav">
             <Nav activeLink={activeLink} onLinkClick={setActiveLink} />
           </nav>
@@ -610,10 +626,10 @@ const App = () => {
         <div className="contact-container">
           <div className="wave3-background"></div>
           <section id="contact" ref={contactRef}>
-            <h1 className="section-title">Contact</h1>
+            <h1 className="section-title" style={{color: "#132852"}}>Contact</h1>
             <ul className="contact-items">
               <li>
-                <svg fill="#FFF" width="30px" height="30px" viewBox="0 0 32 32">
+                <svg fill="#132852" width="30px" height="30px" viewBox="0 0 32 32">
                   <path d="M27.26 27.271h-4.733v-7.427c0-1.771-0.037-4.047-2.475-4.047-2.468 0-2.844 1.921-2.844 3.916v7.557h-4.739v-15.271h4.552v2.083h0.061c0.636-1.203 2.183-2.468 4.491-2.468 4.801 0 5.692 3.161 5.692 7.271v8.385zM7.115 9.912c-1.527 0-2.751-1.235-2.751-2.756 0-1.516 1.229-2.749 2.751-2.749s2.755 1.233 2.755 2.749c0 1.521-1.233 2.756-2.755 2.756zM9.489 27.271h-4.749v-15.271h4.749zM29.636 0h-27.276c-1.303 0-2.36 1.031-2.36 2.307v27.387c0 1.276 1.057 2.307 2.36 2.307h27.271c1.301 0 2.369-1.031 2.369-2.307v-27.387c0-1.276-1.068-2.307-2.369-2.307z" />
                 </svg>
                 <a
@@ -630,14 +646,14 @@ const App = () => {
                   <g clipPath="url(#clip0_429_11225)">
                     <path
                       d="M3 5H21V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V5Z"
-                      stroke="#FFF"
+                      stroke="#132852"
                       strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
                     <path
                       d="M3 5L12 14L21 5"
-                      stroke="#FFF"
+                      stroke="#132852"
                       strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -654,7 +670,7 @@ const App = () => {
                 </a>
               </li>
               <li>
-                <svg fill="#FFF" width="30px" height="30px" viewBox="0 0 24 24">
+                <svg fill="#132852" width="30px" height="30px" viewBox="0 0 24 24">
                   <path d="M1.277,8.858C2.606,14.138,9.863,21.4,15.142,22.723a8.938,8.938,0,0,0,2.18.274,8.54,8.54,0,0,0,4.006-1,3.11,3.11,0,0,0,.764-4.951h0L20.006,14.96a3.111,3.111,0,0,0-3.444-.651,4.859,4.859,0,0,0-1.471.987c-.178.177-.506.205-.977.077A9.981,9.981,0,0,1,8.626,9.886c-.126-.471-.1-.8.078-.977a4.864,4.864,0,0,0,.988-1.473,3.112,3.112,0,0,0-.651-3.442L6.955,1.909A3.065,3.065,0,0,0,4.3,1.035,3.1,3.1,0,0,0,2,2.672,8.58,8.58,0,0,0,1.277,8.858ZM3.773,3.6A1.115,1.115,0,0,1,4.6,3.013,1.044,1.044,0,0,1,4.767,3a1.088,1.088,0,0,1,.774.323L7.626,5.408a1.1,1.1,0,0,1,.239,1.213A2.9,2.9,0,0,1,7.29,7.5,2.817,2.817,0,0,0,6.7,10.4c.722,2.7,4.205,6.179,6.9,6.9a2.821,2.821,0,0,0,2.907-.6,2.906,2.906,0,0,1,.874-.576,1.1,1.1,0,0,1,1.214.239l2.085,2.085a1.089,1.089,0,0,1,.31.942,1.114,1.114,0,0,1-.591.826,6.517,6.517,0,0,1-4.766.556C11.089,19.641,4.36,12.912,3.216,8.37A6.53,6.53,0,0,1,3.773,3.6Z" />
                 </svg>
                 <a className="contact-text" href="tel:+16177569014">
