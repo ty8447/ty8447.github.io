@@ -600,7 +600,6 @@ const App = () => {
         </div>
         <div className="contact-container">
           <div className="wave3-background"></div>
-          <hr />
           <section id="contact">
             <h1 className="section-title">Contact</h1>
             <ul className="contact-items">
