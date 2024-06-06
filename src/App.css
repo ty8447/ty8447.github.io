@@ -360,12 +360,12 @@ section {
 }
 
 .skill-categories {
-  display: flex;
-  font-size:2rem;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minmax values as needed */
+  gap: 20px; /* Adjust the gap between items as needed */
+  font-size: 2rem;
   padding: 0 5vw;
   position: relative;
-  flex-direction: row;
 }
 
 .sksoftware {
