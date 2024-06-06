@@ -1,86 +1,25 @@
 // import Wireframe from './Wireframe';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   useLocation,
-  useNavigate,
 } from "react-router-dom";
 import "./App.css";
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
+import Nav from './Nav.jsx';
 
 const Skills = () => <h1>Skills</h1>;
 const Projects = () => <h1>Projects</h1>;
 const Contact = () => <h1>Contact</h1>;
 
-const links = [
-  {
-    path: "#skills",
-    label: "Skills",
-  },
-  {
-    path: "#projects",
-    label: "Projects",
-  },
-  {
-    path: "#contact",
-    label: "Contact",
-  },
-  {
-    path: "Resume_Cole_Rabe.pdf",
-    label: "Download Resume",
-    isDownload: true,
-  },
-];
-
-const Nav = () => {
-  const { hash } = useLocation();
-  const navigate = useNavigate();
-
-  const handleNavClick = (path) => {
-    if (hash === path) {
-      // If the URL is already the same, reset the hash to empty and then navigate to the same hash
-      navigate("", { replace: true });
-      setTimeout(() => {
-        navigate(path, { replace: true });
-      }, 0);
-    } else {
-      navigate(path);
-    }
-  };
-
-  return (
-    <ul>
-      {links.map(({ path, label, isDownload }) => (
-        <li key={label}>
-          {isDownload ? (
-            <a href={path} download className="resume-button">
-              {label}
-            </a>
-          ) : (
-            <a
-              href={path}
-              className={hash === path ? "active" : ""}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(path);
-              }}
-            >
-              {label}
-            </a>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
-};
-
 const ScrollToSection = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
+    console.log("useEffect triggered");
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
@@ -95,6 +34,53 @@ const ScrollToSection = () => {
 const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCardRef, setSelectedCardRef] = useState(null);
+  const [activeLink, setActiveLink] = useState("#skills");
+
+  const projectRef = useRef(null);
+  const skillRef = useRef(null);
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const sections = [
+      { id: "#skills", ref: skillRef },
+      { id: "#projects", ref: projectRef },
+      { id: "#contact", ref: contactRef },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        console.log("Intersection Observer Triggered");
+        entries.forEach((entry) => {
+          console.log(entry.target.id, entry.isIntersecting);
+          if (entry.isIntersecting) {
+            console.log("Section in View:", entry.target.id);
+            setActiveLink(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    sections.forEach(({ id, ref }) => {
+      if (ref.current) {
+        console.log("Observing:", id, ref.current);
+        observer.observe(ref.current);
+      } else {
+        console.log("Ref not set for:", id);
+      }
+    });
+
+    return () => {
+      sections.forEach(({ id, ref }) => {
+        if (ref.current) {
+          console.log("Unobserving:", id, ref.current);
+          observer.unobserve(ref.current);
+        } else {
+          console.log("Ref not set for:", id);
+        }
+      });
+    };
+  }, []);
 
   const projectData = [
     {
@@ -102,36 +88,42 @@ const App = () => {
       title: 'Placeholder Project 1',
       description: 'Description of Placeholder project 1.',
       date: 'January 2023',
+      status: 'In Progress',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Placeholder Project 2',
       description: 'Description of Placeholder project 2.',
       date: 'February 2023',
+      status: 'Completed',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Placeholder Project 3',
       description: 'Description of Placeholder project 3.',
       date: 'March 2023',
+      status: 'In Progress',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Placeholder Project 4',
       description: 'Description of Placeholder project 4.',
       date: 'April 2023',
+      status: 'Paused',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Placeholder Project 5',
       description: 'Description of Placeholder project 5.',
       date: 'May 2023',
+      status: 'In Progress',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Placeholder Project 6',
       description: 'Description of Placeholder project 6.',
       date: 'June 2023',
+      status: 'In Progress',
     },
     // Add more projects here as needed
   ];
@@ -166,12 +158,12 @@ const App = () => {
         </div>
         <div className="links-container">
           <nav id="nav">
-            <Nav />
+            <Nav activeLink={activeLink} onLinkClick={setActiveLink} />
           </nav>
         </div>
         <div className="skill-container">
           <div className="wave1-background"></div>
-          <section id="skills">
+          <section id="skills" ref={skillRef}>
             <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
               <div className="sksoftware">
@@ -596,7 +588,7 @@ const App = () => {
         </div>
         <div className="project-container">
           <div className="wave2-background"></div>
-          <section id="projects">
+          <section id="projects" ref={projectRef}>
             <h1 className="section-title">Projects</h1>
             <div className="projects-grid">
               {projectData.map((project, index) => (
@@ -606,6 +598,7 @@ const App = () => {
                   title={project.title}
                   description={project.description}
                   date={project.date}
+                  status={project.status}
                   onLearnMore={(cardRef) => handleLearnMore(project, cardRef)}
                 />
               ))}
@@ -613,9 +606,10 @@ const App = () => {
           </section>
           <ProjectModal project={selectedProject} onClose={handleCloseModal} cardRef={selectedCardRef} />
         </div>
+
         <div className="contact-container">
           <div className="wave3-background"></div>
-          <section id="contact">
+          <section id="contact" ref={contactRef}>
             <h1 className="section-title">Contact</h1>
             <ul className="contact-items">
               <li>
