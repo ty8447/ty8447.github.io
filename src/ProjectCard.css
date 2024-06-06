@@ -1,0 +1,57 @@
+/* src/components/ProjectCard.css */
+.project-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    text-align: center;
+    margin: 20px;
+    width: 350px; /* Increased width */
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px; /* Fixed height to crop */
+    object-fit: cover; /* Crops the image */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .project-info {
+    padding: 20px;
+  }
+  
+  .project-info h3 {
+    margin: 10px 0;
+  }
+  
+  .project-info p {
+    color: #666;
+  }
+  
+  .project-date {
+    font-size: 0.9em;
+    color: #999;
+  }
+  
+  .learn-more-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffbc63;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #ffa500;
+  }
+  

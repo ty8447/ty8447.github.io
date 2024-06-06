@@ -388,7 +388,14 @@ section {
 .project-container {
   text-align: center;
   background-color: #FFBC63;
+}
 
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10vw;
 }
 
 .project {
@@ -584,3 +591,4 @@ section {
   }
 
 } */
+

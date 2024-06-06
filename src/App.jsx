@@ -9,6 +9,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import "./App.css";
+import ProjectCard from './ProjectCard';
 
 const Skills = () => <h1>Skills</h1>;
 const Projects = () => <h1>Projects</h1>;
@@ -92,6 +93,46 @@ const ScrollToSection = () => {
 };
 
 const App = () => {
+  const projectData = [
+    {
+      image: 'Proj_Images/Proj_Bracket.jpg',
+      title: 'Placeholder Project 1',
+      description: 'Description of Placeholder project 1.',
+      date: 'January 2023',
+    },
+    {
+      image: 'Proj_Images/Proj_Bracket.jpg',
+      title: 'Placeholder Project 2',
+      description: 'Description of Placeholder project 2.',
+      date: 'February 2023',
+    },
+    {
+      image: 'Proj_Images/Proj_Bracket.jpg',
+      title: 'Placeholder Project 3',
+      description: 'Description of Placeholder project 3.',
+      date: 'March 2023',
+    },
+    {
+      image: 'Proj_Images/Proj_Bracket.jpg',
+      title: 'Placeholder Project 4',
+      description: 'Description of Placeholder project 4.',
+      date: 'April 2023',
+    },
+    {
+      image: 'Proj_Images/Proj_Bracket.jpg',
+      title: 'Placeholder Project 5',
+      description: 'Description of Placeholder project 5.',
+      date: 'May 2023',
+    },
+    {
+      image: 'Proj_Images/Proj_Bracket.jpg',
+      title: 'Placeholder Project 6',
+      description: 'Description of Placeholder project 6.',
+      date: 'June 2023',
+    },
+    // Add more projects here as needed
+  ];
+
   return (
     <Router>
       <div className="body-container">
@@ -103,12 +144,12 @@ const App = () => {
             <p>Mechanical Engineer | Electrical Engineer</p>
           </div>
           <a href="#skills" className="scroll-arrow">
-          <img
-            src="Icons/scroll_arrow.png"
-            alt="Scroll Arrow"
-            className="shrink-arrow"
-          />
-        </a>
+            <img
+              src="Icons/scroll_arrow.png"
+              alt="Scroll Arrow"
+              className="shrink-arrow"
+            />
+          </a>
         </div>
         <div className="links-container">
           <nav id="nav">
@@ -541,34 +582,24 @@ const App = () => {
           </section>
         </div>
         <div className="project-container">
-        <div className="wave2-background"></div>
+          <div className="wave2-background"></div>
           <section id="projects">
             <h1 className="section-title">Projects</h1>
-            <div className="project">
-              <img
-                src="Proj_Images/Proj_Bracket.jpg"
-                alt="Placeholder Project 1"
-              />
-              <div className="project-description">
-                <h3>Placeholder Project 1</h3>
-                <p>Description of Placeholder project 1.</p>
-              </div>
-            </div>
-            <hr className="projdiv" />
-            <div className="project-rev">
-              <div className="project-description">
-                <h3>Placeholder Project 1</h3>
-                <p>Description of Placeholder project 1.</p>
-              </div>
-              <img
-                src="Proj_Images/Proj_Bracket.jpg"
-                alt="Placeholder Project 1"
-              />
+            <div className="projects-grid">
+              {projectData.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                  date={project.date}
+                />
+              ))}
             </div>
           </section>
         </div>
         <div className="contact-container">
-        <div className="wave3-background"></div>
+          <div className="wave3-background"></div>
           <hr />
           <section id="contact">
             <h1 className="section-title">Contact</h1>
