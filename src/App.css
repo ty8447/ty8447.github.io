@@ -1,6 +1,6 @@
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 1px;
   position: fixed;
   right: 0;
 }
@@ -25,13 +25,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: rgb(217, 155, 103);
+  background-color: #2b6d89;
   color: #FFF;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-right: 12px;
 }
 
 .body-container {
