@@ -102,19 +102,19 @@ const App = () => {
             <h1>Cole Rabe</h1>
             <p>Mechanical Engineer | Electrical Engineer</p>
           </div>
-        </div>
-        <div className="links-container">
-          <nav id="nav">
-            <Nav />
-          </nav>
-        </div>
-        <a href="#skills" className="scroll-arrow">
+          <a href="#skills" className="scroll-arrow">
           <img
             src="Icons/scroll_arrow.png"
             alt="Scroll Arrow"
             className="shrink-arrow"
           />
         </a>
+        </div>
+        <div className="links-container">
+          <nav id="nav">
+            <Nav />
+          </nav>
+        </div>
         <div className="skill-container">
           <div className="wave1-background"></div>
           <section id="skills">

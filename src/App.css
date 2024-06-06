@@ -27,12 +27,16 @@ body {
   background-color: rgb(217, 155, 103);
   color: #FFF;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .body-container {
   position: relative;
-  width: auto;
   z-index: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-text {
@@ -91,7 +95,7 @@ body {
 /* Links Container */
 .links-container {
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1002;
   text-align: center;
@@ -99,12 +103,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: rgb(24, 35, 54);
   justify-content: center;
-}
-
-.links-container .links {
-  /* No changes needed */
+  text-align: center;
 }
 
 .links-container nav ul {
@@ -123,11 +123,11 @@ body {
 }
 
 .links-container a.active {
-  color: rgb(235, 156, 134);
+  color: red;
 }
 
 .links-container a:hover {
-  color: rgb(235, 156, 134);
+  color: red;
 }
 
 .title-container {
@@ -253,8 +253,8 @@ section {
 
 @media(prefers-reduced-motion: no-preference) {
   #skills h1 {
-    opacity: 0;
-    animation: fade-in linear forwards;
+    opacity: 1;
+    /* animation: fade-in linear forwards; */
     animation-timeline: view();
     animation-range: contain 30% cover 65%;
 
@@ -285,7 +285,7 @@ section {
   }
 
   #skills h2 {
-    animation: fade-in linear ease-in 1s;
+    /* animation: fade-in linear ease-in 1s; */
     pointer-events: none;
   }
 }
@@ -380,16 +380,9 @@ section {
 .skill-container {
   text-align: center;
   vertical-align: center;
+  height: auto;
   position: relative;
-  padding-bottom: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
   background-color: rgb(215, 157, 104);
-}
-
-.parallax-slow {
-  --parallax-speed: 300;
-
 }
 
 .project-container {
@@ -579,7 +572,7 @@ section {
   }
 }
 
-@keyframes fade-in {
+/* @keyframes fade-in {
   from {
     transform: translateY(150vh);
     opacity: 0;
@@ -590,4 +583,4 @@ section {
     opacity: 1;
   }
 
-}
+} */
