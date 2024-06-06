@@ -361,7 +361,7 @@ section {
 
 .skill-categories {
   display: flex;
-  font-size:1.5rem;
+  font-size:2rem;
   justify-content: space-between;
   padding: 0 5vw;
   position: relative;
@@ -501,15 +501,15 @@ section {
   }
 
   .sksoftware {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sklanguages {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sktraining {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 }
 
@@ -527,15 +527,15 @@ section {
   }
 
   .sksoftware {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sklanguages {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sktraining {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 }
 
@@ -553,15 +553,15 @@ section {
   }
 
   .sksoftware {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sklanguages {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sktraining {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 }
 
@@ -579,15 +579,15 @@ section {
   }
 
   .sksoftware {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sklanguages {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .sktraining {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 }
 
