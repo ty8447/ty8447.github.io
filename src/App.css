@@ -466,7 +466,11 @@ section {
 .contact-container {
   /* background-color: #4D69B0; */
   background-color: #e3d8ad;
-  height: 80vh;
+  height: auto;
+}
+
+.copyright{
+  padding-bottom: 5px;
 }
 
 #contact {
