@@ -261,14 +261,6 @@ section {
 }
 
 @media(prefers-reduced-motion: no-preference) {
-  #skills h1 {
-    opacity: 1;
-    /* animation: fade-in linear forwards; */
-    animation-timeline: view();
-    animation-range: contain 30% cover 65%;
-
-  }
-
   .section-title {
     font-size: 4rem;
     pointer-events: none;
@@ -284,7 +276,8 @@ section {
   }
 
   .skill-title {
-    transition: position 0.3s ease-in-out, top 0.3s ease-in-out;
+    animation: opacity 0.5s ease-in forwards;
+    opacity: 0;
   }
 
   .skill-title.sticky {
@@ -370,7 +363,6 @@ section {
   padding: 0 5vw;
   position: relative;
   justify-content: center;
-
 }
 
 .sksoftware {
@@ -378,6 +370,9 @@ section {
   padding-bottom: 20px;
   align-items: center;
   flex-direction: column;
+  animation: opacity 0.5s 0.3s ease-in forwards;
+  /* Animation definition */
+  opacity: 0;
 
 
 }
@@ -387,6 +382,9 @@ section {
   padding-bottom: 20px;
   align-items: center;
   flex-direction: column;
+  animation: opacity 0.5s 0.8s ease-in forwards;
+  /* Animation definition */
+  opacity: 0;
 
 }
 
@@ -395,6 +393,9 @@ section {
   padding-bottom: 20px;
   align-items: center;
   flex-direction: column;
+  animation: opacity 0.5s 1.3s ease-in forwards;
+  /* Animation definition */
+  opacity: 0;
 
 }
 
@@ -402,8 +403,8 @@ section {
 
 .skill-container {
   text-align: center;
-  vertical-align: center;
-  height: 120vh;
+  height: auto;
+  min-height: 120vh;
   position: relative;
   /* background-color: rgb(215, 157, 104); */
   background-color: #256f89;
@@ -470,7 +471,6 @@ section {
   align-items: center;
   flex-direction: row;
   padding: 0px;
-  vertical-align: center;
 }
 
 .contact-items li {
@@ -540,7 +540,7 @@ section {
     width: 3vw;
   }
 
-  .icon{
+  .icon {
     width: 5vw;
   }
 
@@ -564,7 +564,7 @@ section {
     width: 3vw;
   }
 
-  .icon{
+  .icon {
     width: 7vw;
   }
 }
@@ -574,8 +574,8 @@ section {
     width: 10vw;
   }
 
-  
-  .icon{
+
+  .icon {
     width: 9vw;
     max-width: 10vw;
   }
@@ -588,8 +588,20 @@ section {
     width: 3vw;
   }
 
-  .skill-categories{
+  .skill-categories {
     font-size: 1.5rem;
 
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+    /* Start with opacity 0 */
+  }
+
+  to {
+    opacity: 1;
+    /* End with opacity 1 */
   }
 }

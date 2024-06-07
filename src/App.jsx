@@ -36,6 +36,8 @@ const App = () => {
   const [selectedCardRef, setSelectedCardRef] = useState(null);
   const [activeLink, setActiveLink] = useState("#skills");
   const [isSticky, setIsSticky] = useState(false);
+  const [isSkillsVisible, setIsSkillsVisible] = useState(false);
+  const [isSkillsInView, setIsSkillsInView] = useState(false);
   const linksContainerRef = useRef(null);
   const titleContainerRef = useRef(null);
 
@@ -51,24 +53,25 @@ const App = () => {
     ];
     const observer = new IntersectionObserver(
       (entries) => {
-        console.log("Intersection Observer Triggered");
         entries.forEach((entry) => {
-          console.log(entry.target.id, entry.isIntersecting);
           if (entry.isIntersecting) {
-            console.log("Section in View:", entry.target.id);
             setActiveLink(`#${entry.target.id}`);
+            if (entry.target.id === "skills") {
+              setIsSkillsVisible(true);
+            }
           }
         });
       },
       { threshold: 0.2 }
     );
 
+    if (skillRef.current) {
+      observer.observe(skillRef.current);
+    }
+
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
-        console.log("Observing:", id, ref.current);
         observer.observe(ref.current);
-      } else {
-        console.log("Ref not set for:", id);
       }
     });
 
@@ -76,19 +79,15 @@ const App = () => {
       if (linksContainerRef.current && titleContainerRef.current) {
         const titleContainerBottom = titleContainerRef.current.getBoundingClientRect().bottom;
         const linksContainerTop = linksContainerRef.current.getBoundingClientRect().top;
-        if (titleContainerBottom <= 0 && linksContainerTop <= 0) {
-          setIsSticky(true);
-        } else {
-          setIsSticky(false);
-        }
+        setIsSticky(titleContainerBottom <= 0 && linksContainerTop <= 0);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
+
       sections.forEach(({ id, ref }) => {
         if (ref.current) {
-          console.log("Unobserving:", id, ref.current);
           observer.unobserve(ref.current);
         } else {
           console.log("Ref not set for:", id);
@@ -97,6 +96,12 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (isSkillsInView) {
+      setIsSkillsVisible(true);
+    }
+  }, [isSkillsInView]);
 
   const projectData = [
     {
@@ -189,7 +194,7 @@ const App = () => {
           <section id="skills" ref={skillRef}>
             <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
-              <div className="sksoftware">
+              <div className={`sksoftware ${isSkillsVisible ? 'fade-in' : ''}`}>
                 <h2>Software</h2>
                 <div className="icons-column">
                   <div className="icon" title="Altium Designer">
@@ -508,25 +513,9 @@ const App = () => {
                       <path d="M7.833 6.666v-.055c0-1-.667-1.5-1.778-1.5H4.389v3.055h1.723c1.111 0 1.721-.666 1.721-1.5zM0 0v24h24V0H0zm2.223 3.167h4c2.389 0 3.833 1.389 3.833 3.445v.055c0 2.278-1.778 3.5-4.001 3.5H4.389v2.945H2.223V3.167zM11.277 21h-9v-1.5h9V21zm4.779-7.777c-2.944.055-5.111-2.223-5.111-5.057C10.944 5.333 13.056 3 16.111 3c1.889 0 3 .611 3.944 1.556l-1.389 1.61c-.778-.722-1.556-1.111-2.556-1.111-1.658 0-2.873 1.375-2.887 3.084.014 1.709 1.174 3.083 2.887 3.083 1.111 0 1.833-.445 2.61-1.167l1.39 1.389c-.999 1.112-2.166 1.779-4.054 1.779z" />
                     </svg>
                   </div>
-                  <div className="icon" title="Matlab">
-                    <svg
-                      fill="#FFF"
-                      width="30px"
-                      height="30px"
-                      viewBox="0 0 512 512"
-                      enableBackground="new 0 0 512 512"
-                    >
-                      <g id="5151e0c8492e5103c096af88a51fbe2a">
-                        <path
-                          display="inline"
-                          d="M343.158,24.759l0.009-0.74c-0.096,0-0.191-0.004-0.287-0.004c-1.318,0-2.604,0.116-3.867,0.312c-2.013,0.108-3.984,0.665-5.931,1.68c-14.695,6.03-26.281,25.28-40.275,48.589c-20.493,34.142-45.993,76.629-89.724,87.313c-17.25,4.208-37.639,28.647-57.046,53.32c-1.771,2.245-3.402,4.316-4.857,6.138l-0.482,0.599L0.5,279.95l113.657,80.011c47.719-22.41,62.32,20.51,101.834,128.024c79.515-8.925,132.87-136.009,177.182-144.359c54.955-10.351,59.563,31.729,118.327,67.983C452.449,283.864,389.775,36.669,343.158,24.759z M172.019,316.313l-56.789,28.785l-88.381-62.224L145.99,233.6l23.125,17.184l35.397,26.847C194.62,291.332,183.845,304.365,172.019,316.313z M212.078,266.797l-35.264-26.206l-21.595-16.381c0.283-0.357,0.565-0.72,0.856-1.085c12.451-15.832,35.63-45.291,50.04-48.81c40.188-9.817,65.588-41.959,85.416-73.182C272.418,149.307,248.71,212.35,212.078,266.797z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </div>
                 </div>
               </div>
-              <div className="sklanguages">
+              <div className={`sklanguages ${isSkillsVisible ? 'fade-in' : ''}`}>
                 <h2>Languages</h2>
                 <div className="icons-column">
                   <div className="icon" title="HTML">
@@ -581,9 +570,25 @@ const App = () => {
                       <path d="m20.657 7.002-5.046 2.913-1.046.605-.001-.001L12 12l-2.563 1.48A2.964 2.964 0 0 0 12 14.961a2.97 2.97 0 0 0 2.565-1.481l2.563 1.483a5.944 5.944 0 0 1-5.129 2.959 5.926 5.926 0 0 1-5.128-2.962l-3.529 2.038c.14.242.332.453.543.575l7.345 4.24c.423.245 1.115.245 1.539 0l7.345-4.24c.211-.122.403-.333.543-.575.14-.241.226-.513.226-.758V7.76c0-.245-.086-.517-.226-.758zm-2.735 5.327h-.658v.658h-.657v-.658h-.658v-.658h.658v-.658h.657v.658h.658v.658zm2.468 0h-.658v.658h-.658v-.658h-.657v-.658h.657v-.658h.658v.658h.658v.658z" />
                     </svg>
                   </div>
+                  <div className="icon" title="Matlab">
+                    <svg
+                      fill="#FFF"
+                      width="30px"
+                      height="30px"
+                      viewBox="0 0 512 512"
+                      enableBackground="new 0 0 512 512"
+                    >
+                      <g id="5151e0c8492e5103c096af88a51fbe2a">
+                        <path
+                          display="inline"
+                          d="M343.158,24.759l0.009-0.74c-0.096,0-0.191-0.004-0.287-0.004c-1.318,0-2.604,0.116-3.867,0.312c-2.013,0.108-3.984,0.665-5.931,1.68c-14.695,6.03-26.281,25.28-40.275,48.589c-20.493,34.142-45.993,76.629-89.724,87.313c-17.25,4.208-37.639,28.647-57.046,53.32c-1.771,2.245-3.402,4.316-4.857,6.138l-0.482,0.599L0.5,279.95l113.657,80.011c47.719-22.41,62.32,20.51,101.834,128.024c79.515-8.925,132.87-136.009,177.182-144.359c54.955-10.351,59.563,31.729,118.327,67.983C452.449,283.864,389.775,36.669,343.158,24.759z M172.019,316.313l-56.789,28.785l-88.381-62.224L145.99,233.6l23.125,17.184l35.397,26.847C194.62,291.332,183.845,304.365,172.019,316.313z M212.078,266.797l-35.264-26.206l-21.595-16.381c0.283-0.357,0.565-0.72,0.856-1.085c12.451-15.832,35.63-45.291,50.04-48.81c40.188-9.817,65.588-41.959,85.416-73.182C272.418,149.307,248.71,212.35,212.078,266.797z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <div className="sktraining">
+              <div className={`sktraining ${isSkillsVisible ? 'fade-in' : ''}`}>
                 <h2>Training</h2>
                 <div className="icons-column">
                   <div className="icon" title="FDM/SLA 3D Printing">
