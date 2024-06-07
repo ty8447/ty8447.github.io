@@ -19,6 +19,7 @@
 /* General Styles */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -466,7 +467,7 @@ section {
 
 #contact {
   text-align: center;
-  padding-top: 30vh;
+  padding-top: 10vh;
 }
 
 .contact-items {
