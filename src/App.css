@@ -27,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #2b6d89;
+  background-color: #e3d8ad;
   color: #FFF;
   box-sizing: border-box;
   justify-content: center;
@@ -474,6 +474,7 @@ section {
 
 .copyright{
   padding-bottom: 5px;
+  height:auto;
 }
 
 #contact {
