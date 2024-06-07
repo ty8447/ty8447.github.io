@@ -172,9 +172,9 @@ const App = () => {
         <div className="title-container" ref={titleContainerRef}>
           {/* <Wireframe /> */}
           <div className="name-profession-container">
-            <h1>Cole Rabe</h1>
-            <p>Mechanical Engineer | Electrical Engineer</p>
-            <a href="Resume_Cole_Rabe.pdf" download="" class="resume-button">Download Resume</a>
+            <h1 style={{pointerEvents:"none"}}>Cole Rabe</h1>
+            <p style={{pointerEvents:"none"}}>Mechanical Engineer | Electrical Engineer</p>
+            <a href="Resume_Cole_Rabe.pdf" download="Resume_Cole_Rabe.pdf" class="resume-button">Download Resume</a>
           </div>
           <a href="#skills" className="scroll-arrow">
             <img
