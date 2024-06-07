@@ -15,11 +15,11 @@ const links = [
         path: "#contact",
         label: "Contact",
     },
-    {
-        path: "Resume_Cole_Rabe.pdf",
-        label: "Download Resume",
-        isDownload: true,
-    },
+    // {
+    //     path: "Resume_Cole_Rabe.pdf",
+    //     label: "Download Resume",
+    //     isDownload: true,
+    // },
 ];
 
 const Nav = ({ activeLink, onLinkClick }) => {

@@ -174,6 +174,7 @@ const App = () => {
           <div className="name-profession-container">
             <h1>Cole Rabe</h1>
             <p>Mechanical Engineer | Electrical Engineer</p>
+            <a href="Resume_Cole_Rabe.pdf" download="" class="resume-button">Download Resume</a>
           </div>
           <a href="#skills" className="scroll-arrow">
             <img

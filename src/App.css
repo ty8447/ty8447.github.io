@@ -222,13 +222,17 @@ nav ul li a {
   white-space: nowrap;
 }
 
-nav ul li a.resume-button {
+.resume-button {
   background-color: #444;
+  color: white;
   border-radius: 5px;
+  box-shadow: 0;
+  z-index: 30;
 }
 
-nav ul li a.resume-button:hover {
+.resume-button:hover {
   background-color: #555;
+  color:#b88a7d;
 }
 
 header {
