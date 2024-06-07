@@ -257,7 +257,8 @@ section {
   text-align: center;
   flex-direction: row;
   z-index: 1;
-  padding-top: 10vh
+  padding-top: 10vh;
+  padding-bottom: 20px;
 }
 
 @media(prefers-reduced-motion: no-preference) {
@@ -399,7 +400,9 @@ section {
 
 }
 
-
+#projects{
+  padding-bottom: 20px;
+}
 
 .skill-container {
   text-align: center;
@@ -458,10 +461,12 @@ section {
 .contact-container {
   /* background-color: #4D69B0; */
   background-color: #e3d8ad;
+  height: 80vh;
 }
 
 #contact {
   text-align: center;
+  padding-top: 30vh;
 }
 
 .contact-items {
