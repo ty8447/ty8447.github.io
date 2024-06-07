@@ -301,19 +301,18 @@ section {
 
 .icons-column {
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 20vw;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3vw, 1fr));
+  max-width: 100%;
+  gap: 1vh;
 }
 
 .icon {
   position: relative;
-  width: 4vw;
-  max-width: 3vw;
   height: auto;
+  max-width: 56px;
   display: flex;
-  padding: 3px 5px;
+  padding: 3px;
 }
 
 .icon img,
@@ -404,7 +403,7 @@ section {
 .skill-container {
   text-align: center;
   vertical-align: center;
-  height: auto;
+  height: 120vh;
   position: relative;
   /* background-color: rgb(215, 157, 104); */
   background-color: #256f89;
@@ -477,7 +476,6 @@ section {
 .contact-items li {
   margin: 0 10px;
   padding-right: 10px;
-  vertical-align: center;
   display: flex;
   align-items: center;
   width: auto;
@@ -542,17 +540,15 @@ section {
     width: 3vw;
   }
 
-  /* .sksoftware {
-    font-size: 2.5vw;
+  .icon{
+    width: 5vw;
   }
 
-  .sklanguages {
-    font-size: 2.5vw;
+  .icons-column {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   }
-
-  .sktraining {
-    font-size: 2.5vw;
-  } */
 }
 
 @media (max-width: 768px) {
@@ -568,22 +564,20 @@ section {
     width: 3vw;
   }
 
-  /* .sksoftware {
-    font-size: 2vw;
+  .icon{
+    width: 7vw;
   }
-
-  .sklanguages {
-    font-size: 2vw;
-  }
-
-  .sktraining {
-    font-size: 2vw;
-  } */
 }
 
 @media (max-width: 576px) {
   .shrink_arrow {
     width: 10vw;
+  }
+
+  
+  .icon{
+    width: 9vw;
+    max-width: 10vw;
   }
 
   .contact-items li a {

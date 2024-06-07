@@ -10,6 +10,7 @@ import "./App.css";
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 import Nav from './Nav.jsx';
+import Copyright from './Copyright';
 
 const Skills = () => <h1>Skills</h1>;
 const Projects = () => <h1>Projects</h1>;
@@ -61,7 +62,7 @@ const App = () => {
       },
       { threshold: 0.2 }
     );
-  
+
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
         console.log("Observing:", id, ref.current);
@@ -70,7 +71,7 @@ const App = () => {
         console.log("Ref not set for:", id);
       }
     });
-  
+
     const handleScroll = () => {
       if (linksContainerRef.current && titleContainerRef.current) {
         const titleContainerBottom = titleContainerRef.current.getBoundingClientRect().bottom;
@@ -82,7 +83,7 @@ const App = () => {
         }
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       sections.forEach(({ id, ref }) => {
@@ -95,7 +96,7 @@ const App = () => {
       });
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);  
+  }, []);
 
   const projectData = [
     {
@@ -104,6 +105,7 @@ const App = () => {
       description: 'Description of Placeholder project 1.',
       date: 'January 2023',
       status: 'In Progress',
+      objectPosition: 'center center',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -111,6 +113,7 @@ const App = () => {
       description: 'Description of Placeholder project 2.',
       date: 'February 2023',
       status: 'Completed',
+      objectPosition: '0% 10%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -118,6 +121,7 @@ const App = () => {
       description: 'Description of Placeholder project 3.',
       date: 'March 2023',
       status: 'In Progress',
+      objectPosition: '0% 15%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -125,6 +129,7 @@ const App = () => {
       description: 'Description of Placeholder project 4.',
       date: 'April 2023',
       status: 'Paused',
+      objectPosition: '0% 20%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -132,6 +137,7 @@ const App = () => {
       description: 'Description of Placeholder project 5.',
       date: 'May 2023',
       status: 'In Progress',
+      objectPosition: '0% 0%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -139,6 +145,7 @@ const App = () => {
       description: 'Description of Placeholder project 6.',
       date: 'June 2023',
       status: 'In Progress',
+      objectPosition: '0% 0%',
     },
     // Add more projects here as needed
   ];
@@ -172,7 +179,7 @@ const App = () => {
           </a>
         </div>
         <div className={`links-container ${isSticky ? "sticky" : ""}`}
-        ref={linksContainerRef}>
+          ref={linksContainerRef}>
           <nav id="nav">
             <Nav activeLink={activeLink} onLinkClick={setActiveLink} />
           </nav>
@@ -616,6 +623,7 @@ const App = () => {
                   date={project.date}
                   status={project.status}
                   onLearnMore={(cardRef) => handleLearnMore(project, cardRef)}
+                  objectPosition={project.objectPosition}
                 />
               ))}
             </div>
@@ -626,7 +634,7 @@ const App = () => {
         <div className="contact-container">
           <div className="wave3-background"></div>
           <section id="contact" ref={contactRef}>
-            <h1 className="section-title" style={{color: "#132852"}}>Contact</h1>
+            <h1 className="section-title" style={{ color: "#132852" }}>Contact</h1>
             <ul className="contact-items">
               <li>
                 <svg fill="#132852" width="30px" height="30px" viewBox="0 0 32 32">
@@ -679,6 +687,7 @@ const App = () => {
               </li>
             </ul>
           </section>
+          <Copyright />
         </div>
         <Routes>
           <Route path="/skills" element={<Skills />} />

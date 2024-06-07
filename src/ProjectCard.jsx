@@ -2,7 +2,7 @@
 import React from 'react';
 import './ProjectCard.css';
 
-const ProjectCard = ({ image, title, description, date, status, onLearnMore }) => {
+const ProjectCard = ({ image, title, description, date, status, onLearnMore, objectPosition }) => {
     const cardRef = React.useRef(null);
 
     // Determine the class name for the status pill based on the status
@@ -11,7 +11,12 @@ const ProjectCard = ({ image, title, description, date, status, onLearnMore }) =
     return (
         <div className="project-card" ref={cardRef}>
             <div className={statusClass}>{status}</div>
-            <img src={image} alt={title} className="project-image" />
+            <img
+                src={image}
+                alt={title}
+                className="project-image"
+                style={{ objectPosition: objectPosition }}
+            />
             <div className="project-info">
                 <h3 className="project-title">{title}</h3>
                 <p className="project-date">{date}</p>
@@ -21,5 +26,6 @@ const ProjectCard = ({ image, title, description, date, status, onLearnMore }) =
         </div>
     );
 };
+
 
 export default ProjectCard;
