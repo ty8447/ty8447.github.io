@@ -28,7 +28,7 @@
 }
 
 .project-info {
-    padding: 20px;
+    padding: 5px 20px;
 }
 
 .project-info h3 {
@@ -78,7 +78,7 @@
     z-index: 1;
     transition-duration: 1s ease;
     border: 2px solid ;
-    background-color: rgba(63, 63, 63, 0.7);
+    background-color: rgba(63, 63, 63, 0.85);
 }
 
 /* Specific status styles */
