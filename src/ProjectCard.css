@@ -94,7 +94,7 @@
 }
 
 .status-pill.paused {
-    color: #748ffc;
-    border: 2px solid #748ffc;
+    color: #3c80ff;
+    border: 2px solid #3c80ff;
     /* Paused color */
 }
