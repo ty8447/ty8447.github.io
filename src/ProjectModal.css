@@ -118,13 +118,13 @@
 }
 
 .status-pill.completed {
-    color: #4caf50;
-    border: 2px solid #4caf50;
-    /* Completed color */
-}
+  color: #1ce726;
+  border: 2px solid #1ce726;
+              /* Completed color */
+              }
 
-.status-pill.paused {
-    color: #748ffc;
-    border: 2px solid #748ffc;
-    /* Paused color */
-}
+              .status-pill.paused {
+                  color: #3c80ff;
+                      border: 2px solid #3c80ff;
+                          /* Paused color */
+                          }
