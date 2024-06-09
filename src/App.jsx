@@ -129,7 +129,7 @@ const App = () => {
       objectPosition: '0% 25%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Tendy.jpg',
       title: 'Tendy: The Virtual Home Bartending Assistant ',
       description: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded.',
       date: 'April 2023',
@@ -145,7 +145,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_LightBar.jpg',
       title: 'Custom LED Headlights for Personal Electric Vehicles',
       description: 'After building a bunch of electric boards I found that there were not many small but reliable solutions for head and tail lights (besides the individual solutions for bikes) so I decided that I was going to make one myself for my Onewheel and Longboard.',
       date: 'November 2023',
@@ -185,7 +185,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_CNC.jpg',
       title: 'DIY CNC Machine',
       description: 'Back when there was the Oculus Rift and Google Cardboard, I was inspired to try and see if I could make a prototype myself.',
       date: 'February 2018',
@@ -233,7 +233,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_MQP.jpg',
       title: 'Designing a Mechanism to Avoid Ice Deformation of Fixed Docks',
       description: 'My senior capstone project was to design a mechanism that would reduce the deformation caused by ice on fixed docks. This project was started after my partner got frustrated with the process for winterization of a fixed dock and created a team to help solve that.',
       date: 'January 2023',
@@ -273,7 +273,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Foot.jpg',
       title: 'Reverse Engineering a Consumable Computer Foot',
       description: "After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.",
       date: 'July 2018',
@@ -285,6 +285,14 @@ const App = () => {
       title: 'Designing a Random Voronoi Generator',
       description: "During an intro to programming class we were asked to build a program to do anything, as long as it was in Python. This program was built in 48 hours.",
       date: 'January 2023',
+      status: 'Completed',
+      objectPosition: '0% 40%',
+    },
+    {
+      image: 'Proj_Images/Proj_Drums.jpg',
+      title: 'Using Wii Remotes to Play Air Drums',
+      description: "This was the final project for a music programming class where the goal was to use Max MSP to create an interactive program. Over the course of 2 weeks, this program was planned out, developed, and polished to deliver a fun experience for the user.",
+      date: 'March 2021',
       status: 'Completed',
       objectPosition: '0% 40%',
     },
@@ -305,7 +313,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Sign.jpg',
       title: 'Designing a Vintage On Air Sign ',
       description: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution..',
       date: 'October 2019',
