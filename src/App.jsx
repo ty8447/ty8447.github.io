@@ -107,7 +107,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'MacDeck Dynamic Keyboard',
-      description: 'Description of Placeholder project 1.',
+      description: 'Back when the Stream Deck was first released I loved the concept of having a dynamic macro keyboard for productivity, but I felt that the design was lacking in terms of control. My goal for this project was to design a product where it would functionally work the same as that device but incorporates many of the missing features I was looking for.',
       date: 'August 2021',
       status: 'In Progress',
       objectPosition: 'center center',
@@ -115,7 +115,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'FWG Flashlight',
-      description: 'Description of Placeholder project 2.',
+      description: 'My friend and I love flashlights and the we wanted to challenge ourselves to make one from scratch, but by adding brand new features to increase ease of use.',
       date: 'February 2022',
       status: 'In Progress',
       objectPosition: '0% 10%',
@@ -123,7 +123,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'DIY Electric Longboard',
-      description: 'Description of Placeholder project 3.',
+      description: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
       date: 'June 2020',
       status: 'Completed',
       objectPosition: '0% 15%',
@@ -131,7 +131,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Tendy: The Virtual Home Bartending Assistant ',
-      description: 'Description of Placeholder project 4.',
+      description: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded.',
       date: 'April 2023',
       status: 'In Progress',
       objectPosition: '0% 20%',
@@ -139,7 +139,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Home LED Effect Controller',
-      description: 'Description of Placeholder project 5.',
+      description: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded',
       date: 'August 2021',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -147,7 +147,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Custom LED Headlights for Personal Electric Vehicles',
-      description: 'Description of Placeholder project 6.',
+      description: 'After building a bunch of electric boards I found that there were not many small but reliable solutions for head and tail lights (besides the individual solutions for bikes) so I decided that I was going to make one myself for my Onewheel and Longboard.',
       date: 'November 2023',
       status: 'Paused',
       objectPosition: '0% 0%',
@@ -155,7 +155,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Custom Electric Vehicles Battery Packs',
-      description: 'Description of Placeholder project 6.',
+      description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application .',
       date: 'May 2022',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -163,7 +163,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Automated Item Purchaser',
-      description: 'Description of Placeholder project 6.',
+      description: "When moving into my dorm room I wanted to add more light but didn't want to damage anything, so LED lights were used instead. Instead of using low cost led lights, I took the opportunity to design a control system for them and the project became more complex from there.",
       date: 'June 2023',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -171,7 +171,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Wirelessly Communicating Lamps',
-      description: 'Description of Placeholder project 6.',
+      description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'December 2023',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -179,7 +179,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Custom VR Headset',
-      description: 'Description of Placeholder project 6.',
+      description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'January 2016',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -187,7 +187,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'DIY CNC Machine',
-      description: 'Description of Placeholder project 6.',
+      description: 'Back when there was the Oculus Rift and Google Cardboard, I was inspired to try and see if I could make a prototype myself.',
       date: 'February 2018',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -195,7 +195,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Portfolio Website',
-      description: 'Description of Placeholder project 6.',
+      description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'June 2024',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -203,7 +203,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Scratch Built Onewheel',
-      description: 'Description of Placeholder project 6.',
+      description: 'While updating my resume I found that I wanted to have a way of sharing the most recent version of my projects and resume without needing to resend.',
       date: 'July 2022',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -211,7 +211,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Custom Full Sized Arcade Machine',
-      description: 'Description of Placeholder project 6.',
+      description: 'After renovating my basement, I found that there was some extra space to put something and I found that an arcade machine would fit perfectly. After a bunch of research, I found the cost of an arcade machine to be too high and limiting in the games it would provide so I ended up building one myself.',
       date: 'May 2018',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -219,7 +219,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Simple LED Mapper',
-      description: 'Description of Placeholder project 6.',
+      description: 'In order to determine the walls of the room and amount of LEDs on each wall for animations, I made a program that easily achieved this and gives an output that can be directly inputted into the LED Controller',
       date: 'December 2022',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -227,7 +227,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Handheld Fog Machine',
-      description: 'Description of Placeholder project 6.',
+      description: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       date: 'December 2022',
       status: 'In Progress',
       objectPosition: '0% 0%',
@@ -235,7 +235,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Designing a Mechanism to Avoid Ice Deformation of Fixed Docks',
-      description: 'Description of Placeholder project 6.',
+      description: 'My senior capstone project was to design a mechanism that would reduce the deformation caused by ice on fixed docks. This project was started after my partner got frustrated with the process for winterization of a fixed dock and created a team to help solve that.',
       date: 'January 2023',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -243,7 +243,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Reducing Traffic Congestion in Downtown Nantucket, MA',
-      description: 'Description of Placeholder project 6.',
+      description: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       date: 'October 2022',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -251,7 +251,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Radio Controlled FPV Racing Drones',
-      description: 'Description of Placeholder project 6.',
+      description: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       date: 'February 2016',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -259,7 +259,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Developing a Local Multiplayer Game within Unreal Engine 4',
-      description: 'Description of Placeholder project 6.',
+      description: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       date: 'May 2016',
       status: 'Paused',
       objectPosition: '0% 0%',
@@ -267,7 +267,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Restoration of a Vintage Pipe Failure Tester',
-      description: 'Description of Placeholder project 6.',
+      description: "This project came about after I was given a broken tester that he didn't have time to fix and asked if I wanted to try and fix it.",
       date: 'April 2023',
       status: 'In Progress',
       objectPosition: '0% 0%',
@@ -275,7 +275,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Reverse Engineering a Consumable Computer Foot',
-      description: 'Description of Placeholder project 6.',
+      description: 'After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.',
       date: 'July 2018',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -283,7 +283,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Developing an Ultrasonic Levitating Device',
-      description: 'Description of Placeholder project 6.',
+      description: 'The first project I used CAD for was to design and build a device that uses low cost ultrasonic sensors to float very light objects.',
       date: 'January 2019',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -291,7 +291,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Designing a custom controller to interact with mains voltage devices',
-      description: 'Description of Placeholder project 6.',
+      description: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution.',
       date: 'October 2019',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -299,12 +299,11 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Designing a Vintage On Air Sign ',
-      description: 'Description of Placeholder project 6.',
+      description: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution..',
       date: 'October 2019',
       status: 'Completed',
       objectPosition: '0% 0%',
     },
-    // Add more projects here as needed
   ];
 
   const handleLearnMore = (project, cardRef) => {
