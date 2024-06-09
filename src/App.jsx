@@ -153,7 +153,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Battery.jpg',
       title: 'Custom Electric Vehicles Battery Packs',
       description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application .',
       date: 'May 2022',
@@ -169,12 +169,12 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Lamps.jpg',
       title: 'Wirelessly Communicating Lamps',
       description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'December 2023',
       status: 'Completed',
-      objectPosition: '0% 0%',
+      objectPosition: '0% 40%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -281,6 +281,14 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
+      image: 'Proj_Images/Proj_Voronoi.jpg',
+      title: 'Designing a Random Voronoi Generator',
+      description: "During an intro to programming class we were asked to build a program to do anything, as long as it was in Python. This program was built in 48 hours.",
+      date: 'January 2023',
+      status: 'Completed',
+      objectPosition: '0% 40%',
+    },
+    {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Developing an Ultrasonic Levitating Device',
       description: 'The first project I used CAD for was to design and build a device that uses low cost ultrasonic sensors to float very light objects.',
@@ -289,12 +297,12 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_DMX.jpg',
       title: 'Designing a custom controller to interact with mains voltage devices',
       description: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution.',
       date: 'October 2019',
       status: 'Completed',
-      objectPosition: '0% 0%',
+      objectPosition: '0% 40%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
