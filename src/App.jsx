@@ -121,7 +121,7 @@ const App = () => {
       objectPosition: '0% 10%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Longboard.jpg',
       title: 'DIY Electric Longboard',
       description: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
       date: 'June 2020',
@@ -137,7 +137,7 @@ const App = () => {
       objectPosition: '0% 20%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_LEDControl.jpg',
       title: 'Home LED Effect Controller',
       description: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded',
       date: 'August 2021',
@@ -201,7 +201,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Onewheel.jpg',
       title: 'Scratch Built Onewheel',
       description: 'While updating my resume I found that I wanted to have a way of sharing the most recent version of my projects and resume without needing to resend.',
       date: 'July 2022',
@@ -209,7 +209,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Arcade.jpg',
       title: 'Custom Full Sized Arcade Machine',
       description: 'After renovating my basement, I found that there was some extra space to put something and I found that an arcade machine would fit perfectly. After a bunch of research, I found the cost of an arcade machine to be too high and limiting in the games it would provide so I ended up building one myself.',
       date: 'May 2018',
@@ -249,7 +249,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Drone.jpg',
       title: 'Radio Controlled FPV Racing Drones',
       description: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       date: 'February 2016',
