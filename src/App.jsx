@@ -275,7 +275,7 @@ const App = () => {
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
       title: 'Reverse Engineering a Consumable Computer Foot',
-      description: 'After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.',
+      description: "After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.",
       date: 'July 2018',
       status: 'Completed',
       objectPosition: '0% 0%',
