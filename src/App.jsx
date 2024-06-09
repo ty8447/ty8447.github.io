@@ -118,7 +118,7 @@ const App = () => {
       description: 'My friend and I love flashlights and the we wanted to challenge ourselves to make one from scratch, but by adding brand new features to increase ease of use.',
       date: 'February 2022',
       status: 'In Progress',
-      objectPosition: '0% 10%',
+      objectPosition: '0% 40%',
     },
     {
       image: 'Proj_Images/Proj_Longboard.jpg',
@@ -126,7 +126,7 @@ const App = () => {
       description: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
       date: 'June 2020',
       status: 'Completed',
-      objectPosition: '0% 15%',
+      objectPosition: '0% 25%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -206,7 +206,7 @@ const App = () => {
       description: 'While updating my resume I found that I wanted to have a way of sharing the most recent version of my projects and resume without needing to resend.',
       date: 'July 2022',
       status: 'Completed',
-      objectPosition: '0% 0%',
+      objectPosition: '0% 50%',
     },
     {
       image: 'Proj_Images/Proj_Arcade.jpg',
@@ -214,7 +214,7 @@ const App = () => {
       description: 'After renovating my basement, I found that there was some extra space to put something and I found that an arcade machine would fit perfectly. After a bunch of research, I found the cost of an arcade machine to be too high and limiting in the games it would provide so I ended up building one myself.',
       date: 'May 2018',
       status: 'Completed',
-      objectPosition: '0% 0%',
+      objectPosition: '0% 40%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
@@ -254,7 +254,7 @@ const App = () => {
       description: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       date: 'February 2016',
       status: 'Completed',
-      objectPosition: '0% 0%',
+      objectPosition: '0% 55%',
     },
     {
       image: 'Proj_Images/Proj_Bracket.jpg',
