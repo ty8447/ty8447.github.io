@@ -113,7 +113,7 @@ const App = () => {
       objectPosition: 'center center',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Flashlight.jpg',
       title: 'FWG Flashlight',
       description: 'My friend and I love flashlights and the we wanted to challenge ourselves to make one from scratch, but by adding brand new features to increase ease of use.',
       date: 'February 2022',
