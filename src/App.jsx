@@ -161,7 +161,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Purchase.jpg',
       title: 'Automated Item Purchaser',
       description: "When moving into my dorm room I wanted to add more light but didn't want to damage anything, so LED lights were used instead. Instead of using low cost led lights, I took the opportunity to design a control system for them and the project became more complex from there.",
       date: 'June 2023',
@@ -217,7 +217,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Map.jpg',
       title: 'Simple LED Mapper',
       description: 'In order to determine the walls of the room and amount of LEDs on each wall for animations, I made a program that easily achieved this and gives an output that can be directly inputted into the LED Controller',
       date: 'December 2022',
@@ -230,7 +230,7 @@ const App = () => {
       description: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       date: 'December 2022',
       status: 'In Progress',
-      objectPosition: '0% 0%',
+      objectPosition: '0% 20%',
     },
     {
       image: 'Proj_Images/Proj_MQP.jpg',
@@ -238,7 +238,7 @@ const App = () => {
       description: 'My senior capstone project was to design a mechanism that would reduce the deformation caused by ice on fixed docks. This project was started after my partner got frustrated with the process for winterization of a fixed dock and created a team to help solve that.',
       date: 'January 2023',
       status: 'Completed',
-      objectPosition: '0% 0%',
+      objectPosition: '20% 0%',
     },
     {
       image: 'Proj_Images/Proj_Nantucket.jpg',
@@ -297,7 +297,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Levitator.jpg',
       title: 'Developing an Ultrasonic Levitating Device',
       description: 'The first project I used CAD for was to design and build a device that uses low cost ultrasonic sensors to float very light objects.',
       date: 'January 2019',
