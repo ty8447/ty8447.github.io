@@ -177,7 +177,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_VR.jpg',
       title: 'Custom VR Headset',
       description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'January 2016',
@@ -225,7 +225,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Fog.jpg',
       title: 'Handheld Fog Machine',
       description: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       date: 'December 2022',
@@ -257,7 +257,7 @@ const App = () => {
       objectPosition: '0% 55%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      image: 'Proj_Images/Proj_Game.jpg',
       title: 'Developing a Local Multiplayer Game within Unreal Engine 4',
       description: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       date: 'May 2016',
