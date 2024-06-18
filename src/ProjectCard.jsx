@@ -8,8 +8,13 @@ const ProjectCard = ({ image, title, description, date, status, onLearnMore, obj
     // Determine the class name for the status pill based on the status
     const statusClass = `status-pill ${status.replace(' ', '-').toLowerCase()}`;
 
+    const handleButtonClick = (e) => {
+        e.stopPropagation();
+        onLearnMore(cardRef);
+    };
+
     return (
-        <div className="project-card" ref={cardRef}>
+        <div className="project-card" ref={cardRef} onClick={() => onLearnMore(cardRef)}>
             <div className={statusClass}>{status}</div>
             <img
                 src={image}
@@ -21,7 +26,7 @@ const ProjectCard = ({ image, title, description, date, status, onLearnMore, obj
                 <h3 className="project-title">{title}</h3>
                 <p className="project-date">{date}</p>
                 <p className="project-description">{description}</p>
-                <button className="learn-more-button" onClick={() => onLearnMore(cardRef)}>Learn More</button>
+                <button className="learn-more-button" onClick={handleButtonClick}>Learn More</button>
             </div>
         </div>
     );

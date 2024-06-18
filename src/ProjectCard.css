@@ -3,24 +3,27 @@
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
     /* Slight shadow */
     text-align: center;
     margin: 20px;
-    width: 350px;
+    width: 500px;
     position: relative;
     /* Increased width */
     transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
 }
 
 .project-image {
     width: calc(100% - 10px);
-    height: calc(200px - 10px);
+    height: 350px;
     object-fit: cover;
     margin: 0 auto;
     border-radius: 15px;
@@ -28,7 +31,11 @@
 }
 
 .project-info {
-    padding: 5px 20px;
+    padding: 5px 10px;
+    flex-grow: 1; /* Allow project-info to grow and take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .project-info h3 {
@@ -40,19 +47,26 @@
 }
 
 .project-title {
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin-top: 3px;
-    margin-bottom: 5px;
     color: #333;
 }
 
 .project-date {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #999;
+    margin-top: 0;
 }
+
+.project-description {
+    flex: 1;
+    font-size: 1.2em;
+    margin: 0;
+  }
 
 .learn-more-button {
     margin-top: 10px;
+    margin-bottom: 5px;
     padding: 10px 20px;
     border: none;
     background-color: #ffbc63;
@@ -60,6 +74,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    align-self: center;
 }
 
 .learn-more-button:hover {

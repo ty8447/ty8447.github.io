@@ -54,15 +54,22 @@ const App = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.log(`Bounding rect for ${entry.target.id}:`, entry.boundingClientRect);
           if (entry.isIntersecting) {
+            console.log(`Intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
             setActiveLink(`#${entry.target.id}`);
             if (entry.target.id === "skills") {
               setIsSkillsVisible(true);
             }
+          } else {
+            console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
           }
         });
       },
-      { threshold: 0.2 }
+      {
+        threshold: [0.1, 0.5, 1.0], // Multiple thresholds for better intersection detection
+        rootMargin: '0px 0px -50% 0px' // Adjust the root margin to better capture intersections
+      }
     );
 
     if (skillRef.current) {
@@ -72,6 +79,9 @@ const App = () => {
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
         observer.observe(ref.current);
+        console.log(`Observing section: ${id}`);
+      } else {
+        console.log(`Ref not set for: ${id}`);
       }
     });
 

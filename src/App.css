@@ -432,7 +432,6 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 0 10vw;
 }
 
 .project {
@@ -459,11 +458,6 @@ section {
   height: 50px;
   width: 70px;
   flex: 1;
-}
-
-.project-description {
-  flex: 1;
-  padding: 20px;
 }
 
 .contact-container {
