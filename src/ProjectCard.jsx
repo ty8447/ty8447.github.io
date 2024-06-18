@@ -22,6 +22,7 @@ const ProjectCard = ({ image, title, description, date, status, onLearnMore, obj
                 className="project-image"
                 style={{ objectPosition: objectPosition }}
             />
+            {/* <div className="fade-grad"></div> */}
             <div className="project-info">
                 <h3 className="project-title">{title}</h3>
                 <p className="project-date">{date}</p>

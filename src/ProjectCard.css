@@ -69,7 +69,8 @@
     margin-bottom: 5px;
     padding: 10px 20px;
     border: none;
-    background-color: #ffbc63;
+    font-size:1.02em;
+    background-color: #ffbd33;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -95,6 +96,16 @@
     border: 2px solid ;
     background-color: rgba(63, 63, 63, 0.85);
 }
+
+/* .fade-grad{
+    width:500px;
+    position: absolute;
+    top:305px;
+    z-index:1;
+    height:50px;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+} */
+
 
 /* Specific status styles */
 .status-pill.in-progress {
