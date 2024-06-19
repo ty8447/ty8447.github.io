@@ -1,144 +1,215 @@
-/* src/components/ProjectModal.css */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transition: opacity 0.3s ease;
-  }
-  
-  .modal-content {
-    background-color: white;
-    border-radius: 15px;
-    /* border: 2px solid black; */
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 75%;
-    max-height: 80%;
-    overflow-y: auto;
-    text-align: center;
-    position: relative;
-  }
-
-  .modal-content.open {
-    transform: scale(1);
-  }
-  
-  .modal-thumbnail {
-    width: 30%; /* Smaller size */
-    height: auto;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  
-  .modal-info {
-    padding: 20px;
-    position: relative;
-  }
-  
-  .modal-title {
-    margin: 10px 0;
-    position:absolute;
-    font-size: 1.5em;
-    left: 5px;
-    top: 20px;
-    color: #000;
-  }
-
-  .header{
-    width:auto;
-    padding: 10px;
-    height:50px;
-    position:relative;
-  }
-  
-  .modal-date {
-    font-size: 0.9em;
-    top: 0;
-    position: absolute;
-    left:5px;
-    color: #999;
-  }
-  
-  .modal-description {
-    color: #666;
-    margin: 15px 0;
-  }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    background-color: #e4e4e4;
-    border-radius: 5px;
-  }
-  
-  .close-button:hover {
-    background-color: #ffa500;
-  }
-  
-  /* Custom scrollbar styles */
-  .modal-content::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  .modal-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-  }
-  
-  .modal-content::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-  
-  .modal-content::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-  .no-scroll {
-    overflow: hidden;
-  }
-  
-  .status-pill {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 50px;
-    font-size: 0.8em;
-    font-weight: bold;
-    z-index: 1;
-    background-color: rgba(221, 221, 221, 0.7);
-  }
-
-  .status-pill.in-progress {
-    color: #ffbc63;
-    border: 2px solid #ffbc63;
-    /* In Progress color */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
 }
 
-.status-pill.completed {
+.modal-content {
+  background-color: white;
+  border-radius: 15px;
+  /* border: 2px solid black; */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 75%;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content p {
+  color: black;
+}
+
+.modal-content.open {
+  transform: scale(1);
+}
+
+.carousel-root {
+  text-align: center;
+  position: relative;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.carousel .slide {
+  height: 500px; /* Adjusted height of the carousel slides */
+}
+
+.carousel .slide img {
+  max-width: 100%; /* Ensure images scale properly */
+  max-height: 500px; /* Set a maximum height for the images */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Ensure images scale properly */
+  object-fit: contain; /* Ensure images fit within the slide */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.slider-wrapper{
+  background-color: #4d4d4d;
+}
+
+.carousel.carousel-slider .control-arrow {
+  z-index: 100; /* Ensure arrows are on top of images */
+  color: #000; /* Arrow color */
+  font-size: 2em; /* Adjust arrow size */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.carousel .control-prev.control-arrow:before,
+.carousel .control-next.control-arrow:before {
+  color: inherit; /* Inherit arrow color */
+}
+
+
+.modal-thumbnail {
+  width: 30%;
+  /* Smaller size */
+  height: auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-info {
+  padding: 20px;
+  padding-top: 0;
+  position: relative;
+  text-align: left;
+}
+
+.modal-title-container {
+  top: 30px;
+  display: flex; 
+  height:auto;
+  width:50%;
+  position:absolute;
+  flex-direction: row;
+}
+
+.modal-title {
+  margin: auto 0;
+  font-size: 1.5em;
+  color: #000;
+  justify-content: left;
+  display: inline-block;
+}
+
+.status-pill-modal {
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 50px;
+  font-size: 0.8em;
+  font-weight: bold;
+  background-color: rgba(221, 221, 221, 0.7);
+  top: 10px;
+  right: 10px;
+  z-index: 1; /* Ensure status pill is above content */
+}
+
+.status-pill-modal.in-progress {
+  color: #ffbc63;
+  border: 2px solid #ffbc63;
+}
+
+.status-pill-modal.completed {
   color: #1ce726;
   border: 2px solid #1ce726;
-              /* Completed color */
-              }
+}
 
-              .status-pill.paused {
-                  color: #3c80ff;
-                      border: 2px solid #3c80ff;
-                          /* Paused color */
-                          }
+.status-pill-modal.paused {
+  color: #3c80ff;
+  border: 2px solid #3c80ff;
+}
+
+.header {
+  width: auto;
+  padding: 10px;
+  height: 50px;
+  position: relative;
+}
+
+.modal-date {
+  font-size: 0.9em;
+  top: 0;
+  position: absolute;
+  left: 10px;
+  color: #999;
+}
+
+.modal-description {
+  color: #666;
+  margin: 15px 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  background-color: #e4e4e4;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #ffa500;
+}
+
+/* Custom scrollbar styles */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.tools-list {
+  margin-left: 10px;
+}
+
+.tools {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tool-pill {
+  background-color: #d1d1d1;
+  border: 0.1em solid;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}

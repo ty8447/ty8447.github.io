@@ -2,7 +2,7 @@
 import React from 'react';
 import './ProjectCard.css';
 
-const ProjectCard = ({ thumbnail, title, description, date, status, onLearnMore, objectPosition }) => {
+const ProjectCard = ({ thumbnail, title, summary, date, status, onLearnMore, objectPosition, objectScale }) => {
     const cardRef = React.useRef(null);
 
     // Determine the class name for the status pill based on the status
@@ -20,13 +20,15 @@ const ProjectCard = ({ thumbnail, title, description, date, status, onLearnMore,
                 src={thumbnail}
                 alt={title}
                 className="project-thumbnail"
-                style={{ objectPosition: objectPosition }}
+                style={{
+                    objectPosition: objectPosition
+                }}
             />
             {/* <div className="fade-grad"></div> */}
             <div className="project-info">
                 <h3 className="project-title">{title}</h3>
                 <p className="project-date">{date}</p>
-                <p className="project-description">{description}</p>
+                <p className="project-summary">{summary}</p>
                 <button className="learn-more-button" onClick={handleButtonClick}>Learn More</button>
             </div>
         </div>
