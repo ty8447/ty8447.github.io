@@ -62,7 +62,7 @@ const App = () => {
               setIsSkillsVisible(true);
             }
           } else {
-            // console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
+            console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
           }
         });
       },
@@ -79,9 +79,9 @@ const App = () => {
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
         observer.observe(ref.current);
-        // console.log(`Observing section: ${id}`);
+        console.log(`Observing section: ${id}`);
       } else {
-        // console.log(`Ref not set for: ${id}`);
+        console.log(`Ref not set for: ${id}`);
       }
     });
 
@@ -100,7 +100,7 @@ const App = () => {
         if (ref.current) {
           observer.unobserve(ref.current);
         } else {
-          // console.log("Ref not set for:", id);
+          console.log("Ref not set for:", id);
         }
       });
       window.removeEventListener("scroll", handleScroll);
@@ -120,7 +120,7 @@ const App = () => {
       title: 'MacDeck Dynamic Keyboard',
       summary: 'Back when the Stream Deck was first released I loved the concept of having a dynamic macro keyboard for productivity, but I felt that the design was lacking in terms of control. My goal for this project was to design a product where it would functionally work the same as that device but incorporates many of the missing features I was looking for.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Onshape', 'Altium Designer', '3D Printing', 'C++', 'Python'],
       date: 'August 2021',
       status: 'In Progress',
       objectPosition: 'center center',
@@ -131,7 +131,7 @@ const App = () => {
       title: 'FWG Flashlight',
       summary: 'My friend and I love flashlights and the we wanted to challenge ourselves to make one from scratch, but by adding brand new features to increase ease of use.',
       description: 'Placeholder',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', 'Altium Designer', '3D Printing'],
       date: 'February 2022',
       status: 'In Progress',
       objectPosition: '0% 40%',
@@ -142,7 +142,7 @@ const App = () => {
       title: 'DIY Electric Longboard',
       summary: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML', 'Slick'],
+      tools: ['Solidworks', '3D Printing', 'Spot Welding'],
       date: 'June 2020',
       status: 'Completed',
       objectPosition: '0% 25%',
@@ -153,7 +153,7 @@ const App = () => {
       title: 'Tendy: The Virtual Home Bartending Assistant ',
       summary: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Javascript', 'HTML', 'CSS', 'Python', 'Pycharm'],
       date: 'April 2023',
       status: 'In Progress',
       objectPosition: '40% 0%',
@@ -164,7 +164,7 @@ const App = () => {
       title: 'Home LED Effect Controller',
       summary: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Python', 'C++', 'Arduino', 'Processing4'],
       date: 'August 2021',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -175,7 +175,7 @@ const App = () => {
       title: 'Custom LED Headlights for Personal Electric Vehicles',
       summary: 'After building a bunch of electric boards I found that there were not many small but reliable solutions for head and tail lights (besides the individual solutions for bikes) so I decided that I was going to make one myself for my Onewheel and Longboard.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', 'Altium Designer'],
       date: 'November 2023',
       status: 'Paused',
       objectPosition: '58% 0%',
@@ -186,7 +186,7 @@ const App = () => {
       title: 'Custom Electric Vehicles Battery Packs',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application .',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', 'Spot Welding'],
       date: 'May 2022',
       status: 'Completed',
       objectPosition: '50% 0%',
@@ -197,7 +197,7 @@ const App = () => {
       title: 'Automated Item Purchaser',
       summary: "When moving into my dorm room I wanted to add more light but didn't want to damage anything, so LED lights were used instead. Instead of using low cost led lights, I took the opportunity to design a control system for them and the project became more complex from there.",
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Python', 'Selenium', 'BeautifulSoup', 'Pycharm'],
       date: 'June 2023',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -208,7 +208,7 @@ const App = () => {
       title: 'Wirelessly Communicating Lamps',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Arduino', 'C++', 'MQTT'],
       date: 'December 2023',
       status: 'Completed',
       objectPosition: '0% 56%',
@@ -219,7 +219,7 @@ const App = () => {
       title: 'Custom VR Headset',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Prototyping', 'FreeTrack', 'RiftCat'],
       date: 'January 2016',
       status: 'Completed',
       objectPosition: '70% 0%',
@@ -230,7 +230,7 @@ const App = () => {
       title: 'DIY CNC Machine',
       summary: 'Back when there was the Oculus Rift and Google Cardboard, I was inspired to try and see if I could make a prototype myself.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Fusion360 CAM', 'CNC', 'OpenGRBL', 'Arduino'],
       date: 'February 2018',
       status: 'Completed',
       objectPosition: '40% 0%',
@@ -241,7 +241,7 @@ const App = () => {
       title: 'Portfolio Website',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['React', 'Vite', 'CSS', 'HTML', 'Javascript', 'VSCode'],
       date: 'June 2024',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -252,7 +252,7 @@ const App = () => {
       title: 'Scratch Built Onewheel',
       summary: 'While updating my resume I found that I wanted to have a way of sharing the most recent version of my projects and resume without needing to resend.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', '3D Printing', 'Spot Welding', 'VESC'],
       date: 'July 2022',
       status: 'Completed',
       objectPosition: '0% 60%',
@@ -263,7 +263,7 @@ const App = () => {
       title: 'Custom Full Sized Arcade Machine',
       summary: 'After renovating my basement, I found that there was some extra space to put something and I found that an arcade machine would fit perfectly. After a bunch of research, I found the cost of an arcade machine to be too high and limiting in the games it would provide so I ended up building one myself.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Onshape', 'Power Tools', 'Raspberry Pi'],
       date: 'May 2018',
       status: 'Completed',
       objectPosition: '0% 40%',
@@ -274,7 +274,7 @@ const App = () => {
       title: 'Simple LED Mapper',
       summary: 'In order to determine the walls of the room and amount of LEDs on each wall for animations, I made a program that easily achieved this and gives an output that can be directly inputted into the LED Controller',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Arduino', 'C++'],
       date: 'December 2022',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -285,7 +285,7 @@ const App = () => {
       title: 'Handheld Fog Machine',
       summary: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', 'Arduino', 'C++'],
       date: 'December 2022',
       status: 'In Progress',
       objectPosition: '0% 40%',
@@ -296,7 +296,7 @@ const App = () => {
       title: 'Designing a Mechanism to Avoid Ice Deformation of Fixed Docks',
       summary: 'My senior capstone project was to design a mechanism that would reduce the deformation caused by ice on fixed docks. This project was started after my partner got frustrated with the process for winterization of a fixed dock and created a team to help solve that.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Matlab', 'CREO Parametric', 'Solidworks', 'Teamwork'],
       date: 'January 2023',
       status: 'Completed',
       objectPosition: '20% 0%',
@@ -307,7 +307,7 @@ const App = () => {
       title: 'Reducing Traffic Congestion in Downtown Nantucket, MA',
       summary: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['ArcGIS', 'Google Forms', 'Communication', 'Teamwork'],
       date: 'October 2022',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -318,7 +318,7 @@ const App = () => {
       title: 'Radio Controlled FPV Racing Drones',
       summary: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Ardupilot', 'GPS', 'Radio Frequency'],
       date: 'February 2016',
       status: 'Completed',
       objectPosition: '0% 55%',
@@ -329,7 +329,7 @@ const App = () => {
       title: 'Developing a Local Multiplayer Game within Unreal Engine 4',
       summary: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Unreal Engine'],
       date: 'May 2016',
       status: 'Paused',
       objectPosition: '50% 0%',
@@ -340,7 +340,7 @@ const App = () => {
       title: 'Restoration of a Vintage Pipe Failure Tester',
       summary: "This project came about after I was given a broken tester that he didn't have time to fix and asked if I wanted to try and fix it.",
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Soldering', 'Troubleshooting'],
       date: 'April 2023',
       status: 'In Progress',
       objectPosition: '0% 0%',
@@ -351,7 +351,7 @@ const App = () => {
       title: 'Reverse Engineering a Consumable Computer Foot',
       summary: "After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.",
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', '3D Printing'],
       date: 'July 2018',
       status: 'Completed',
       objectPosition: '0% 40%',
@@ -362,7 +362,7 @@ const App = () => {
       title: 'Designing a Random Voronoi Generator',
       summary: "During an intro to programming class we were asked to build a program to do anything, as long as it was in Python. This program was built in 48 hours.",
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Javascript'],
       date: 'January 2023',
       status: 'Completed',
       objectPosition: '0% 45%',
@@ -373,7 +373,7 @@ const App = () => {
       title: 'Using Wii Remotes to Play Air Drums',
       summary: "This was the final project for a music programming class where the goal was to use Max MSP to create an interactive program. Over the course of 2 weeks, this program was planned out, developed, and polished to deliver a fun experience for the user.",
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Max 8'],
       date: 'March 2021',
       status: 'Completed',
       objectPosition: '0% 40%',
@@ -384,7 +384,7 @@ const App = () => {
       title: 'Developing an Ultrasonic Levitating Device',
       summary: 'The first project I used CAD for was to design and build a device that uses low cost ultrasonic sensors to float very light objects.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', '3D Printing', 'Arduino', 'C++'],
       date: 'January 2019',
       status: 'Completed',
       objectPosition: '0% 0%',
@@ -395,7 +395,7 @@ const App = () => {
       title: 'Designing a custom controller to interact with mains voltage devices',
       summary: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Solidworks', '3D Printing', 'Arduino', 'C++'],
       date: 'October 2019',
       status: 'Completed',
       objectPosition: '0% 60%',
@@ -406,7 +406,7 @@ const App = () => {
       title: 'Designing a Vintage On Air Sign ',
       summary: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution..',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['Onshape', '3D Printing'],
       date: 'October 2019',
       status: 'Completed',
       objectPosition: '45% 0%',
