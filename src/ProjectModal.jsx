@@ -27,7 +27,7 @@ const ProjectModal = ({ project, onClose }) => {
       <button className="close-button" onClick={onClose}>×</button>
       <h3 className="modal-title">{project.title}</h3>
       </div>
-        <img src={project.image} alt={project.title} className="modal-image" />
+        <img src={project.thumbnail} alt={project.title} className="modal-thumbnail" />
         <div className="modal-info">
           <div className={statusClass}>{project.status}</div> {/* Move status pill here */}
           <p className="modal-description">{project.description}</p>

@@ -54,15 +54,15 @@ const App = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(`Bounding rect for ${entry.target.id}:`, entry.boundingClientRect);
+          // console.log(`Bounding rect for ${entry.target.id}:`, entry.boundingClientRect);
           if (entry.isIntersecting) {
-            console.log(`Intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
+            // console.log(`Intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
             setActiveLink(`#${entry.target.id}`);
             if (entry.target.id === "skills") {
               setIsSkillsVisible(true);
             }
           } else {
-            console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
+            // console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
           }
         });
       },
@@ -79,9 +79,9 @@ const App = () => {
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
         observer.observe(ref.current);
-        console.log(`Observing section: ${id}`);
+        // console.log(`Observing section: ${id}`);
       } else {
-        console.log(`Ref not set for: ${id}`);
+        // console.log(`Ref not set for: ${id}`);
       }
     });
 
@@ -100,7 +100,7 @@ const App = () => {
         if (ref.current) {
           observer.unobserve(ref.current);
         } else {
-          console.log("Ref not set for:", id);
+          // console.log("Ref not set for:", id);
         }
       });
       window.removeEventListener("scroll", handleScroll);
@@ -115,7 +115,7 @@ const App = () => {
 
   const projectData = [
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      thumbnail: 'Proj_Images/MacDeck/Proj_Bracket.jpg',
       title: 'MacDeck Dynamic Keyboard',
       description: 'Back when the Stream Deck was first released I loved the concept of having a dynamic macro keyboard for productivity, but I felt that the design was lacking in terms of control. My goal for this project was to design a product where it would functionally work the same as that device but incorporates many of the missing features I was looking for.',
       date: 'August 2021',
@@ -123,7 +123,7 @@ const App = () => {
       objectPosition: 'center center',
     },
     {
-      image: 'Proj_Images/Proj_Flashlight.jpg',
+      thumbnail: 'Proj_Images/Flashlight/Proj_Flashlight.jpg',
       title: 'FWG Flashlight',
       description: 'My friend and I love flashlights and the we wanted to challenge ourselves to make one from scratch, but by adding brand new features to increase ease of use.',
       date: 'February 2022',
@@ -131,7 +131,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Longboard.jpg',
+      thumbnail: 'Proj_Images/Longboard/Proj_Longboard.jpg',
       title: 'DIY Electric Longboard',
       description: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
       date: 'June 2020',
@@ -139,7 +139,7 @@ const App = () => {
       objectPosition: '0% 25%',
     },
     {
-      image: 'Proj_Images/Proj_Tendy.jpg',
+      thumbnail: 'Proj_Images/Tendy/Proj_Tendy.jpg',
       title: 'Tendy: The Virtual Home Bartending Assistant ',
       description: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded.',
       date: 'April 2023',
@@ -147,7 +147,7 @@ const App = () => {
       objectPosition: '0% 20%',
     },
     {
-      image: 'Proj_Images/Proj_LEDControl.jpg',
+      thumbnail: 'Proj_Images/LEDControl/Proj_LEDControl.jpg',
       title: 'Home LED Effect Controller',
       description: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded',
       date: 'August 2021',
@@ -155,7 +155,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_LightBar.jpg',
+      thumbnail: 'Proj_Images/LightBar/Proj_LightBar.jpg',
       title: 'Custom LED Headlights for Personal Electric Vehicles',
       description: 'After building a bunch of electric boards I found that there were not many small but reliable solutions for head and tail lights (besides the individual solutions for bikes) so I decided that I was going to make one myself for my Onewheel and Longboard.',
       date: 'November 2023',
@@ -163,7 +163,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Battery.jpg',
+      thumbnail: 'Proj_Images/Battery/Proj_Battery.jpg',
       title: 'Custom Electric Vehicles Battery Packs',
       description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application .',
       date: 'May 2022',
@@ -171,7 +171,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Purchase.jpg',
+      thumbnail: 'Proj_Images/Purchase/Proj_Purchase.jpg',
       title: 'Automated Item Purchaser',
       description: "When moving into my dorm room I wanted to add more light but didn't want to damage anything, so LED lights were used instead. Instead of using low cost led lights, I took the opportunity to design a control system for them and the project became more complex from there.",
       date: 'June 2023',
@@ -179,7 +179,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Lamps.jpg',
+      thumbnail: 'Proj_Images/Lamps/Proj_Lamps.jpg',
       title: 'Wirelessly Communicating Lamps',
       description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'December 2023',
@@ -187,7 +187,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_VR.jpg',
+      thumbnail: 'Proj_Images/VR/Proj_VR.jpg',
       title: 'Custom VR Headset',
       description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'January 2016',
@@ -195,7 +195,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_CNC.jpg',
+      thumbnail: 'Proj_Images/CNC/Proj_CNC.jpg',
       title: 'DIY CNC Machine',
       description: 'Back when there was the Oculus Rift and Google Cardboard, I was inspired to try and see if I could make a prototype myself.',
       date: 'February 2018',
@@ -203,7 +203,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      thumbnail: 'Proj_Images/Bracket/Proj_Bracket.jpg',
       title: 'Portfolio Website',
       description: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       date: 'June 2024',
@@ -211,7 +211,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Onewheel.jpg',
+      thumbnail: 'Proj_Images/Onewheel/Proj_Onewheel.jpg',
       title: 'Scratch Built Onewheel',
       description: 'While updating my resume I found that I wanted to have a way of sharing the most recent version of my projects and resume without needing to resend.',
       date: 'July 2022',
@@ -219,7 +219,7 @@ const App = () => {
       objectPosition: '0% 50%',
     },
     {
-      image: 'Proj_Images/Proj_Arcade.jpg',
+      thumbnail: 'Proj_Images/Arcade/Proj_Arcade.jpg',
       title: 'Custom Full Sized Arcade Machine',
       description: 'After renovating my basement, I found that there was some extra space to put something and I found that an arcade machine would fit perfectly. After a bunch of research, I found the cost of an arcade machine to be too high and limiting in the games it would provide so I ended up building one myself.',
       date: 'May 2018',
@@ -227,7 +227,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Map.jpg',
+      thumbnail: 'Proj_Images/Map/Proj_Map.jpg',
       title: 'Simple LED Mapper',
       description: 'In order to determine the walls of the room and amount of LEDs on each wall for animations, I made a program that easily achieved this and gives an output that can be directly inputted into the LED Controller',
       date: 'December 2022',
@@ -235,7 +235,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Fog.jpg',
+      thumbnail: 'Proj_Images/Fog/Proj_Fog.jpg',
       title: 'Handheld Fog Machine',
       description: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       date: 'December 2022',
@@ -243,7 +243,7 @@ const App = () => {
       objectPosition: '0% 20%',
     },
     {
-      image: 'Proj_Images/Proj_MQP.jpg',
+      thumbnail: 'Proj_Images/MQP/Proj_MQP.jpg',
       title: 'Designing a Mechanism to Avoid Ice Deformation of Fixed Docks',
       description: 'My senior capstone project was to design a mechanism that would reduce the deformation caused by ice on fixed docks. This project was started after my partner got frustrated with the process for winterization of a fixed dock and created a team to help solve that.',
       date: 'January 2023',
@@ -251,7 +251,7 @@ const App = () => {
       objectPosition: '20% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Nantucket.jpg',
+      thumbnail: 'Proj_Images/Nantucket/Proj_Nantucket.jpg',
       title: 'Reducing Traffic Congestion in Downtown Nantucket, MA',
       description: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       date: 'October 2022',
@@ -259,7 +259,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Drone.jpg',
+      thumbnail: 'Proj_Images/Drone/Proj_Drone.jpg',
       title: 'Radio Controlled FPV Racing Drones',
       description: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       date: 'February 2016',
@@ -267,7 +267,7 @@ const App = () => {
       objectPosition: '0% 55%',
     },
     {
-      image: 'Proj_Images/Proj_Game.jpg',
+      thumbnail: 'Proj_Images/Game/Proj_Game.jpg',
       title: 'Developing a Local Multiplayer Game within Unreal Engine 4',
       description: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       date: 'May 2016',
@@ -275,7 +275,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Bracket.jpg',
+      thumbnail: 'Proj_Images/Pipe/Proj_Bracket.jpg',
       title: 'Restoration of a Vintage Pipe Failure Tester',
       description: "This project came about after I was given a broken tester that he didn't have time to fix and asked if I wanted to try and fix it.",
       date: 'April 2023',
@@ -283,7 +283,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Foot.jpg',
+      thumbnail: 'Proj_Images/Foot/Proj_Foot.jpg',
       title: 'Reverse Engineering a Consumable Computer Foot',
       description: "After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.",
       date: 'July 2018',
@@ -291,7 +291,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_Voronoi.jpg',
+      thumbnail: 'Proj_Images/Voronoi/Proj_Voronoi.jpg',
       title: 'Designing a Random Voronoi Generator',
       description: "During an intro to programming class we were asked to build a program to do anything, as long as it was in Python. This program was built in 48 hours.",
       date: 'January 2023',
@@ -299,7 +299,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Drums.jpg',
+      thumbnail: 'Proj_Images/Drums/Proj_Drums.jpg',
       title: 'Using Wii Remotes to Play Air Drums',
       description: "This was the final project for a music programming class where the goal was to use Max MSP to create an interactive program. Over the course of 2 weeks, this program was planned out, developed, and polished to deliver a fun experience for the user.",
       date: 'March 2021',
@@ -307,7 +307,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Levitator.jpg',
+      thumbnail: 'Proj_Images/Levitator/Proj_Levitator.jpg',
       title: 'Developing an Ultrasonic Levitating Device',
       description: 'The first project I used CAD for was to design and build a device that uses low cost ultrasonic sensors to float very light objects.',
       date: 'January 2019',
@@ -315,7 +315,7 @@ const App = () => {
       objectPosition: '0% 0%',
     },
     {
-      image: 'Proj_Images/Proj_DMX.jpg',
+      thumbnail: 'Proj_Images/DMX/Proj_DMX.jpg',
       title: 'Designing a custom controller to interact with mains voltage devices',
       description: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution.',
       date: 'October 2019',
@@ -323,7 +323,7 @@ const App = () => {
       objectPosition: '0% 40%',
     },
     {
-      image: 'Proj_Images/Proj_Sign.jpg',
+      thumbnail: 'Proj_Images/Sign/Proj_Sign.jpg',
       title: 'Designing a Vintage On Air Sign ',
       description: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution..',
       date: 'October 2019',
@@ -351,7 +351,7 @@ const App = () => {
           <div className="name-profession-container">
             <h1 style={{pointerEvents:"none"}}>Cole Rabe</h1>
             <p style={{pointerEvents:"none"}}>Mechanical Engineer | Electrical Engineer</p>
-            <a href="Resume_Cole_Rabe.pdf" download="Resume_Cole_Rabe.pdf" class="resume-button">Download Resume</a>
+            <a href="Resume_Cole_Rabe.pdf" download="Resume_Cole_Rabe.pdf" className="resume-button">Download Resume</a>
           </div>
           <a href="#skills" className="scroll-arrow">
             <img
@@ -800,7 +800,7 @@ const App = () => {
               {projectData.map((project, index) => (
                 <ProjectCard
                   key={index}
-                  image={project.image}
+                  thumbnail={project.thumbnail}
                   title={project.title}
                   description={project.description}
                   date={project.date}

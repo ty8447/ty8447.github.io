@@ -21,7 +21,7 @@
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
 }
 
-.project-image {
+.project-thumbnail {
     width: calc(100% - 10px);
     height: 350px;
     object-fit: cover;
