@@ -142,7 +142,7 @@ const App = () => {
       title: 'DIY Electric Longboard',
       summary: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
       description: '',
-      tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+      tools: ['React', 'JavaScript', 'CSS', 'HTML', 'Slick'],
       date: 'June 2020',
       status: 'Completed',
       objectPosition: '0% 25%',

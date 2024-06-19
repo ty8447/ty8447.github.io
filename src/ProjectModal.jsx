@@ -51,22 +51,24 @@ const ProjectModal = ({ project, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className={`modal-content ${isOpen ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
         <div className="header">
-          <p className="modal-date">{project.date}</p>
-          <button className="close-button" onClick={onClose}>×</button>
-          <div className="modal-title-container">
-          <h3 className="modal-title">{project.title}</h3>
-          <div className={statusClass}>{project.status}</div>
+          <div className='modal-date-title'>
+            <p className="modal-date">{project.date}</p>
+            <div className="modal-title-container">
+              <h3 className="modal-title">{project.title}</h3>
+              <div className={statusClass}>{project.status}</div>
+            </div>
           </div>
+          <div className="modal-close"><button className="close-button" onClick={onClose}>×</button></div>
         </div>
         <div className="tools-list">
-            {project.tools && project.tools.length > 0 && (
-              <ul className="tools">
-                {project.tools.map((tool, index) => (
-                  <li key={index} className="tool-pill">{tool}</li>
-                ))}
-              </ul>
-            )}
-          </div>
+          {project.tools && project.tools.length > 0 && (
+            <ul className="tools">
+              {project.tools.map((tool, index) => (
+                <li key={index} className="tool-pill">{tool}</li>
+              ))}
+            </ul>
+          )}
+        </div>
         {images.length > 0 ? (
           <Carousel dynamicHeight={true} showStatus={false} showArrows={true} infiniteLoop={true} >
             {images.map((src, index) => (
