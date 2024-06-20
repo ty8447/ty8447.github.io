@@ -63,10 +63,20 @@ body {
   position: relative;
   z-index: 1002;
   text-align: center;
-  background-color: #0e2b52;
+}
+
+.cover-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(15%) scale(3.5);
+  width: 100%;
+  height: auto;
+  z-index: 2;
 }
 
 .name-profession-container h1 {
+  z-index: 3;
   font-size: 3.5rem;
   margin: 0;
 }
@@ -85,6 +95,7 @@ body {
   position: absolute;
   height: auto;
   bottom: 0;
+  z-index: 30;
   left: var(--arrow-left, 50%);
   transform: translateX(-50%);
   transition: transform 0.3s 0.1s;
@@ -264,7 +275,7 @@ section {
   position: relative;
   text-align: center;
   flex-direction: row;
-  z-index: 1;
+  z-index: 3;
   padding-top: 10vh;
   padding-bottom: 20px;
 }
@@ -416,6 +427,7 @@ section {
   text-align: center;
   height: auto;
   min-height: 120vh;
+  z-index: 3;
   position: relative;
   /* background-color: rgb(215, 157, 104); */
   background-color: #256f89;
@@ -519,7 +531,7 @@ section {
 
 
 @media (max-width: 1200px) {
-  .shrink_arrow {
+  .shrink-arrow {
     width: 4vw;
   }
 
@@ -541,7 +553,7 @@ section {
 }
 
 @media (max-width: 992px) {
-  .shrink_arrow {
+  .shrink-arrow {
     width: 6vw;
   }
 
@@ -565,7 +577,7 @@ section {
 }
 
 @media (max-width: 768px) {
-  .shrink_arrow {
+  .shrink-arrow {
     width: 8vw;
   }
 
@@ -583,7 +595,7 @@ section {
 }
 
 @media (max-width: 576px) {
-  .shrink_arrow {
+  .shrink-arrow {
     width: 10vw;
   }
 

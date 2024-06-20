@@ -11,6 +11,7 @@ import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 import Nav from './Nav.jsx';
 import Copyright from './Copyright';
+import cover from './Assets/misc/cover.svg';
 
 const Skills = () => <h1>Skills</h1>;
 const Projects = () => <h1>Projects</h1>;
@@ -441,7 +442,7 @@ const App = () => {
       <div className="body-container">
         <ScrollToSection />
         <div className="title-container" ref={titleContainerRef}>
-          {/* <Wireframe /> */}
+        <img src={cover} alt="Cover Background" className="cover-background" />
           <div className="name-profession-container">
             <h1 style={{ pointerEvents: "none" }}>Cole Rabe</h1>
             <p style={{ pointerEvents: "none" }}>Mechanical Engineer | Electrical Engineer</p>
