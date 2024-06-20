@@ -529,9 +529,28 @@ section {
   text-align: center;
 }
 
+.return-arrow {
+  width: 4vw;
+  height: auto;
+  bottom: 0;
+  z-index: 30;
+  left: var(--arrow-left, 50%);
+  transform: translate(0, -90%) rotate(180deg);
+  transition: transform 0.3s 0.1s;
+}
+
+.return-arrow:hover {
+  left: var(--arrow-left, 50%);
+  transform: translate(0, -110%) rotate(180deg);
+}
+
 
 @media (max-width: 1200px) {
   .shrink-arrow {
+    width: 4vw;
+  }
+
+  .return-arrow {
     width: 4vw;
   }
 
@@ -554,6 +573,9 @@ section {
 
 @media (max-width: 992px) {
   .shrink-arrow {
+    width: 6vw;
+  }
+  .return-arrow {
     width: 6vw;
   }
 
@@ -580,6 +602,9 @@ section {
   .shrink-arrow {
     width: 8vw;
   }
+  .return-arrow {
+    width: 8vw;
+  }
 
   .contact-items li a {
     font-size: 3vw;
@@ -596,6 +621,9 @@ section {
 
 @media (max-width: 576px) {
   .shrink-arrow {
+    width: 10vw;
+  }
+  .return-arrow {
     width: 10vw;
   }
 

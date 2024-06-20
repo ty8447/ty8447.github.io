@@ -1,4 +1,3 @@
-// import Wireframe from './Wireframe';
 import React, { useEffect, useState, useRef } from "react";
 import {
   BrowserRouter as Router,
@@ -1676,6 +1675,13 @@ z"/>
         <div className="contact-container">
           <div className="wave3-background"></div>
           <section id="contact" ref={contactRef}>
+          <a href="#" className="scroll-arrow">
+            <img
+              src="Icons/return_arrow.png"
+              alt="Return Arrow"
+              className="return-arrow"
+            />
+          </a>
             <h1 className="section-title" style={{ color: "#132852" }}>Contact</h1>
             <ul className="contact-items">
               <li>
