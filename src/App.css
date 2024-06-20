@@ -1,16 +1,17 @@
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 12px;
   position: fixed;
   right: 0;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgb(14, 43, 82);
+  background: linear-gradient(180deg, rgba(14, 43, 82, 1) 10%, rgba(37, 111, 137, 1) 15%, rgba(136, 173, 164, 1) 25%, rgba(227, 216, 173, 1) 97%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #eeaf9e;
+  background-color: #747474;
   width: 10px;
   border-radius: 10px;
   border: 3px solid transparent;
@@ -236,9 +237,9 @@ nav ul li a {
   background-color: #444;
   color: white;
   border-radius: 5px;
-  width:auto;
+  width: auto;
   padding: 12px 16px;
-  height:auto;
+  height: auto;
   z-index: 30;
   font-size: 1.1rem;
   text-decoration: none;
@@ -246,7 +247,7 @@ nav ul li a {
 
 .resume-button:hover {
   background-color: #555;
-  color:#b88a7d;
+  color: #b88a7d;
 }
 
 header {
@@ -271,7 +272,7 @@ section {
   margin-right: 20px;
 }
 
-#skills {
+#skill {
   position: relative;
   text-align: center;
   flex-direction: row;
@@ -419,8 +420,9 @@ section {
 
 }
 
-#projects{
+#project {
   padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 .skill-container {
@@ -478,9 +480,9 @@ section {
   height: auto;
 }
 
-.copyright{
+.copyright {
   padding-bottom: 5px;
-  height:auto;
+  height: auto;
 }
 
 #contact {
@@ -575,6 +577,7 @@ section {
   .shrink-arrow {
     width: 6vw;
   }
+
   .return-arrow {
     width: 6vw;
   }
@@ -602,6 +605,7 @@ section {
   .shrink-arrow {
     width: 8vw;
   }
+
   .return-arrow {
     width: 8vw;
   }
@@ -623,6 +627,7 @@ section {
   .shrink-arrow {
     width: 10vw;
   }
+
   .return-arrow {
     width: 10vw;
   }

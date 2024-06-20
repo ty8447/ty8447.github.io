@@ -12,8 +12,9 @@ import Nav from './Nav.jsx';
 import Copyright from './Copyright';
 import cover from './Assets/misc/cover.svg';
 
-const Skills = () => <h1>Skills</h1>;
-const Projects = () => <h1>Projects</h1>;
+const Home = () => <p></p>;
+const Skill = () => <h1>Skill</h1>;
+const Project = () => <h1>Project</h1>;
 const Contact = () => <h1>Contact</h1>;
 
 const ScrollToSection = () => {
@@ -34,45 +35,43 @@ const ScrollToSection = () => {
 const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCardRef, setSelectedCardRef] = useState(null);
-  const [activeLink, setActiveLink] = useState("#skills");
+  const [activeLink, setActiveLink] = useState("#");
   const [isSticky, setIsSticky] = useState(false);
   const linksContainerRef = useRef(null);
   const titleContainerRef = useRef(null);
 
+  const homeRef = useRef(null);
   const projectRef = useRef(null);
   const skillRef = useRef(null);
   const contactRef = useRef(null);
 
   useEffect(() => {
     const sections = [
-      { id: "#skills", ref: skillRef },
-      { id: "#projects", ref: projectRef },
+      { id: "#", ref: homeRef },
+      { id: "#skill", ref: skillRef },
+      { id: "#project", ref: projectRef },
       { id: "#contact", ref: contactRef },
     ];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+           console.log(`Entry: ${entry.target.id}`);
           if (entry.isIntersecting) {
             setActiveLink(`#${entry.target.id}`);
           } else {
-            console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
+             console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
           }
         });
       },
       {
-        threshold: [0.1, 0.5, 1.0],
-        rootMargin: '0px 0px -50% 0px'
+        threshold: [0],
+        rootMargin: '0px 0px -50% 0px',
       }
     );
-
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
 
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
         observer.observe(ref.current);
-        console.log(`Observing section: ${id}`);
       } else {
         console.log(`Ref not set for: ${id}`);
       }
@@ -441,19 +440,21 @@ const App = () => {
       <div className="body-container">
         <ScrollToSection />
         <div className="title-container" ref={titleContainerRef}>
-          <img src={cover} alt="Cover Background" className="cover-background" />
-          <div className="name-profession-container">
-            <h1 style={{ pointerEvents: "none" }}>Cole Rabe</h1>
-            <p style={{ pointerEvents: "none" }}>Mechanical Engineer | Electrical Engineer</p>
-            <a href="Resume_Cole_Rabe.pdf" download="Resume_Cole_Rabe.pdf" className="resume-button">Download Resume</a>
-          </div>
-          <a href="#contact" className="scroll-arrow">
-            <img
-              src="Icons/scroll_arrow.png"
-              alt="Scroll Arrow"
-              className="shrink-arrow"
-            />
-          </a>
+          <section id="home" ref={homeRef}>
+            <img src={cover} alt="Cover Background" className="cover-background" />
+            <div className="name-profession-container">
+              <h1 style={{ pointerEvents: "none" }}>Cole Rabe</h1>
+              <p style={{ pointerEvents: "none" }}>Mechanical Engineer | Electrical Engineer</p>
+              <a href="Resume_Cole_Rabe.pdf" download="Resume_Cole_Rabe.pdf" className="resume-button">Download Resume</a>
+            </div>
+            <a href="#contact" className="scroll-arrow">
+              <img
+                src="Icons/scroll_arrow.png"
+                alt="Scroll Arrow"
+                className="shrink-arrow"
+              />
+            </a>
+          </section>
         </div>
         <div className={`links-container ${isSticky ? "sticky" : ""}`}
           ref={linksContainerRef}>
@@ -463,7 +464,7 @@ const App = () => {
         </div>
         <div className="skill-container">
           <div className="wave1-background"></div>
-          <section id="skills" ref={skillRef}>
+          <section id="skill" ref={skillRef}>
             <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
               <div className={`sksoftware`}>
@@ -497,7 +498,7 @@ const App = () => {
                     </svg>
                   </div>
                   <div className="icon" title="KiCAD">
-                    <svg width="100%" viewBox="1100 1100 2250 2250" enable-background="new 0 0 4500 4500">
+                    <svg width="100%" viewBox="1100 1100 2250 2250" enableBackground="new 0 0 4500 4500">
                       <path fill="#FDFDFD" opacity="1.000000" stroke="none"
                         d="
 M2383.998779,3322.356445 
@@ -610,7 +611,7 @@ z"/>
                     </svg>
                   </div>
                   <div className="icon" title="Fusion 360">
-                    <svg width="100%" viewBox="0 0 4267 4267" enable-background="new 0 0 4267 4267">
+                    <svg width="100%" viewBox="0 0 4267 4267" enableBackground="new 0 0 4267 4267">
                       <path fill="#FFFFFF" opacity="1.000000" stroke="none"
                         d="
 M1990.765137,4100.892578 
@@ -677,13 +678,13 @@ z"/>
                     </svg>
                   </div>
                   <div className="icon" title="AutoCAD">
-                    <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" fill="#FFF">
-                      <path clip-rule="evenodd" d="m55.704 499.013c.082-.158.925-1.752 5.251-7.704 8.558-11.79 21.405-20.608 25.638-23.336l87.14-10.979c-7.754 7.46-13.905 16.777 1.123 18.68 65.263 8.235 162.189-28.477 200.286-44.379l.077.888 70.053-6.256c-33.935 17.05-119.062 50.789-302.894 80.874-81.813 13.389-87.59-6.064-87.655-6.213m89.858-500.088 70.877 8.266 244.397 398.478-74.336 6.635-40.14-70.836-154.282 9.476-4.882 85.457-92.752 11.682zm49.224 273.523 108.265-2.709-100.146-175.932h-2.707zm-118.321 180.53 51.032-448.409c-.256.743-.379 1.268-.379 1.268l-73.992 467.327c8.458-9.565 18.137-16.704 23.339-20.186z" fill-rule="evenodd" />
+                    <svg enableBackground="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" fill="#FFF">
+                      <path clipRule="evenodd" d="m55.704 499.013c.082-.158.925-1.752 5.251-7.704 8.558-11.79 21.405-20.608 25.638-23.336l87.14-10.979c-7.754 7.46-13.905 16.777 1.123 18.68 65.263 8.235 162.189-28.477 200.286-44.379l.077.888 70.053-6.256c-33.935 17.05-119.062 50.789-302.894 80.874-81.813 13.389-87.59-6.064-87.655-6.213m89.858-500.088 70.877 8.266 244.397 398.478-74.336 6.635-40.14-70.836-154.282 9.476-4.882 85.457-92.752 11.682zm49.224 273.523 108.265-2.709-100.146-175.932h-2.707zm-118.321 180.53 51.032-448.409c-.256.743-.379 1.268-.379 1.268l-73.992 467.327c8.458-9.565 18.137-16.704 23.339-20.186z" fillRule="evenodd" />
                       <title>AutoCAD icon</title>
                     </svg>
                   </div>
                   <div className="icon" title="CREO Parametric">
-                    <svg width="100%" viewBox="0 0 120 130" enable-background="new 0 0 120 130">
+                    <svg width="100%" viewBox="0 0 120 130" enableBackground="new 0 0 120 130">
 
                       <path fill="#FFF" opacity="1.000000" stroke="none"
                         d="
@@ -893,7 +894,7 @@ z"/>
                       version="1.1"
                       xmlSpace="preserve"
                     >
-                      <style type="text/css">{`.st0 { fill: #FFF; }.st1 { fill-rule: evenodd; clip-rule: evenodd; fill: #FFF; }`}</style>
+                      <style type="text/css">{`.st0 { fill: #FFF; }.st1 { fillRule: evenodd; clipRule: evenodd; fill: #FFF; }`}</style>
                       <g>
                         <path
                           className="st0"
@@ -1018,7 +1019,7 @@ z"/>
                     </svg>
                   </div>
                   <div className="icon" title="Cura">
-                    <svg width="100%" height="100%" viewBox="400 300 400 360" enable-background="new 0 0 1200 960">
+                    <svg width="100%" height="100%" viewBox="400 300 400 360" enableBackground="new 0 0 1200 960">
                       <path fill="#FFF" opacity="1.000000" stroke="none" d="M489.000000,675.846497 C460.021545,675.846436 431.543091,675.846436 402.442444,675.846436 C402.330322,673.673340 402.145325,671.757080 402.144989,669.840820 C402.130280,587.535278 402.171844,505.229645 402.026154,422.924316 C402.018005,418.312500 403.544983,415.290039 406.756226,412.168427 C438.994263,380.829773 471.083740,349.338287 503.220917,317.895813 C513.102966,308.227325 522.924500,298.493988 532.975037,289.003448 C534.587830,287.480499 537.259460,286.279846 539.443787,286.276367 C624.914673,286.140198 710.385925,286.158844 795.857056,286.172791 
 	C797.313354,286.173035 798.769714,286.363556 800.508972,286.485016 
 	C800.595520,288.194733 800.733337,289.647491 800.733521,291.100250 
@@ -1133,7 +1134,7 @@ z"/>
                     </svg>
                   </div>
                   <div className="icon" title="Power Tools">
-                    <svg width="100%" viewBox="230 230 340 340" enable-background="new 0 0 800 800">
+                    <svg width="100%" viewBox="230 230 340 340" enableBackground="new 0 0 800 800">
                       <path fill="#FFF" opacity="1.000000" stroke="none"
                         d="
 M309.250946,254.749603 
@@ -1327,7 +1328,7 @@ z"/>
                     </svg>
                   </div>
                   <div className="icon" title="OSHA Lift Certification">
-                    <svg width="100%" viewBox="50 60 480 460" enable-background="new 0 0 590 584">
+                    <svg width="100%" viewBox="50 60 480 460" enableBackground="new 0 0 590 584">
                       <path fill="#FFF" opacity="1.000000" stroke="none"
                         d="
 M198.172760,300.675964 
@@ -1645,13 +1646,13 @@ z"/>
                   </div>
                 </div>
               </div>
-              
+
             </div>
           </section>
         </div>
         <div className="project-container">
           <div className="wave2-background"></div>
-          <section id="projects" ref={projectRef}>
+          <section id="project" ref={projectRef}>
             <h1 className="section-title">Projects</h1>
             <div className="projects-grid">
               {projectData.map((project, index) => (
@@ -1675,13 +1676,13 @@ z"/>
         <div className="contact-container">
           <div className="wave3-background"></div>
           <section id="contact" ref={contactRef}>
-          <a href="#" className="scroll-arrow">
-            <img
-              src="Icons/return_arrow.png"
-              alt="Return Arrow"
-              className="return-arrow"
-            />
-          </a>
+            <a href="#" className="scroll-arrow">
+              <img
+                src="Icons/return_arrow.png"
+                alt="Return Arrow"
+                className="return-arrow"
+              />
+            </a>
             <h1 className="section-title" style={{ color: "#132852" }}>Contact</h1>
             <ul className="contact-items">
               <li>
@@ -1738,8 +1739,9 @@ z"/>
           <Copyright />
         </div>
         <Routes>
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/skill" element={<Skill />} />
+          <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

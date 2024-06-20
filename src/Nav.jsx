@@ -4,11 +4,11 @@ import "./Nav.css";
 
 const links = [
     {
-        path: "#skills",
+        path: "#skill",
         label: "Skills",
     },
     {
-        path: "#projects",
+        path: "#project",
         label: "Projects",
     },
     {
@@ -42,17 +42,26 @@ const Nav = ({ activeLink, onLinkClick }) => {
     };
 
     const updatePillStyle = (index) => {
+        if (index === -1 || links[index].path === "#home") {
+            setPillStyle((prevStyle) => ({
+                ...prevStyle,
+                opacity: 0,
+            }));
+            return;
+        }
+
         const linkRef = linkRefs.current[index];
         if (linkRef) {
             let backgroundColor = "#4d6aa8";
 
-            if (links[index].path === "#projects") {
+            if (links[index].path === "#project") {
                 backgroundColor = "#378baf";
             } else if (links[index].path === "#contact") {
                 backgroundColor = "#378baf";
             }
             
             setPillStyle({
+                display: 'block',
                 width: `${linkRef.offsetWidth}px`,
                 left: `${linkRef.offsetLeft}px`,
                 backgroundColor: backgroundColor,
