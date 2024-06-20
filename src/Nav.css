@@ -11,6 +11,11 @@
     margin: 0;
 }
 
+.nav-container li {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
 .nav-container a {
     position: relative;
     text-decoration: none;
