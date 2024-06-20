@@ -11,10 +11,6 @@
     margin: 0;
 }
 
-.nav-container li {
-    margin-right: 20px;
-}
-
 .nav-container a {
     position: relative;
     text-decoration: none;

@@ -28,11 +28,33 @@
   animation: fadeIn 0.3s ease-out;
 }
 
+@media (max-width: 316px) {
+  .modal-title-container h3{
+    font-size: 6vw;
+  }
+  .status-pill-modal.completed{
+    font-size: 4vw;
+  }
+
+  .status-pill-modal.in-progress{
+    font-size: 4vw;
+  }
+
+  .status-pill-modal.paused{
+    font-size: 4vw;
+  }
+
+  .nav-list{
+    font-size: 6vw;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
