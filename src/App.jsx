@@ -36,8 +36,6 @@ const App = () => {
   const [selectedCardRef, setSelectedCardRef] = useState(null);
   const [activeLink, setActiveLink] = useState("#skills");
   const [isSticky, setIsSticky] = useState(false);
-  const [isSkillsVisible, setIsSkillsVisible] = useState(false);
-  const [isSkillsInView, setIsSkillsInView] = useState(false);
   const linksContainerRef = useRef(null);
   const titleContainerRef = useRef(null);
 
@@ -54,21 +52,16 @@ const App = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // console.log(`Bounding rect for ${entry.target.id}:`, entry.boundingClientRect);
           if (entry.isIntersecting) {
-            // console.log(`Intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
             setActiveLink(`#${entry.target.id}`);
-            if (entry.target.id === "skills") {
-              setIsSkillsVisible(true);
-            }
           } else {
             console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
           }
         });
       },
       {
-        threshold: [0.1, 0.5, 1.0], // Multiple thresholds for better intersection detection
-        rootMargin: '0px 0px -50% 0px' // Adjust the root margin to better capture intersections
+        threshold: [0.1, 0.5, 1.0],
+        rootMargin: '0px 0px -50% 0px'
       }
     );
 
@@ -106,13 +99,6 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    if (isSkillsInView) {
-      setIsSkillsVisible(true);
-    }
-  }, [isSkillsInView]);
-
   const projectData = [
     {
       folder: 'MacDeck',
@@ -120,6 +106,7 @@ const App = () => {
       title: 'MacDeck Dynamic Keyboard',
       summary: 'Back when the Stream Deck was first released I loved the concept of having a dynamic macro keyboard for productivity, but I felt that the design was lacking in terms of control. My goal for this project was to design a product where it would functionally work the same as that device but incorporates many of the missing features I was looking for.',
       description: '',
+      link: '',
       tools: ['Onshape', 'Altium Designer', '3D Printing', 'C++', 'Python'],
       date: 'August 2021',
       status: 'In Progress',
@@ -131,6 +118,7 @@ const App = () => {
       title: 'FWG Flashlight',
       summary: 'My friend and I love flashlights and the we wanted to challenge ourselves to make one from scratch, but by adding brand new features to increase ease of use.',
       description: 'Placeholder',
+      link: 'https://www.google.com',
       tools: ['Solidworks', 'Altium Designer', '3D Printing'],
       date: 'February 2022',
       status: 'In Progress',
@@ -142,6 +130,7 @@ const App = () => {
       title: 'DIY Electric Longboard',
       summary: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
       description: '',
+      link: '',
       tools: ['Solidworks', '3D Printing', 'Spot Welding'],
       date: 'June 2020',
       status: 'Completed',
@@ -153,6 +142,7 @@ const App = () => {
       title: 'Tendy: The Virtual Home Bartending Assistant ',
       summary: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded.',
       description: '',
+      link: '',
       tools: ['Javascript', 'HTML', 'CSS', 'Python', 'Pycharm'],
       date: 'April 2023',
       status: 'In Progress',
@@ -164,6 +154,7 @@ const App = () => {
       title: 'Home LED Effect Controller',
       summary: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded',
       description: '',
+      link: '',
       tools: ['Python', 'C++', 'Arduino', 'Processing4'],
       date: 'August 2021',
       status: 'Completed',
@@ -175,6 +166,7 @@ const App = () => {
       title: 'Custom LED Headlights for Personal Electric Vehicles',
       summary: 'After building a bunch of electric boards I found that there were not many small but reliable solutions for head and tail lights (besides the individual solutions for bikes) so I decided that I was going to make one myself for my Onewheel and Longboard.',
       description: '',
+      link: '',
       tools: ['Solidworks', 'Altium Designer'],
       date: 'November 2023',
       status: 'Paused',
@@ -186,6 +178,7 @@ const App = () => {
       title: 'Custom Electric Vehicles Battery Packs',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application .',
       description: '',
+      link: '',
       tools: ['Solidworks', 'Spot Welding'],
       date: 'May 2022',
       status: 'Completed',
@@ -197,6 +190,7 @@ const App = () => {
       title: 'Automated Item Purchaser',
       summary: "When moving into my dorm room I wanted to add more light but didn't want to damage anything, so LED lights were used instead. Instead of using low cost led lights, I took the opportunity to design a control system for them and the project became more complex from there.",
       description: '',
+      link: '',
       tools: ['Python', 'Selenium', 'BeautifulSoup', 'Pycharm'],
       date: 'June 2023',
       status: 'Completed',
@@ -208,6 +202,7 @@ const App = () => {
       title: 'Wirelessly Communicating Lamps',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       description: '',
+      link: '',
       tools: ['Arduino', 'C++', 'MQTT'],
       date: 'December 2023',
       status: 'Completed',
@@ -219,6 +214,7 @@ const App = () => {
       title: 'Custom VR Headset',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       description: '',
+      link: '',
       tools: ['Prototyping', 'FreeTrack', 'RiftCat'],
       date: 'January 2016',
       status: 'Completed',
@@ -230,6 +226,7 @@ const App = () => {
       title: 'DIY CNC Machine',
       summary: 'Back when there was the Oculus Rift and Google Cardboard, I was inspired to try and see if I could make a prototype myself.',
       description: '',
+      link: '',
       tools: ['Fusion360 CAM', 'CNC', 'OpenGRBL', 'Arduino'],
       date: 'February 2018',
       status: 'Completed',
@@ -241,6 +238,7 @@ const App = () => {
       title: 'Portfolio Website',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
       description: '',
+      link: '',
       tools: ['React', 'Vite', 'CSS', 'HTML', 'Javascript', 'VSCode'],
       date: 'June 2024',
       status: 'Completed',
@@ -252,6 +250,7 @@ const App = () => {
       title: 'Scratch Built Onewheel',
       summary: 'While updating my resume I found that I wanted to have a way of sharing the most recent version of my projects and resume without needing to resend.',
       description: '',
+      link: '',
       tools: ['Solidworks', '3D Printing', 'Spot Welding', 'VESC'],
       date: 'July 2022',
       status: 'Completed',
@@ -263,6 +262,7 @@ const App = () => {
       title: 'Custom Full Sized Arcade Machine',
       summary: 'After renovating my basement, I found that there was some extra space to put something and I found that an arcade machine would fit perfectly. After a bunch of research, I found the cost of an arcade machine to be too high and limiting in the games it would provide so I ended up building one myself.',
       description: '',
+      link: '',
       tools: ['Onshape', 'Power Tools', 'Raspberry Pi'],
       date: 'May 2018',
       status: 'Completed',
@@ -274,6 +274,7 @@ const App = () => {
       title: 'Simple LED Mapper',
       summary: 'In order to determine the walls of the room and amount of LEDs on each wall for animations, I made a program that easily achieved this and gives an output that can be directly inputted into the LED Controller',
       description: '',
+      link: '',
       tools: ['Arduino', 'C++'],
       date: 'December 2022',
       status: 'Completed',
@@ -285,6 +286,7 @@ const App = () => {
       title: 'Handheld Fog Machine',
       summary: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       description: '',
+      link: '',
       tools: ['Solidworks', 'Arduino', 'C++'],
       date: 'December 2022',
       status: 'In Progress',
@@ -296,6 +298,7 @@ const App = () => {
       title: 'Designing a Mechanism to Avoid Ice Deformation of Fixed Docks',
       summary: 'My senior capstone project was to design a mechanism that would reduce the deformation caused by ice on fixed docks. This project was started after my partner got frustrated with the process for winterization of a fixed dock and created a team to help solve that.',
       description: '',
+      link: '',
       tools: ['Matlab', 'CREO Parametric', 'Solidworks', 'Teamwork'],
       date: 'January 2023',
       status: 'Completed',
@@ -307,6 +310,7 @@ const App = () => {
       title: 'Reducing Traffic Congestion in Downtown Nantucket, MA',
       summary: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
       description: '',
+      link: '',
       tools: ['ArcGIS', 'Google Forms', 'Communication', 'Teamwork'],
       date: 'October 2022',
       status: 'Completed',
@@ -318,6 +322,7 @@ const App = () => {
       title: 'Radio Controlled FPV Racing Drones',
       summary: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       description: '',
+      link: '',
       tools: ['Ardupilot', 'GPS', 'Radio Frequency'],
       date: 'February 2016',
       status: 'Completed',
@@ -329,6 +334,7 @@ const App = () => {
       title: 'Developing a Local Multiplayer Game within Unreal Engine 4',
       summary: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
       description: '',
+      link: '',
       tools: ['Unreal Engine'],
       date: 'May 2016',
       status: 'Paused',
@@ -340,6 +346,7 @@ const App = () => {
       title: 'Restoration of a Vintage Pipe Failure Tester',
       summary: "This project came about after I was given a broken tester that he didn't have time to fix and asked if I wanted to try and fix it.",
       description: '',
+      link: '',
       tools: ['Soldering', 'Troubleshooting'],
       date: 'April 2023',
       status: 'In Progress',
@@ -351,6 +358,7 @@ const App = () => {
       title: 'Reverse Engineering a Consumable Computer Foot',
       summary: "After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.",
       description: '',
+      link: '',
       tools: ['Solidworks', '3D Printing'],
       date: 'July 2018',
       status: 'Completed',
@@ -362,6 +370,7 @@ const App = () => {
       title: 'Designing a Random Voronoi Generator',
       summary: "During an intro to programming class we were asked to build a program to do anything, as long as it was in Python. This program was built in 48 hours.",
       description: '',
+      link: '',
       tools: ['Javascript'],
       date: 'January 2023',
       status: 'Completed',
@@ -373,6 +382,7 @@ const App = () => {
       title: 'Using Wii Remotes to Play Air Drums',
       summary: "This was the final project for a music programming class where the goal was to use Max MSP to create an interactive program. Over the course of 2 weeks, this program was planned out, developed, and polished to deliver a fun experience for the user.",
       description: '',
+      link: '',
       tools: ['Max 8'],
       date: 'March 2021',
       status: 'Completed',
@@ -384,6 +394,7 @@ const App = () => {
       title: 'Developing an Ultrasonic Levitating Device',
       summary: 'The first project I used CAD for was to design and build a device that uses low cost ultrasonic sensors to float very light objects.',
       description: '',
+      link: '',
       tools: ['Solidworks', '3D Printing', 'Arduino', 'C++'],
       date: 'January 2019',
       status: 'Completed',
@@ -395,6 +406,7 @@ const App = () => {
       title: 'Designing a custom controller to interact with mains voltage devices',
       summary: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution.',
       description: '',
+      link: '',
       tools: ['Solidworks', '3D Printing', 'Arduino', 'C++'],
       date: 'October 2019',
       status: 'Completed',
@@ -406,6 +418,7 @@ const App = () => {
       title: 'Designing a Vintage On Air Sign ',
       summary: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution..',
       description: '',
+      link: '',
       tools: ['Onshape', '3D Printing'],
       date: 'October 2019',
       status: 'Completed',
@@ -453,7 +466,7 @@ const App = () => {
           <section id="skills" ref={skillRef}>
             <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
-              <div className={`sksoftware ${isSkillsVisible ? 'fade-in' : ''}`}>
+              <div className={`sksoftware`}>
                 <h2>Software</h2>
                 <div className="icons-column">
                   <div className="icon" title="Altium Designer">
@@ -774,7 +787,7 @@ const App = () => {
                   </div>
                 </div>
               </div>
-              <div className={`sklanguages ${isSkillsVisible ? 'fade-in' : ''}`}>
+              <div className={`sklanguages`}>
                 <h2>Languages</h2>
                 <div className="icons-column">
                   <div className="icon" title="HTML">
@@ -847,7 +860,7 @@ const App = () => {
                   </div>
                 </div>
               </div>
-              <div className={`sktraining ${isSkillsVisible ? 'fade-in' : ''}`}>
+              <div className={`sktraining`}>
                 <h2>Training</h2>
                 <div className="icons-column">
                   <div className="icon" title="FDM/SLA 3D Printing">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./Nav.css"; // Assuming you have a separate CSS file for styling
+import "./Nav.css";
 
 const links = [
     {
@@ -15,11 +15,6 @@ const links = [
         path: "#contact",
         label: "Contact",
     },
-    // {
-    //     path: "Resume_Cole_Rabe.pdf",
-    //     label: "Download Resume",
-    //     isDownload: true,
-    // },
 ];
 
 const Nav = ({ activeLink, onLinkClick }) => {
@@ -49,12 +44,12 @@ const Nav = ({ activeLink, onLinkClick }) => {
     const updatePillStyle = (index) => {
         const linkRef = linkRefs.current[index];
         if (linkRef) {
-            let backgroundColor = "#4d6aa8"; // Default color
+            let backgroundColor = "#4d6aa8";
 
             if (links[index].path === "#projects") {
-                backgroundColor = "#378baf"; // Change this to the desired color for projects
+                backgroundColor = "#378baf";
             } else if (links[index].path === "#contact") {
-                backgroundColor = "#378baf"; // Color for contact
+                backgroundColor = "#378baf";
             }
             
             setPillStyle({
@@ -73,13 +68,8 @@ const Nav = ({ activeLink, onLinkClick }) => {
     return (
         <div className="nav-container">
             <ul className="nav-list">
-                {links.map(({ path, label, isDownload }, index) => (
+                {links.map(({ path, label }, index) => (
                     <li key={label}>
-                        {isDownload ? (
-                            <a href={path} download className="resume-button">
-                                {label}
-                            </a>
-                        ) : (
                             <a
                                 href={path}
                                 className={activeLink === path ? "active" : ""}
@@ -91,7 +81,6 @@ const Nav = ({ activeLink, onLinkClick }) => {
                             >
                                 {label}
                             </a>
-                        )}
                     </li>
                 ))}
             </ul>
