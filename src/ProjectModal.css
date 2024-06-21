@@ -169,11 +169,9 @@
 
 .projectLink {
   position: relative;
-  display: flex;
+  display: inline-block; /* Change to inline-block */
   align-items: center;
-  /* Center the text vertically */
   justify-content: center;
-  /* Center the text horizontally */
   margin: 15px auto;
   padding: 10px 20px;
   background: linear-gradient(135deg, #6e8efb, #a777e3);

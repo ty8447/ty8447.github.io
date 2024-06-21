@@ -84,7 +84,14 @@ const ProjectModal = ({ project, onClose }) => {
           <p className="modal-description">{project.description}</p>
         </div>
         {project.link && (
-          <button href={project.link} target="_blank" rel="noopener noreferrer" className="projectLink">Go to Project Files</button>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projectLink"
+          >
+            Go to Project Files
+          </a>
         )}
       </div>
     </div>
