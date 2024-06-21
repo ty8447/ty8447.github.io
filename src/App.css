@@ -402,7 +402,7 @@ section {
   padding-bottom: 20px;
   align-items: center;
   flex-direction: column;
-  animation: opacity 0.5s 0.8s ease-in forwards;
+  animation: opacity 0.5s 1.3s ease-in forwards;
   opacity: 0;
 
 }
@@ -412,7 +412,7 @@ section {
   padding-bottom: 20px;
   align-items: center;
   flex-direction: column;
-  animation: opacity 0.5s 1.3s ease-in forwards;
+  animation: opacity 0.5s 0.8s ease-in forwards;
   opacity: 0;
 
 }
