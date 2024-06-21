@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+public/Proj_Images/Lamps/20231209_184249.mp4 filter=lfs diff=lfs merge=lfs -text
+public/Proj_Images/Lamps/20231207_090447.mp4 filter=lfs diff=lfs merge=lfs -text
+public/Proj_Images/Onewheel/20220709_030216.mp4 filter=lfs diff=lfs merge=lfs -text
+public/Proj_Images/Drums/20210316_191600.mp4 filter=lfs diff=lfs merge=lfs -text
+public/Proj_Images/Levitator/20181229_185502.mp4 filter=lfs diff=lfs merge=lfs -text
+public/Proj_Images/Arcade/20181218_192617.mp4 filter=lfs diff=lfs merge=lfs -text
+public/Proj_Images/VR/20160706_225134.mp4 filter=lfs diff=lfs merge=lfs -text
