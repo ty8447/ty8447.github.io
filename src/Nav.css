@@ -38,15 +38,12 @@
     padding: 10px 20px;
     position: relative;
     z-index: 1;
-    /* Ensure the text is above the pill */
     text-decoration: none;
     color: #000;
-    /* Adjust as needed */
 }
 
 .nav-item .active {
     color: #fff;
-    /* Adjust as needed */
 }
 
 .active-pill {

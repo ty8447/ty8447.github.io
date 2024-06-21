@@ -4,12 +4,10 @@
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
-    /* Slight shadow */
     text-align: center;
     margin: 20px;
     width: 500px;
     position: relative;
-    /* Increased width */
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
@@ -32,7 +30,7 @@
 
 .project-info {
     padding: 5px 10px;
-    flex-grow: 1; /* Allow project-info to grow and take available space */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -97,31 +95,17 @@
     background-color: rgba(63, 63, 63, 0.85);
 }
 
-/* .fade-grad{
-    width:500px;
-    position: absolute;
-    top:305px;
-    z-index:1;
-    height:50px;
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-} */
-
-
-/* Specific status styles */
 .status-pill.in-progress {
     color: #ffbc63;
     border: 2px solid #ffbc63;
-    /* In Progress color */
 }
 
 .status-pill.completed {
     color: #1ce726;
     border: 2px solid #1ce726;
-    /* Completed color */
 }
 
 .status-pill.paused {
     color: #3c80ff;
     border: 2px solid #3c80ff;
-    /* Paused color */
 }

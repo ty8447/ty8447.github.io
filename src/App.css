@@ -1,4 +1,3 @@
-/* Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 12px;
   position: fixed;
@@ -17,7 +16,6 @@
   border: 3px solid transparent;
 }
 
-/* General Styles */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -53,7 +51,6 @@ body {
   width: 40%;
 }
 
-/* Sticky Nav */
 .sticky-nav {
   position: fixed;
   top: 0;
@@ -115,7 +112,6 @@ body {
   transform: translate(-50%, 20%);
 }
 
-/* Links Container */
 .links-container {
   position: fixed;
   top: 0;
@@ -166,7 +162,6 @@ body {
   background-repeat: no-repeat;
   width: auto;
   height: 100vh;
-  /* background-color: rgb(24, 35, 54); */
   background-color: #0e2b52;
   display: flex;
   flex-direction: column;
@@ -316,7 +311,6 @@ section {
   }
 
   #skills h2 {
-    /* animation: fade-in linear ease-in 1s; */
     pointer-events: none;
   }
 }
@@ -385,9 +379,7 @@ section {
 .skill-categories {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* Adjust the minmax values as needed */
   gap: 20px;
-  /* Adjust the gap between items as needed */
   font-size: 2rem;
   padding: 0 5vw;
   position: relative;
@@ -400,7 +392,6 @@ section {
   align-items: center;
   flex-direction: column;
   animation: opacity 0.5s 0.3s ease-in forwards;
-  /* Animation definition */
   opacity: 0;
 
 
@@ -412,7 +403,6 @@ section {
   align-items: center;
   flex-direction: column;
   animation: opacity 0.5s 0.8s ease-in forwards;
-  /* Animation definition */
   opacity: 0;
 
 }
@@ -423,7 +413,6 @@ section {
   align-items: center;
   flex-direction: column;
   animation: opacity 0.5s 1.3s ease-in forwards;
-  /* Animation definition */
   opacity: 0;
 
 }
@@ -439,13 +428,11 @@ section {
   min-height: 120vh;
   z-index: 3;
   position: relative;
-  /* background-color: rgb(215, 157, 104); */
   background-color: #256f89;
 }
 
 .project-container {
   text-align: center;
-  /* background-color: #FFBC63; */
   background-color: #88ada4;
 }
 
@@ -483,7 +470,6 @@ section {
 }
 
 .contact-container {
-  /* background-color: #4D69B0; */
   background-color: #e3d8ad;
   height: auto;
 }
@@ -567,18 +553,6 @@ section {
   .contact-items li a img {
     width: 3vw;
   }
-
-  /* .sksoftware {
-    font-size: 2.5vw;
-  }
-
-  .sklanguages {
-    font-size: 2.5vw;
-  }
-
-  .sktraining {
-    font-size: 2.5vw;
-  } */
 }
 
 @media (max-width: 992px) {
@@ -663,11 +637,9 @@ section {
 @keyframes opacity {
   from {
     opacity: 0;
-    /* Start with opacity 0 */
   }
 
   to {
     opacity: 1;
-    /* End with opacity 1 */
   }
 }

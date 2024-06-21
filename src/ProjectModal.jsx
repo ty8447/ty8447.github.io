@@ -3,40 +3,44 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './ProjectModal.css'; // Import CSS for styling the modal
 
-// Import all images at build time
-const allImages = import.meta.glob('/public/Proj_Images/**/*.jpg', { eager: true });
+// Import all images and videos at build time
+const allImages = import.meta.glob('/public/Proj_Images/**/*.{jpg,png}', { eager: true });
+const allVideos = import.meta.glob('/public/Proj_Images/**/*.mp4', { eager: true }); // Update pattern to match your structure
 
 const ProjectModal = ({ project, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [images, setImages] = useState([]);
+  const [media, setMedia] = useState([]);
 
   useEffect(() => {
-    // console.log('All Images:', allImages); // Log all imported images
-
     if (project) {
       setIsOpen(true);
       document.body.classList.add('no-scroll');
 
       const projectfolder = project.folder;
-      // console.log('Project Title:', projectfolder); // Debug: Log project title
 
-      // Filter images based on project title
+      // Filter images based on project folder
       const projectImages = Object.keys(allImages)
-        .filter(path => {
-          const matches = path.includes(`/Proj_Images/${projectfolder}/`);
-          // console.log(`Checking path: ${path} - Matches: ${matches}`); // Debug: Log each path check
-          return matches;
-        })
+        .filter(path => path.includes(`/Proj_Images/${projectfolder}/`))
         .map(path => {
-          const newPath = path.replace('/public', '');
-          // console.log(`Filtered Path: ${newPath}`); // Debug: Log filtered paths
+          const newPath = new URL(path.replace('/public', ''), import.meta.url).pathname;
+          console.log(`Image Path: ${newPath}`); // Debug: Log image paths
           return newPath;
-        })
-        .map(path => new URL(path, import.meta.url).pathname); // Adjust path
+        });
 
-      // console.log('Filtered Images:', projectImages); // Debug: Log filtered images
+      // Filter videos based on project folder
+      const projectVideos = Object.keys(allVideos)
+        .filter(path => path.includes(`/Proj_Images/${projectfolder}/`)) // Updated pattern
+        .map(path => {
+          const newPath = new URL(path.replace('/public', ''), import.meta.url).pathname;
+          console.log(`Video Path: ${newPath}`); // Debug: Log video paths
+          return newPath;
+        });
 
-      setImages(projectImages);
+      console.log(`Project Videos:`, projectVideos); // Debug: Log all project video paths
+      console.log(`Project Images:`, projectImages); // Debug: Log all project image paths
+
+      // Combine images and videos
+      setMedia([...projectImages, ...projectVideos]);
     } else {
       setIsOpen(false);
       document.body.classList.remove('no-scroll');
@@ -45,7 +49,7 @@ const ProjectModal = ({ project, onClose }) => {
 
   if (!project) return null;
 
-  const statusClass = `status-pill-modal ${project.status.replace(' ', '-').toLowerCase()}`;
+  const statusClass = `status-pill-carousel ${project.status.replace(' ', '-').toLowerCase()}`;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -55,7 +59,6 @@ const ProjectModal = ({ project, onClose }) => {
             <p className="modal-date">{project.date}</p>
             <div className="modal-title-container">
               <h3 className="modal-title">{project.title}</h3>
-              <div className={statusClass}>{project.status}</div>
             </div>
           </div>
           <div className="modal-close"><button className="close-button" onClick={onClose}>×</button></div>
@@ -69,16 +72,33 @@ const ProjectModal = ({ project, onClose }) => {
             </ul>
           )}
         </div>
-        {images.length > 0 ? (
-          <Carousel dynamicHeight={true} showStatus={false} showArrows={true} infiniteLoop={true} >
-            {images.map((src, index) => (
-              <div key={index}>
-                <img src={src} alt={`Project ${project.title} ${index}`} />
-              </div>
-            ))}
-          </Carousel>
+        {media.length > 0 ? (
+          <div className="carousel-container">
+            <Carousel 
+              dynamicHeight={true} 
+              showStatus={true} 
+              showArrows={true} 
+              infiniteLoop={true}
+              showIndicators={false}
+              showThumbs={false} // Hide the dots
+            >
+              {media.map((src, index) => (
+                <div key={index}>
+                  {src.endsWith('.jpg') || src.endsWith('.png') ? (
+                    <img src={src} alt={`Project ${project.title} ${index}`} />
+                  ) : (
+                    <video controls>
+                      <source src={src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
+                </div>
+              ))}
+            </Carousel>
+            <div className={statusClass}>{project.status}</div>
+          </div>
         ) : (
-          <p>No images available</p>
+          <p>No media available</p>
         )}
         <div className="modal-info">
           <p className="modal-description">{project.description}</p>

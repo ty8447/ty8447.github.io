@@ -12,7 +12,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fff;
   border-radius: 15px;
@@ -79,22 +78,29 @@
 
 .carousel .slide {
   height: 500px;
-  /* Adjusted height of the carousel slides */
 }
 
 .carousel .slide img {
   max-width: 100%;
-  /* Ensure images scale properly */
   max-height: 500px;
-  /* Set a maximum height for the images */
   width: auto;
-  /* Maintain aspect ratio */
   height: auto;
-  /* Ensure images scale properly */
   object-fit: contain;
-  /* Ensure images fit within the slide */
   margin: 0 auto;
-  /* Center the image horizontally */
+}
+
+.carousel .slide video {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.carousel .thumb video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .slider-wrapper {
@@ -103,25 +109,30 @@
 
 .carousel.carousel-slider .control-arrow {
   z-index: 100;
-  /* Ensure arrows are on top of images */
   color: #000;
-  /* Arrow color */
-  font-size: 2em;
-  /* Adjust arrow size */
-  background: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent background */
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 }
 
-.carousel .control-prev.control-arrow:before,
-.carousel .control-next.control-arrow:before {
-  color: inherit;
-  /* Inherit arrow color */
+.carousel.carousel-slider .control-arrow:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.carousel .control-arrow:hover {
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel .control-arrow:before {
+  margin: 0;
 }
 
 
 .modal-thumbnail {
   width: 30%;
-  /* Smaller size */
   height: auto;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -169,7 +180,7 @@
 
 .projectLink {
   position: relative;
-  display: inline-block; /* Change to inline-block */
+  display: inline-block;
   align-items: center;
   justify-content: center;
   margin: 15px auto;
@@ -222,7 +233,6 @@
   width: fit-content;
   right: 10px;
   z-index: 1;
-  /* Ensure status pill is above content */
 }
 
 .status-pill-modal.in-progress {
@@ -270,7 +280,6 @@
   background-color: #ffa500;
 }
 
-/* Custom scrollbar styles */
 .modal-content::-webkit-scrollbar {
   width: 8px;
 }
