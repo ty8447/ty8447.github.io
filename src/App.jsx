@@ -441,7 +441,7 @@ const App = () => {
         <ScrollToSection />
         <div className="title-container" ref={titleContainerRef}>
           <section id="home" ref={homeRef}>
-            <img src={cover} alt="Cover Background" className="cover-background" />
+            <div className="cover-box"><img src={cover} alt="Cover Background" className="cover-background" /></div>
             <div className="name-profession-container">
               <h1 style={{ pointerEvents: "none" }}>Cole Rabe</h1>
               <p style={{ pointerEvents: "none" }}>Mechanical Engineer | Electrical Engineer</p>
