@@ -12,8 +12,8 @@ Inspired by the opportunity to apply engineering principles in a practical proje
 - Stepper Motor Shield
 - Variable DC Voltage Supply
 <p>Goals:<br>
-Educational Experience: The desktop CNC machine aimed to provide a hands-on learning experience in mechanical design, electronics, and CNC programming.<br>
-Affordability and Accessibility: Designed with cost-effective materials and open-source software, making CNC technology accessible to students and hobbyists.<br>
-Functional Performance: Aimed to achieve precise cutting and engraving capabilities, demonstrating the practical application of CNC technology in small-scale projects.</p>
+- Educational Experience: The desktop CNC machine aimed to provide a hands-on learning experience in mechanical design, electronics, and CNC programming.<br>
+- Affordability and Accessibility: Designed with cost-effective materials and open-source software, making CNC technology accessible to students and hobbyists.<br>
+- Functional Performance: Aimed to achieve precise cutting and engraving capabilities, demonstrating the practical application of CNC technology in small-scale projects.</p>
 <p>Challenges and Solutions:<br>
 Throughout the project, challenges included optimizing the CNC machine's rigidity and stability using MDF wood, fine-tuning stepper motor performance for smooth operation, and debugging software integration with OpenGRBL for reliable CNC control. By leveraging iterative testing and peer feedback, I successfully overcame these challenges to create a functional desktop CNC machine.</p>

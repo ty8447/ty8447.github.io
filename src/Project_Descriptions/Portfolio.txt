@@ -10,9 +10,9 @@ While updating my resume, I realized the need for a convenient way to share the 
 - GitHub Actions for continuous deployment and automatic updates</p>
 <p>This project showcases my skills in modern web development and my commitment to creating a professional and easily accessible platform for my work.</p>
 <p>Goals:<br>
-Real-Time Updates: The portfolio allows for immediate updates to projects and resume, ensuring that the most current information is always available.<br>
-Accessibility and Ease of Sharing: Designed to provide an easy-to-navigate platform that can be shared with potential employers, collaborators, and peers.<br>
-Professional Presentation: Aims to present my work in a polished and organized manner, highlighting my skills and achievements effectively.</p>
+- Real-Time Updates: The portfolio allows for immediate updates to projects and resume, ensuring that the most current information is always available.<br>
+- Accessibility and Ease of Sharing: Designed to provide an easy-to-navigate platform that can be shared with potential employers, collaborators, and peers.<br>
+- Professional Presentation: Aims to present my work in a polished and organized manner, highlighting my skills and achievements effectively.</p>
 <p>Challenges and Solutions:<br>
 Throughout the development process, challenges included optimizing the portfolio for performance and responsiveness, ensuring seamless integration with GitHub Pages for hosting, and setting up continuous deployment with GitHub Actions. By leveraging the powerful capabilities of React and Vite, and thorough testing, I successfully addressed these challenges to create a reliable and efficient portfolio platform.</p>
 <p>Future Improvements:<br>
