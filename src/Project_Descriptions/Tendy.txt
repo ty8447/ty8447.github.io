@@ -1,0 +1,24 @@
+<p>While in college, I built a liquor cabinet for my apartment. I wanted an easy way to find drink recipes using the ingredients I already had, so I developed a localized assistant that can be easily downloaded.<br>
+<br>
+Objective:<br>
+My primary goal was to create a virtual bartending assistant, named Tendy, tailored to simplify the process of making cocktails at home. Tendy allows users to discover drink recipes based on available ingredients, enhancing the home bartending experience.
+<br>
+Backstory:<br>
+Inspired by my passion for mixology and the need for practicality in college life, I conceived Tendy as a solution to streamline the cocktail-making process. Having built a liquor cabinet, I saw an opportunity to combine my DIY spirit with technology to develop a user-friendly assistant that provides customized drink recipes.
+<br>
+User-friendly interface for seamless navigation and recipe browsing<br>
+Database of curated cocktail recipes and ingredient pairings<br>
+Compatibility with iOS and Android platforms for widespread accessibility<br>
+Continuous updates and improvements based on user feedback
+This project has been a labor of love, integrating my interest in mixology with my technical skills to create a practical solution for cocktail enthusiasts and beginners alike.
+<br>
+Goals:<br>
+Simplicity and Convenience: Tendy offers an intuitive interface that simplifies the process of finding and creating cocktails using available ingredients.<br>
+Personalization: Allows users to customize drink preferences, save favorite recipes, and explore new cocktails tailored to individual tastes.<br>
+Accessibility: Designed to be easily downloadable and user-friendly, ensuring accessibility for all levels of bartending enthusiasts.<br>
+<br>
+Challenges and Solutions:<br>
+Throughout development, challenges included optimizing ingredient recognition accuracy and enhancing the assistant's responsiveness to user queries. By refining algorithms and conducting extensive testing, Tendy now delivers reliable and tailored cocktail recommendations.
+<br>
+Future Improvements:<br>
+Looking ahead, I plan to expand Tendy's capabilities by incorporating recipe rating systems, a more robust platform, integrating real-time ingredient updates, and making Tendy portable so that it can be easily run on a cheap microcontroller such as a Raspberry Pi Zero W (~$15) and left on a network. These enhancements aim to elevate the home bartending experience and foster a community of cocktail enthusiasts.</p>
