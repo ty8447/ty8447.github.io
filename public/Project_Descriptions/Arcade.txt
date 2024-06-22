@@ -1,0 +1,20 @@
+<p>Objective:<br>
+My objective was to design and build a custom arcade machine to fit perfectly in my newly renovated basement. This project aimed to create a versatile and cost-effective gaming system using readily available materials and components.</p>
+<p>Backstory:<br>
+After renovating my basement, I noticed an extra space that seemed perfect for an arcade machine. However, after researching commercial options, I found them to be too expensive and limited in game selection. This motivated me to build a custom arcade machine myself, providing a personalized and expansive gaming experience.</p>
+<p>Components Used:<br>
+- 1/2" MDF wood for the structural frame and housing<br>
+- Computer monitor for the display<br>
+- 8" speakers for high-quality audio output<br>
+- Raspberry Pi 4B+ for running arcade emulation software<br>
+- Arcade joysticks and buttons for authentic gameplay controls<br>
+- LED lights for enhanced visual appeal and customization</p>
+<p>This project reflects my passion for DIY projects and my ability to integrate various components into a cohesive and functional entertainment system.</p>
+<p>Goals:<br>
+- Customization and Versatility: The arcade machine is designed to support a wide range of games, providing a versatile gaming experience.<br>
+- Cost-Effective Solution: By building the machine myself, I aimed to create an affordable alternative to commercial arcade machines.<br>
+- Aesthetic and Functional Design: The arcade machine combines visual appeal with robust performance, fitting seamlessly into the renovated basement space.</p>
+<p>Challenges and Solutions:<br>
+Throughout the development process, challenges included designing a sturdy yet aesthetically pleasing cabinet from MDF wood, integrating the various electronic components for seamless operation, and configuring the Raspberry Pi to run multiple arcade games smoothly. By carefully planning the design and conducting thorough testing, I successfully overcame these challenges to create a fully functional and visually appealing arcade machine.</p>
+<p>Future Improvements:<br>
+Looking ahead, I plan to enhance the arcade machine painting and adding trim pieces to improve the Aesthetic, add a custom CNC acrylic panel to cover the joysticks and provide easy to see controls, and build in some of the nice to have features such as a single dedicated power plug. Additionally, I aim to refine the cabinet design for easier maintenance and potential upgrades, ensuring the arcade machine remains a central piece of entertainment in the basement.</p>

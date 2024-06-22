@@ -345,7 +345,7 @@ const App = () => {
       folder: 'Game',
       thumbnail: 'Proj_Images/Game/Proj_Game.jpg',
       title: 'Developing a Local Multiplayer Game within Unreal Engine 4',
-      summary: 'This project came about after visiting a game developer convention and being impressed with what came out and being encouraged by some developers to try to make one. ',
+      summary: 'This project came about after visiting a game developer convention and being impressed with what came out and being encouraged by some developers to try to make one.',
       link: 'https://github.com/ty8447/4-Player-Unreal-Game',
       tools: ['Unreal Engine'],
       date: 'May 2016',

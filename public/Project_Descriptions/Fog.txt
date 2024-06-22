@@ -1,0 +1,21 @@
+<p>Objective:<br>
+The objective was to design and build a handheld fog machine that would enable my friend to add smoke effects and haze for his photography. This project aimed to create a portable and user-friendly device with advanced features such as remote triggering and an intuitive interface.</p>
+<p>Backstory:<br>
+For my friend's birthday, I wanted to give him a unique and practical gift for his photography. Inspired by cool pictures achieved with smoke machines, I set out to build a handheld fog machine. My goal is to use a small microcontroller to control a heating element and integrate other useful features to enhance his photography experience.</p>
+<p>Components Used:<br>
+- ESP32 microcontroller for control and connectivity<br>
+- Li-ion batteries for portable power supply<br>
+- Heating coil for generating fog<br>
+- Breadboard prototype for initial testing and development<br>
+- Screen for displaying the status of the fogger<br>
+- Remote trigger capabilities for convenient operation<br>
+- Custom-fabricated heating coil mounting for connectivity with the heating coil</p>
+<p>This project demonstrates my ability to design and prototype electronic devices, focusing on creating innovative solutions to enhance user experiences in practical applications.</p>
+<p>Goals:<br>
+- Portability and Convenience: The handheld fog machine is designed to be lightweight and easy to use, making it ideal for on-the-go photography.<br>
+- Intuitive Interface: Features an included screen to show the status of the fogger, ensuring easy monitoring and control.<br>
+- Advanced Functionality: Aims to provide remote trigger capabilities, allowing for flexible and creative use in various photography settings.</p>
+<p>Current Challenges:<br>
+Throughout the development process, challenges included designing a safe and effective heating coil system, ensuring reliable power management with Li-ion batteries, and creating an intuitive user interface.</p>
+<p>Next Steps:<br>
+Looking ahead, I plan to fabricate a durable and safe mount that allows the heating coil to have an air tight connection with the air pump.</p>

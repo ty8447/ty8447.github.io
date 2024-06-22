@@ -1,0 +1,17 @@
+<p>Objective:<br>
+The objective of this project was to design and build a device using an Arduino Uno and low-cost ultrasonic sensors to suspend foam beads in mid-air. This project aimed to serve as both a desk toy and a learning experience in programming, electronics, and CAD design, utilizing Solidworks for the first time.</p>
+<p>Backstory:<br>
+This project marked my introduction to CAD design using Solidworks, where I set out to create a device capable of levitating very light objects using inexpensive ultrasonic sensors. The goal was to explore principles of levitation, enhance my skills in programming microcontrollers, and apply CAD design techniques to realize a functional and visually appealing prototype.</p>
+<p>Components Used:<br>
+- Arduino Uno microcontroller for controlling the levitation system<br>
+- Low-cost ultrasonic sensors for object detection and positioning<br>
+- Solidworks for CAD design and modeling of the levitator structure<br>
+- Foam beads as lightweight objects for levitation experiments<br>
+- Basic electronic components such as resistors, capacitors, and wires for circuit assembly</p>
+<p>This project showcases my curiosity in combining electronics, programming, and CAD design to create an interactive and educational device.</p>
+<p>Goals:<br>
+- Levitation Experimentation: Construct a prototype that demonstrates the levitation of foam beads using ultrasonic sensors and precise control algorithms.<br>
+- Learning CAD Design: Gain proficiency in Solidworks by designing the structural components of the levitator to optimize functionality and aesthetics.<br>
+- Desk Toy Application: Create a visually appealing and engaging desk toy that showcases principles of physics and technology in an accessible manner.</p>
+<p>Challenges and Solutions:<br>
+Throughout the project, challenges included aligning the ultrasonic sensors, implementing control algorithms for stable levitation, and iterating on the CAD design to ensure structural integrity and effective levitation performance. By conducting systematic testing, refining code logic, and iteratively improving the CAD model, I successfully achieved stable levitation of foam beads.</p>

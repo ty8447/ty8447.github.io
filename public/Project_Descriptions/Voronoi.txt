@@ -1,0 +1,14 @@
+<p>Objective:<br>
+The objective of this project was to develop a Voronoi diagram generator using P5.js that allows users to create both random patterns and biased patterns based on user input. This project aimed to explore computational geometry concepts and interactive visualizations using web-based programming.</p>
+<p>Backstory:<br>
+During an introduction to programming class where we were tasked with building a program in Python, I chose to challenge myself by creating a Voronoi diagram generator using P5.js within a 48-hour timeframe. The goal was to understand Voronoi diagrams and implement an interactive tool that allows users to manipulate and visualize geometric patterns.</p>
+<p>Components Used:<br>
+- P5.js for interactive graphics and user interface<br>
+- Computational geometry algorithms for Voronoi diagram generation</p>
+<p>This project showcases my interest in computational art and my ability to apply programming concepts to create interactive and visually appealing simulations.</p>
+<p>Goals:<br>
+- Voronoi Diagram Generation: Develop a program that generates Voronoi diagrams based on user-defined points and regions.<br>
+- User Interaction: Implement features that allow users to bias the diagram generation process, achieving desired visual effects and patterns.<br>
+- Educational Tool: Create a learning resource that demonstrates computational geometry principles through interactive exploration and experimentation.</p>
+<p>Challenges and Solutions:<br>
+Throughout the project, challenges included understanding and implementing Voronoi diagram algorithms in a web-based environment, optimizing performance for real-time interaction, and designing an intuitive user interface for parameter adjustment. By leveraging online resources, experimenting with different algorithms, and iterative testing, I successfully overcame these challenges and created a functional Voronoi diagram generator.</p>

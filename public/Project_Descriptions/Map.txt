@@ -1,0 +1,18 @@
+<p>Objective:<br>
+The objective was to create a program that facilitates the mapping of existing LEDs in a room to enable the creation of immersive and dynamic lighting effects. This project aimed to streamline the process of determining LED positions and outputting data for use with an LED controller.</p>
+<p>Backstory:<br>
+To enhance the immersive experience of a room with pre-installed LEDs, I needed an efficient way to map the LEDs' locations and sections on each wall. This led me to develop a program that could quickly and accurately achieve this, providing an output that can be directly inputted into the LED controller for advanced animations and effects.</p>
+<p>Components Used:<br>
+- Arduino IDE<br>
+- Existing LED strips installed in the room<br>
+- LED controller for managing animations and effects<br>
+- microcontroller for running the program and interfacing with the LED controller</p>
+<p>This project showcases my ability to develop quick and effective software solutions to enhance existing hardware setups, focusing on improving user experience and creative possibilities.</p>
+<p>Goals:<br>
+- Efficiency and Accuracy: The program is designed to quickly and accurately map the LEDs' positions and sections, minimizing setup time.<br>
+- Ease of Use: Provides an intuitive interface for users to input room dimensions and LED placement, ensuring accessibility for non-technical users.<br>
+- Enhanced Immersion: Enables the creation of more dynamic and immersive lighting effects by providing precise LED mapping data to the controller.</p>
+<p>Challenges and Solutions:<br>
+Throughout the development process, challenges included creating an algorithm that could accurately interpret room dimensions and LED placement, ensuring compatibility with various LED controllers, and optimizing the program for quick execution. By focusing on a user-friendly design and rigorous testing, I successfully addressed these challenges to create a reliable and efficient mapping program.</p>
+<p>Future Improvements:<br>
+Looking ahead, I plan to enhance the program by adding features such as real-time mapping adjustments. This improvement aims to further enhance the user experience and expand the creative possibilities for LED animations and effects.</p>

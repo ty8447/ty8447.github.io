@@ -1,0 +1,16 @@
+<p>Objective:<br>
+The objective of this project was to design and build a vintage "On Air" sign prop for a production, with a focus on easy control by actors. This project served as an opportunity to explore advanced CAD features in Onshape, such as sweep, loft, and patterns, while gaining practical experience in designing and 3D printing props.</p>
+<p>Backstory:<br>
+As one of my earliest projects involving CAD design, I was tasked with creating a retro-style "On Air" sign that could be easily controlled by actors during a production. This challenge motivated me to delve into advanced CAD techniques in Onshape, aiming to enhance my skills in digital modeling and prototype development for theatrical props.</p>
+<p>Components Used:<br>
+- Onshape for CAD modeling, utilizing features like sweep, loft, and patterns for intricate design elements<br>
+- 3D printing for prototyping and manufacturing the physical sign<br>
+- Electrical components for implementing a control mechanism, possibly including Arduino for automation or simple manual switches<br>
+- Retro-themed design elements to evoke the nostalgic aesthetic of vintage broadcasting</p>
+<p>This project highlights my early exploration of CAD software and its application in creating functional and visually appealing props for theatrical settings.</p>
+<p>Goals:<br>
+- Functional Design: Design a retro "On Air" sign that authentically replicates vintage broadcasting aesthetics and functions reliably in a theatrical environment.<br>
+- Actor-Friendly Control: Implement a user-friendly control mechanism that allows actors to easily activate and deactivate the sign during performances.<br>
+- CAD Skill Development: Gain proficiency in advanced CAD techniques such as sweep, loft, and patterns through practical application in prop design and manufacturing.</p>
+<p>Challenges and Solutions:<br>
+Throughout the project, challenges included mastering complex CAD features to achieve desired design aesthetics, integrating electronic components for seamless functionality, and ensuring the prop's durability and usability on stage. By experimenting with different design iterations, refining manufacturing techniques, and collaborating with theater production teams for feedback, I successfully delivered a functional "On Air" sign prop that met performance requirements.</p>

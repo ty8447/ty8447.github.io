@@ -1,0 +1,16 @@
+<p>Objective:<br>
+The objective of our Interactive Qualifying Project (IQP) was to develop strategies to reduce traffic congestion in the town of Nantucket, particularly caused by trucks. This project aimed to provide practical solutions to improve traffic flow and enhance the quality of life for residents and visitors.</p>
+<p>Backstory:<br>
+At the end of 2022, I joined a team of students to work with the town of Nantucket, MA. Our task was to analyze the traffic congestion in the core downtown area and propose a plan to mitigate the issues caused by truck traffic. This seven-week project involved extensive collaboration with local stakeholders and the use of digital tools for data collection and analysis.</p>
+<p>Components Used:<br>
+- Digital tools for collecting and analyzing traffic and parking data<br>
+- Surveys and interviews with residents and business owners to gather insights<br>
+- Data analysis software for identifying congestion patterns and problem areas<br>
+- Comprehensive reporting and presentation tools for delivering findings and recommendations</p>
+<p>This project showcases our ability to work collaboratively with community stakeholders, use digital tools for data-driven analysis, and develop practical solutions to real-world problems.</p>
+<p>Goals:<br>
+- Reduce Traffic Congestion: Develop feasible strategies to alleviate congestion caused by trucks in downtown Nantucket.<br>
+- Engage with Community: Collaborate with residents and business owners to gather insights and ensure proposed solutions meet community needs.<br>
+- Deliver Comprehensive Solutions: Provide detailed findings and recommendations to town officials and citizens through reports and presentations.</p>
+<p>Challenges and Solutions:<br>
+Throughout the seven-week project, challenges included accurately collecting and analyzing traffic data, engaging with a diverse range of community members, and developing feasible and effective solutions. By leveraging digital tools, conducting thorough data analysis, and maintaining open communication with stakeholders, we successfully addressed these challenges and delivered actionable recommendations.</p>

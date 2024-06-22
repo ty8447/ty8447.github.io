@@ -1,0 +1,20 @@
+<p>Objective:<br>
+The objective was to design and build a variety of drones, ranging from small micro brushed and brushless drones to larger racing drones and autonomous drones capable of carrying payloads. This project aimed to explore different aspects of drone technology, from manual control to autonomous flight systems using Ardupilot.</p>
+<p>Backstory:<br>
+Since childhood, I have always loved toy helicopters, and when drones started to become popular, I was inspired to build my own. Over the years, I have built numerous drones, each with unique features and capabilities, including autonomous flight and payload carrying. This journey reflects my passion for aerial technology and continuous learning in the field.</p>
+<p>Components Used:<br>
+- Micro brushed and brushless motors for small drones<br>
+- Mini drone components for agile and fast flight<br>
+- 5" racing drone parts for high-speed and maneuverability<br>
+- Larger drone frames and motors for carrying payloads<br>
+- GPS modules and Ardupilot for autonomous flight capabilities<br>
+- Various sensors and controllers for precise navigation and control</p>
+<p>This project showcases my ability to design, build, and program drones with a range of functionalities, from manual control to advanced autonomous operations.</p>
+<p>Goals:<br>
+- Explore Drone Technology: Build and experiment with various types of drones to understand different aspects of drone design and functionality.<br>
+- Achieve Autonomous Flight: Implement GPS and Ardupilot systems to enable drones to fly autonomously and perform complex tasks.<br>
+- Payload Capability: Design larger drones capable of carrying and delivering payloads, expanding the potential applications of the technology.</p>
+<p>Challenges and Solutions:<br>
+Throughout these projects, challenges included designing stable and efficient flight systems, integrating GPS and autonomous control systems, and ensuring reliable payload delivery. By conducting extensive research, iterative prototyping, and leveraging advanced flight control software, I successfully addressed these challenges and built a range of functional and versatile drones.</p>
+<p>Future Improvements:<br>
+Looking ahead, I plan to further refine the autonomous capabilities of my drones by incorporating advanced sensors and machine learning algorithms for obstacle detection and avoidance. Additionally, I aim to explore new applications for payload-carrying drones, such as aerial photography, surveying, and delivery services.</p>
