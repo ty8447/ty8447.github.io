@@ -11,6 +11,7 @@ import ProjectModal from './ProjectModal';
 import Nav from './Nav.jsx';
 import Copyright from './Copyright';
 import cover from './Assets/misc/cover.svg';
+import Stats from './stats.jsx';
 
 const Home = () => <p></p>;
 const Skill = () => <h1>Skill</h1>;
@@ -1746,6 +1747,7 @@ z"/>
             </ul>
           </section>
           <Copyright />
+          <div style={{color:"#e3d8ad", fontSize:"1px"}}><Stats /></div>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
