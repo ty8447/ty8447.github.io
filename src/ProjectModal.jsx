@@ -15,6 +15,7 @@ const ProjectModal = ({ project, onClose }) => {
     if (project) {
       setIsOpen(true);
       document.body.classList.add('no-scroll');
+      console.log(`Project Description: ${project.description}`);
 
       const projectfolder = project.folder;
 
@@ -74,10 +75,10 @@ const ProjectModal = ({ project, onClose }) => {
         </div>
         {media.length > 0 ? (
           <div className="carousel-container">
-            <Carousel 
-              dynamicHeight={true} 
-              showStatus={true} 
-              showArrows={true} 
+            <Carousel
+              dynamicHeight={true}
+              showStatus={true}
+              showArrows={true}
               infiniteLoop={true}
               showIndicators={false}
               showThumbs={false} // Hide the dots
@@ -101,7 +102,7 @@ const ProjectModal = ({ project, onClose }) => {
           <p>No media available</p>
         )}
         <div className="modal-info">
-          <p className="modal-description">{project.description}</p>
+          <p className="modal-description" dangerouslySetInnerHTML={{ __html: project.description }} />
         </div>
         {project.link && (
           <a

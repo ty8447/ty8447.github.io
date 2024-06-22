@@ -1,0 +1,23 @@
+<p>The idea of creating a custom flashlight has always fascinated my friend and me, driven by our shared passion for flashlights. We decided to embark on a project to challenge ourselves by designing a flashlight from scratch, incorporating novel features aimed at enhancing usability and functionality.<br>
+<br>
+Objective:<br>
+Our primary goal was to develop a unique flashlight that not only matches but surpasses existing models in terms of innovation and user experience. This involved integrating new features that improve ease of use and practicality in various scenarios.<br>
+<br>
+Backstory:<br>
+As enthusiasts of flashlights, we saw an opportunity to innovate in an area we are passionate about. Current "smart" flashlights lack the customizability for using the auxillary LEDs to give more information about the light, which we find essential to having the best information about the device when it is most needed. Motivated by this insight, we set out to create a flashlight that achieves this while pushing the boundaries of what a flashlight can offer.<br>
+<br>
+Components Used:<br>
+<br>
+- High-capacity 21700 lithium-ion batteries<br>
+- Custom-designed LED modules for enhanced brightness and efficiency<br>
+- Aerospace-grade aluminum alloy for lightweight durability<br>
+- Ergonomic grips and switches for comfortable handling<br>
+- Waterproof seals and impact-resistant materials for outdoor durability<br>
+<br>
+Goals:<br>
+Innovative Design: The flashlight features a cutting-edge design that prioritizes usability and performance.<br>
+Enhanced Functionality: Incorporates new features such as gesture controls, modular attachments, and adaptive brightness settings to cater to diverse user needs.<br>
+Durable Build: Constructed with premium materials to withstand rugged conditions while maintaining optimal performance.<br>
+<br>
+Future Work:<br>
+Looking ahead, we plan to continue designing a prototype to make sure our current method is correct and then design the final product.</p>

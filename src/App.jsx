@@ -32,11 +32,27 @@ const ScrollToSection = () => {
   return null;
 };
 
+const fetchDescription = async (folder) => {
+  try {
+    const response = await fetch(`/src/Project_Descriptions/${folder}.txt`);
+    console.log('Checking for Description!');
+    if (!response.ok) {
+      throw new Error(`Failed to fetch description for ${folder}`);
+    }
+    return await response.text();
+  } catch (error) {
+    console.error(error);
+    return 'Description Coming Soon';
+  }
+};
+
 const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCardRef, setSelectedCardRef] = useState(null);
   const [activeLink, setActiveLink] = useState("#");
   const [isSticky, setIsSticky] = useState(false);
+  const [descriptions, setDescriptions] = useState({});
+
   const linksContainerRef = useRef(null);
   const titleContainerRef = useRef(null);
 
@@ -98,13 +114,29 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const loadDescriptions = async () => {
+      const descriptionPromises = projectData.map(project =>
+        fetchDescription(project.folder)
+      );
+      const descriptionsArray = await Promise.all(descriptionPromises);
+      const descriptionsObject = projectData.reduce((acc, project, index) => {
+        acc[project.folder] = descriptionsArray[index];
+        return acc;
+      }, {});
+      setDescriptions(descriptionsObject);
+    };
+
+    loadDescriptions();
+  }, []);
+  
   const projectData = [
     {
       folder: 'MacDeck',
       thumbnail: 'Proj_Images/MacDeck/Proj_MacDeck.jpg',
       title: 'MacDeck Dynamic Keyboard',
       summary: 'Back when the Stream Deck was first released I loved the concept of having a dynamic macro keyboard for productivity, but I felt that the design was lacking in terms of control. My goal for this project was to design a product where it would functionally work the same as that device but incorporates many of the missing features I was looking for.',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Onshape', 'Altium Designer', '3D Printing', 'C++', 'Python'],
       date: 'August 2021',
@@ -116,7 +148,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Flashlight/Proj_Flashlight.jpg',
       title: 'FWG Flashlight',
       summary: 'My friend and I love flashlights and the we wanted to challenge ourselves to make one from scratch, but by adding brand new features to increase ease of use.',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Solidworks', 'Altium Designer', '3D Printing'],
       date: 'February 2022',
@@ -128,7 +159,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Longboard/Proj_Longboard.jpg',
       title: 'DIY Electric Longboard',
       summary: 'From when I was a kid I loved longboarding and after seeing one in person and knew I had to make my own.',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Solidworks', '3D Printing', 'Spot Welding'],
       date: 'June 2020',
@@ -140,7 +170,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Tendy/Proj_Tendy.jpg',
       title: 'Tendy: The Virtual Home Bartending Assistant ',
       summary: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded.',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/Tendy',
       tools: ['Javascript', 'HTML', 'CSS', 'Python', 'Pycharm'],
       date: 'April 2023',
@@ -152,7 +181,6 @@ const App = () => {
       thumbnail: 'Proj_Images/LEDControl/Proj_LEDControl.jpg',
       title: 'Home LED Effect Controller',
       summary: 'While in College I built a liquor cabinet for my apartment and wanted to have an easy way to find drink recipes with the ingredients I have already in my apartment, so I developed a localized assistant that can be easily downloaded',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/LED-Controller',
       tools: ['Python', 'C++', 'Arduino', 'Processing4'],
       date: 'August 2021',
@@ -164,7 +192,6 @@ const App = () => {
       thumbnail: 'Proj_Images/LightBar/Proj_LightBar.jpg',
       title: 'Custom LED Headlights for Personal Electric Vehicles',
       summary: 'After building a bunch of electric boards I found that there were not many small but reliable solutions for head and tail lights (besides the individual solutions for bikes) so I decided that I was going to make one myself for my Onewheel and Longboard.',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Solidworks', 'Altium Designer'],
       date: 'November 2023',
@@ -176,7 +203,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Battery/Proj_Battery.jpg',
       title: 'Custom Electric Vehicles Battery Packs',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application .',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Solidworks', 'Spot Welding'],
       date: 'May 2022',
@@ -188,7 +214,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Purchase/Proj_Purchase.jpg',
       title: 'Automated Item Purchaser',
       summary: "When moving into my dorm room I wanted to add more light but didn't want to damage anything, so LED lights were used instead. Instead of using low cost led lights, I took the opportunity to design a control system for them and the project became more complex from there.",
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/Automatic-Item-Purchaser',
       tools: ['Python', 'Selenium', 'BeautifulSoup', 'Pycharm'],
       date: 'June 2023',
@@ -200,7 +225,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Lamps/Proj_Lamps.jpg',
       title: 'Wirelessly Communicating Lamps',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/DIY-Friendship-Lamps',
       tools: ['Arduino', 'C++', 'MQTT'],
       date: 'December 2023',
@@ -212,7 +236,6 @@ const App = () => {
       thumbnail: 'Proj_Images/VR/Proj_VR.jpg',
       title: 'Custom VR Headset',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Prototyping', 'FreeTrack', 'RiftCat'],
       date: 'January 2016',
@@ -224,7 +247,6 @@ const App = () => {
       thumbnail: 'Proj_Images/CNC/Proj_CNC.jpg',
       title: 'DIY CNC Machine',
       summary: 'Back when there was the Oculus Rift and Google Cardboard, I was inspired to try and see if I could make a prototype myself.',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Fusion360 CAM', 'CNC', 'OpenGRBL', 'Arduino'],
       date: 'February 2018',
@@ -236,7 +258,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Portfolio/Proj_Portfolio.jpg',
       title: 'Portfolio Website',
       summary: 'When building the longboard and Onewheel I wanted to design and build battery packs that would fit within the restricting structure of the boards and create a process for easily building custom battery packs for any application ',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/ty8447.github.io',
       tools: ['React', 'Vite', 'CSS', 'HTML', 'Javascript', 'VSCode'],
       date: 'June 2024',
@@ -248,7 +269,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Onewheel/Proj_Onewheel.jpg',
       title: 'Scratch Built Onewheel',
       summary: 'While updating my resume I found that I wanted to have a way of sharing the most recent version of my projects and resume without needing to resend.',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Solidworks', '3D Printing', 'Spot Welding', 'VESC'],
       date: 'July 2022',
@@ -260,7 +280,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Arcade/Proj_Arcade.jpg',
       title: 'Custom Full Sized Arcade Machine',
       summary: 'After renovating my basement, I found that there was some extra space to put something and I found that an arcade machine would fit perfectly. After a bunch of research, I found the cost of an arcade machine to be too high and limiting in the games it would provide so I ended up building one myself.',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Onshape', 'Power Tools', 'Raspberry Pi'],
       date: 'May 2018',
@@ -272,7 +291,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Map/Proj_Map.jpg',
       title: 'Simple LED Mapper',
       summary: 'In order to determine the walls of the room and amount of LEDs on each wall for animations, I made a program that easily achieved this and gives an output that can be directly inputted into the LED Controller',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/LEDMapper',
       tools: ['Arduino', 'C++'],
       date: 'December 2022',
@@ -284,7 +302,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Fog/Proj_Fog.jpg',
       title: 'Handheld Fog Machine',
       summary: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
-      description: 'Description Coming Soon',
       // link: 'https://github.com/ty8447/Open-Fogger',
       tools: ['Solidworks', 'Arduino', 'C++'],
       date: 'December 2022',
@@ -296,7 +313,6 @@ const App = () => {
       thumbnail: 'Proj_Images/MQP/Proj_MQP.jpg',
       title: 'Designing a Mechanism to Avoid Ice Deformation of Fixed Docks',
       summary: 'My senior capstone project was to design a mechanism that would reduce the deformation caused by ice on fixed docks. This project was started after my partner got frustrated with the process for winterization of a fixed dock and created a team to help solve that.',
-      description: 'Description Coming Soon',
       link: 'https://digital.wpi.edu/pdfviewer/tb09j922d',
       tools: ['Matlab', 'CREO Parametric', 'Solidworks', 'Teamwork'],
       date: 'January 2023',
@@ -308,7 +324,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Nantucket/Proj_Nantucket.jpg',
       title: 'Reducing Traffic Congestion in Downtown Nantucket, MA',
       summary: "For my friend's birthday I wanted to give him a gift that he could use for photography and found some really cool pictures that were achieved with smoke machines. In order to achieve this my goal is to use a small microcontroller to control a heating element and other useful features.",
-      description: 'Description Coming Soon',
       link: 'https://digital.wpi.edu/pdfviewer/8w32r9166',
       tools: ['ArcGIS', 'Google Forms', 'Communication', 'Teamwork'],
       date: 'October 2022',
@@ -320,7 +335,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Drone/Proj_Drone.jpg',
       title: 'Radio Controlled FPV Racing Drones',
       summary: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Ardupilot', 'GPS', 'Radio Frequency'],
       date: 'February 2016',
@@ -332,7 +346,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Game/Proj_Game.jpg',
       title: 'Developing a Local Multiplayer Game within Unreal Engine 4',
       summary: 'When I was a kid I always love the toy helicopters and when drones started to become a thing I built many different drones (with some that were autonomous and some that could carry payloads).',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/4-Player-Unreal-Game',
       tools: ['Unreal Engine'],
       date: 'May 2016',
@@ -344,7 +357,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Pipe/Proj_Pipe.jpg',
       title: 'Restoration of a Vintage Pipe Failure Tester',
       summary: "This project came about after I was given a broken tester that he didn't have time to fix and asked if I wanted to try and fix it.",
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Soldering', 'Troubleshooting'],
       date: 'April 2023',
@@ -356,7 +368,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Foot/Proj_Foot.jpg',
       title: 'Reverse Engineering a Consumable Computer Foot',
       summary: "After a bunch of the feet on my computer case broke, I was in need of finding a solution and turned to taking a foot that wasn't broken and remade them within CAD and 3D printed them.",
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Solidworks', '3D Printing'],
       date: 'July 2018',
@@ -368,7 +379,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Voronoi/Proj_Voronoi.jpg',
       title: 'Designing a Random Voronoi Generator',
       summary: "During an intro to programming class we were asked to build a program to do anything, as long as it was in Python. This program was built in 48 hours.",
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/Voronoi',
       tools: ['Javascript'],
       date: 'January 2023',
@@ -380,7 +390,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Drums/Proj_Drums.jpg',
       title: 'Using Wii Remotes to Play Air Drums',
       summary: "This was the final project for a music programming class where the goal was to use Max MSP to create an interactive program. Over the course of 2 weeks, this program was planned out, developed, and polished to deliver a fun experience for the user.",
-      description: 'Description Coming Soon',
       // link: 'https://github.com/ty8447/Wii-Air-Drums',
       tools: ['Max 8'],
       date: 'March 2021',
@@ -392,7 +401,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Levitator/Proj_Levitator.jpg',
       title: 'Developing an Ultrasonic Levitating Device',
       summary: 'The first project I used CAD for was to design and build a device that uses low cost ultrasonic sensors to float very light objects.',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/Ultrasonic-Levitator',
       tools: ['Solidworks', '3D Printing', 'Arduino', 'C++'],
       date: 'January 2019',
@@ -404,7 +412,6 @@ const App = () => {
       thumbnail: 'Proj_Images/DMX/Proj_DMX.jpg',
       title: 'Designing a custom controller to interact with mains voltage devices',
       summary: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution.',
-      description: 'Description Coming Soon',
       link: 'https://github.com/ty8447/DMX-Relay',
       tools: ['Solidworks', '3D Printing', 'Arduino', 'C++'],
       date: 'October 2019',
@@ -416,7 +423,6 @@ const App = () => {
       thumbnail: 'Proj_Images/Sign/Proj_Sign.jpg',
       title: 'Designing a Vintage On Air Sign ',
       summary: 'For a theatrical performance we needed to have a rotary phone ring, instead of using a sound effect the director wanted to see if we could make a real rotary phone ring on command and tasked me with finding a solution..',
-      description: 'Description Coming Soon',
       link: '',
       tools: ['Onshape', '3D Printing'],
       date: 'October 2019',
@@ -426,7 +432,10 @@ const App = () => {
   ];
 
   const handleLearnMore = (project, cardRef) => {
-    setSelectedProject(project);
+    setSelectedProject({
+      ...project,
+      description: descriptions[project.folder]
+    });
     setSelectedCardRef(cardRef);
   };
 
