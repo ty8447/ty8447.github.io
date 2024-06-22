@@ -34,7 +34,7 @@ const ScrollToSection = () => {
 
 const fetchDescription = async (folder) => {
   try {
-    const response = await fetch(`/public/Project_Descriptions/${folder}.txt`);
+    const response = await fetch(`/Project_Descriptions/${folder}.txt`);
     // console.log('Checking for Description!');
     if (!response.ok) {
       throw new Error(`Failed to fetch description for ${folder}`);
