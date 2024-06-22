@@ -24,7 +24,7 @@ const ProjectModal = ({ project, onClose }) => {
         .filter(path => path.includes(`/Proj_Images/${projectfolder}/`))
         .map(path => {
           const newPath = new URL(path.replace('/public', ''), import.meta.url).pathname;
-          console.log(`Image Path: ${newPath}`); // Debug: Log image paths
+          // console.log(`Image Path: ${newPath}`); // Debug: Log image paths
           return newPath;
         });
 
@@ -33,12 +33,12 @@ const ProjectModal = ({ project, onClose }) => {
         .filter(path => path.includes(`/Proj_Images/${projectfolder}/`)) // Updated pattern
         .map(path => {
           const newPath = new URL(path.replace('/public', ''), import.meta.url).pathname;
-          console.log(`Video Path: ${newPath}`); // Debug: Log video paths
+          // console.log(`Video Path: ${newPath}`); // Debug: Log video paths
           return newPath;
         });
 
-      console.log(`Project Videos:`, projectVideos); // Debug: Log all project video paths
-      console.log(`Project Images:`, projectImages); // Debug: Log all project image paths
+      // console.log(`Project Videos:`, projectVideos); // Debug: Log all project video paths
+      // console.log(`Project Images:`, projectImages); // Debug: Log all project image paths
 
       // Combine images and videos
       setMedia([...projectImages, ...projectVideos]);

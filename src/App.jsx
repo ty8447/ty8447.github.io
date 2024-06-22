@@ -71,11 +71,11 @@ const App = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-           console.log(`Entry: ${entry.target.id}`);
+          //  console.log(`Entry: ${entry.target.id}`);
           if (entry.isIntersecting) {
             setActiveLink(`#${entry.target.id}`);
           } else {
-             console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
+            //  console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
           }
         });
       },
@@ -89,7 +89,7 @@ const App = () => {
       if (ref.current) {
         observer.observe(ref.current);
       } else {
-        console.log(`Ref not set for: ${id}`);
+        // console.log(`Ref not set for: ${id}`);
       }
     });
 
@@ -108,7 +108,7 @@ const App = () => {
         if (ref.current) {
           observer.unobserve(ref.current);
         } else {
-          console.log("Ref not set for:", id);
+          // console.log("Ref not set for:", id);
         }
       });
       window.removeEventListener("scroll", handleScroll);
