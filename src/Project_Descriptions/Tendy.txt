@@ -13,9 +13,9 @@ Continuous updates and improvements based on user feedback
 This project has been a labor of love, integrating my interest in mixology with my technical skills to create a practical solution for cocktail enthusiasts and beginners alike.
 <br>
 Goals:<br>
-Simplicity and Convenience: Tendy offers an intuitive interface that simplifies the process of finding and creating cocktails using available ingredients.<br>
-Personalization: Allows users to customize drink preferences, save favorite recipes, and explore new cocktails tailored to individual tastes.<br>
-Accessibility: Designed to be easily downloadable and user-friendly, ensuring accessibility for all levels of bartending enthusiasts.<br>
+- Simplicity and Convenience: Tendy offers an intuitive interface that simplifies the process of finding and creating cocktails using available ingredients.<br>
+- Personalization: Allows users to customize drink preferences, save favorite recipes, and explore new cocktails tailored to individual tastes.<br>
+- Accessibility: Designed to be easily downloadable and user-friendly, ensuring accessibility for all levels of bartending enthusiasts.<br>
 <br>
 Challenges and Solutions:<br>
 Throughout development, challenges included optimizing ingredient recognition accuracy and enhancing the assistant's responsiveness to user queries. By refining algorithms and conducting extensive testing, Tendy now delivers reliable and tailored cocktail recommendations.

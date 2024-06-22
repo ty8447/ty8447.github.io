@@ -1,0 +1,19 @@
+<p>Objective:<br>
+For my anniversary, I aimed to create a personalized communication tool for my girlfriend and me using friendship lamps. This project sought to provide an elegant and simple way for us to stay connected and communicate over a distance, leveraging technology to enhance our relationship.</p>
+<p>Backstory:<br>
+Inspired by the idea of lamps that can communicate with each other, I embarked on a challenge to create a custom version for my girlfriend and me. Motivated by the upcoming anniversary and the desire to create something meaningful, I set ambitious goals to complete the project within a tight 4-day timeline, breaking down tasks into manageable steps.</p>
+<p>Components Used:<br>
+- Cheap LED lamps for housing and aesthetics<br>
+- ESP32 microcontrollers for wireless connectivity and processing power<br>
+- WS2812B LEDs for colorful and customizable lighting effects<br>
+- USB-C breakout boards for power management and connectivity<br>
+- MQTT protocol for lightweight messaging and synchronization between lamps</p>
+<p>This project reflects my commitment to combining creativity with technical skills, aiming to deliver a functional and sentimental gift that enhances our ability to stay connected regardless of distance.</p>
+<p>Goals:<br>
+- Communication and Connection: The friendship lamps provide a visual and immediate way for us to communicate affection and thoughts, fostering closeness despite physical separation.<br>
+- Elegance and Simplicity: Designed with a minimalist aesthetic, the lamps offer an intuitive user experience with straightforward operation and meaningful interaction.<br>
+- Timely Completion: With a focused timeline and clear objectives, I successfully completed the project within four days, meeting the set goals and ensuring a memorable anniversary gift.</p>
+<p>Challenges and Solutions:<br>
+Throughout the project, challenges included optimizing code for efficient communication between lamps, managing power consumption to maximize lamp longevity, and ensuring robust connectivity over WiFi. By implementing iterative testing and troubleshooting, I overcame these challenges to create a reliable and functional set of friendship lamps.</p>
+<p>Future Improvements:<br>
+Looking ahead, I plan to enhance the friendship lamps with additional features such as a more robust wifi setup process and easy pairing of the lamps without the need to modify the code of the lamps. Additionally, I plan on updating the code to prevent Wifi timeout's from the lamps.</p>

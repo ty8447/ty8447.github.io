@@ -24,9 +24,9 @@ Components Used:<br>
 This project has been worked on between classes and other projects that have come up and has had many iterations to fix errors in the PCB design and to better work with the hardware that was chosen for this project. The main principle behind this device is that it is a macro keyboard similar to other programmable keyboards but behind each key is a screen that displays an icon coorelating to what the key does. This allows to quickly determine what the key does and add more flexibility to the keyboard itself. <br>
 <br>
 Goals:<br>
-User-Friendly Interface: The device features an intuitive interface that allows for easy customization and configuration of buttons.<br>
-High-Quality Build: Using PETG, the device is designed to be durable and comfortable for long-term use.<br>
-Advanced Integration: Seamlessly integrates with a variety of software applications, enhancing productivity across different platforms.<br>
+- User-Friendly Interface: The device features an intuitive interface that allows for easy customization and configuration of buttons.<br>
+- High-Quality Build: Using PETG, the device is designed to be durable and comfortable for long-term use.<br>
+- Advanced Integration: Seamlessly integrates with a variety of software applications, enhancing productivity across different platforms.<br>
 <br>
 Challenges and Solutions:<br>
 Throughout the development process, I encountered several challenges so far relating to hardware cross compatibilty and small mistakes when designing both pcbs. To overcome these, I have drawn up flow charts and connection diagrams to ensure that I am correctly connecting everything and to plan on paper before spending time and money fabricating a PCB for it, which ultimately led to a more robust and reliable product.<br>

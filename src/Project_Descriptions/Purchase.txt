@@ -1,0 +1,11 @@
+<p>Objective:<br>
+My objective was to build an automatic item purchaser capable of buying a part faster than the 40-second window in which it typically sells out. This project aimed to leverage automation to secure highly sought-after items efficiently and reliably.</p>
+<p>Backstory:<br>
+Faced with the challenge of purchasing a part that sold out within a mere 40 seconds, I recognized the need for a solution that could execute purchases swiftly and without manual intervention. Motivated by the urgency and limited availability of the item, I set out to develop a programmatic solution capable of outpacing human purchasing speeds.</p>
+<p>This project epitomizes my dedication to leveraging technology for practical solutions, combining software development skills with a keen understanding of e-commerce dynamics.</p>
+<p>Goals:<br>
+- Efficiency and Speed: The automatic item purchaser executes purchases within milliseconds, ensuring swift acquisition of limited-edition or high-demand items.<br>
+- Reliability: Designed to operate seamlessly with minimal downtime, providing consistent performance during peak purchasing periods.<br>
+- Adaptability: Incorporates adaptive algorithms to adjust purchasing strategies based on real-time data and market conditions.</p>
+<p>Challenges and Solutions:<br>
+Throughout development, challenges included fine-tuning algorithms to synchronize with website dynamics, optimizing response times to server requests, and ensuring compliance with e-commerce platform policies. By iterating on software design and conducting rigorous testing, I successfully addressed these challenges to create a robust and effective automatic item purchaser.</p>

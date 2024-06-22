@@ -15,9 +15,9 @@ Components Used:<br>
 - Waterproof seals and impact-resistant materials for outdoor durability<br>
 <br>
 Goals:<br>
-Innovative Design: The flashlight features a cutting-edge design that prioritizes usability and performance.<br>
-Enhanced Functionality: Incorporates new features such as gesture controls, modular attachments, and adaptive brightness settings to cater to diverse user needs.<br>
-Durable Build: Constructed with premium materials to withstand rugged conditions while maintaining optimal performance.<br>
+- Innovative Design: The flashlight features a cutting-edge design that prioritizes usability and performance.<br>
+- Enhanced Functionality: Incorporates new features such as gesture controls, modular attachments, and adaptive brightness settings to cater to diverse user needs.<br>
+- Durable Build: Constructed with premium materials to withstand rugged conditions while maintaining optimal performance.<br>
 <br>
 Future Work:<br>
 Looking ahead, we plan to continue designing a prototype to make sure our current method is correct and then design the final product.</p>

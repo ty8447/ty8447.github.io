@@ -1,0 +1,17 @@
+<p>Objective:<br>
+My objective was to design and build custom battery packs for the longboard and Onewheel that fit within the restrictive structures of these boards. Additionally, I aimed to develop a streamlined process for easily creating custom battery packs for various applications, emphasizing versatility and performance.</p>
+<p>Backstory:<br>
+In the process of building my longboard and Onewheel, I faced the challenge of integrating battery packs that not only met performance requirements but also fit within the tight size constraints of the boards. Recognizing the need for tailored solutions and a systematic approach to battery pack assembly, I embarked on developing custom batteries that optimize space and enhance overall board performance.</p>
+<p>Components Used:<br>
+- High-density lithium-ion cells for compact yet powerful energy storage<br>
+- Custom-designed battery management systems (BMS) for optimal performance and safety<br>
+- Lightweight and durable casing materials to withstand vibrations and impact<br>
+<p>This project has been a testament to my commitment to innovation and practical engineering, blending technical expertise with hands-on problem-solving to meet the specific needs of electric board enthusiasts.</p>
+<p>Goals:<br>
+- Optimized Performance: The custom battery packs deliver enhanced power output and extended range, tailored to the demands of electric longboards and Onewheels.<br>
+- Space Efficiency: Designed to fit snugly within the board structures, maximizing space utilization without compromising performance or safety.<br>
+Versatility and Accessibility: Developed a standardized process for building custom battery packs, ensuring accessibility for DIY enthusiasts and professionals alike.</p>
+<p>Challenges and Solutions:<br>
+For the Onewheel, overcoming the tight size constraint posed a significant challenge. Through iterative design and precise engineering, I successfully minimized the footprint of the battery pack while maintaining optimal performance and safety standards. Additionally, developing a modular assembly process allowed for flexibility in configuration and efficient troubleshooting.</p>
+<p>Future Improvements:<br>
+Looking ahead, as this is more of a never ending project where most portable devices I build will need a custom battery pack, I plan to continue refining the process for how I design and build the battery packs and develop safer practices to ensure that the battery is built in a safe and sustainable manner.</p>
