@@ -15,7 +15,7 @@ const ProjectModal = ({ project, onClose }) => {
     if (project) {
       setIsOpen(true);
       document.body.classList.add('no-scroll');
-      console.log(`Project Description: ${project.description}`);
+      // console.log(`Project Description: ${project.description}`);
 
       const projectfolder = project.folder;
 
