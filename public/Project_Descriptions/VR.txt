@@ -14,3 +14,6 @@ Motivated by the accessibility and potential of VR technology showcased by devic
 - Innovation and Experimentation: By integrating available resources creatively, I aimed to explore the potential of DIY VR technology and inspire further innovation in the VR community.</p>
 <p>Challenges and Solutions:<br>
 Throughout the development process, challenges included calibrating sensors for accurate motion tracking, optimizing software for compatibility with different VR applications, and achieving comfortable ergonomics without specialized manufacturing tools. By iterating on design iterations and leveraging online resources, I successfully addressed these challenges to create a functional and ergonomic VR headset prototype.</p>
+
+<p>For a demonstration of one of the prototypes where hand tracking was used, please watch the video below:</p>
+<a href="https://youtu.be/w3JI-yMpNh0">YouTube</a>

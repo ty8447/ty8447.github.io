@@ -17,3 +17,7 @@ Inspired by the idea of lamps that can communicate with each other, I embarked o
 Throughout the project, challenges included optimizing code for efficient communication between lamps, managing power consumption to maximize lamp longevity, and ensuring robust connectivity over WiFi. By implementing iterative testing and troubleshooting, I overcame these challenges to create a reliable and functional set of friendship lamps.</p>
 <p>Future Improvements:<br>
 Looking ahead, I plan to enhance the friendship lamps with additional features such as a more robust wifi setup process and easy pairing of the lamps without the need to modify the code of the lamps. Additionally, I plan on updating the code to prevent Wifi timeout's from the lamps.</p>
+
+<p>For build videos of the lamp, please watch the videos below:</p>
+<a href="https://youtu.be/CRw18FXMBiU">YouTube</a>
+<a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID">YouTube</a>

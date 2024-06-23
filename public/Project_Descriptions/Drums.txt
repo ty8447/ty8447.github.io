@@ -15,3 +15,6 @@ As the final project for a music programming class utilizing Max MSP, I embarked
 - Educational and Fun: Provide a platform for users to explore music through a playful and interactive interface, encouraging creativity and engagement.</p>
 <p>Challenges and Solutions:<br>
 Throughout the project, challenges included optimizing motion detection algorithms for responsiveness and accuracy, integrating sound synthesis with real-time user input, and designing an intuitive user interface for seamless interaction. By experimenting with different Max MSP objects, refining motion tracking techniques, and conducting iterative testing, I successfully created a functional and enjoyable air drumming experience.</p>
+
+<p>For a demonstration of the drums, please watch the video below:</p>
+<a href="https://youtu.be/RjstxmKJP2I">YouTube</a>

@@ -18,3 +18,6 @@ After successfully building an electric longboard, I became interested in explor
 Throughout the development process, challenges included designing a robust battery pack that fits within the tight constraints of the Onewheel, ensuring reliable balance and control through sensor integration, and fabricating durable and precise 3D-printed enclosures. By iterating on design prototypes and conducting thorough testing, I successfully overcame these challenges to build a functional and reliable custom Onewheel.</p>
 <p>Future Improvements:<br>
 Looking ahead, I plan to enhance the custom Onewheel by integrating the lightbar that I am designing and a better cable management for a cleaner system. These improvements aim to further refine the riding experience and expand the capabilities of the custom-built Onewheel.</p>
+
+<p>For a motor test video of the onewheel, please watch the video below:</p>
+<a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID">YouTube</a>

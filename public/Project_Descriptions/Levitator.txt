@@ -15,3 +15,6 @@ This project marked my introduction to CAD design using Solidworks, where I set 
 - Desk Toy Application: Create a visually appealing and engaging desk toy that showcases principles of physics and technology in an accessible manner.</p>
 <p>Challenges and Solutions:<br>
 Throughout the project, challenges included aligning the ultrasonic sensors, implementing control algorithms for stable levitation, and iterating on the CAD design to ensure structural integrity and effective levitation performance. By conducting systematic testing, refining code logic, and iteratively improving the CAD model, I successfully achieved stable levitation of foam beads.</p>
+
+<p>For a demonstration of the Levitator, please watch the video below:</p>
+<a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID">YouTube</a>
