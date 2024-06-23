@@ -50,7 +50,7 @@ const ProjectModal = ({ project, onClose }) => {
 
   if (!project) return null;
 
-  const statusClass = `status-pill-carousel ${project.status.replace(' ', '-').toLowerCase()}`;
+  const statusClass = `status-pill-modal ${project.status.replace(' ', '-').toLowerCase()}`;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -60,6 +60,7 @@ const ProjectModal = ({ project, onClose }) => {
             <p className="modal-date">{project.date}</p>
             <div className="modal-title-container">
               <h3 className="modal-title">{project.title}</h3>
+              <div className={statusClass}>{project.status}</div>
             </div>
           </div>
           <div className="modal-close"><button className="close-button" onClick={onClose}>×</button></div>
@@ -96,7 +97,6 @@ const ProjectModal = ({ project, onClose }) => {
                 </div>
               ))}
             </Carousel>
-            <div className={statusClass}>{project.status}</div>
           </div>
         ) : (
           <p>No media available</p>
