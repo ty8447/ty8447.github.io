@@ -20,4 +20,4 @@ Throughout the development process, challenges included designing a robust batte
 Looking ahead, I plan to enhance the custom Onewheel by integrating the lightbar that I am designing and a better cable management for a cleaner system. These improvements aim to further refine the riding experience and expand the capabilities of the custom-built Onewheel.</p>
 
 <p>For a motor test video of the onewheel, please watch the video below:</p>
-<a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID">YouTube</a>
+<a href="https://youtube.com/shorts/EmFzbHSu12E?feature=share">YouTube</a>
