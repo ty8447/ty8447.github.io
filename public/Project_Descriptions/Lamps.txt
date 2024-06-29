@@ -19,5 +19,10 @@ Throughout the project, challenges included optimizing code for efficient commun
 Looking ahead, I plan to enhance the friendship lamps with additional features such as a more robust wifi setup process and easy pairing of the lamps without the need to modify the code of the lamps. Additionally, I plan on updating the code to prevent Wifi timeout's from the lamps.</p>
 
 <p>For build videos of the lamp, please watch the videos below:</p>
-<a href="https://youtu.be/CRw18FXMBiU">YouTube</a>
-<a href="https://youtube.com/shorts/8rM4BHlxQA8?feature=share">YouTube</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CRw18FXMBiU?si=BQSUawBSi3byuzgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+<iframe width="315" height="560"
+src="https://youtube.com/embed/8rM4BHlxQA8?feature=share"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>

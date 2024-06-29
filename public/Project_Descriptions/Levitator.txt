@@ -17,4 +17,10 @@ This project marked my introduction to CAD design using Solidworks, where I set 
 Throughout the project, challenges included aligning the ultrasonic sensors, implementing control algorithms for stable levitation, and iterating on the CAD design to ensure structural integrity and effective levitation performance. By conducting systematic testing, refining code logic, and iteratively improving the CAD model, I successfully achieved stable levitation of foam beads.</p>
 
 <p>For a demonstration of the Levitator, please watch the video below:</p>
-<a href="https://youtube.com/shorts/qIjux1KCh7s?feature=share">YouTube</a>
+<iframe width="315" height="560"
+src="https://youtube.com/embed/qIjux1KCh7s?feature=shared"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+

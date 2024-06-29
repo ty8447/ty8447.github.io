@@ -17,4 +17,4 @@ As the final project for a music programming class utilizing Max MSP, I embarked
 Throughout the project, challenges included optimizing motion detection algorithms for responsiveness and accuracy, integrating sound synthesis with real-time user input, and designing an intuitive user interface for seamless interaction. By experimenting with different Max MSP objects, refining motion tracking techniques, and conducting iterative testing, I successfully created a functional and enjoyable air drumming experience.</p>
 
 <p>For a demonstration of the drums, please watch the video below:</p>
-<a href="https://youtu.be/RjstxmKJP2I">YouTube</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RjstxmKJP2I?si=yDsQD0Aozqcld6iC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

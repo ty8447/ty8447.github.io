@@ -20,4 +20,4 @@ Throughout the development process, challenges included designing a sturdy yet a
 Looking ahead, I plan to enhance the arcade machine painting and adding trim pieces to improve the Aesthetic, add a custom CNC acrylic panel to cover the joysticks and provide easy to see controls, and build in some of the nice to have features such as a single dedicated power plug. Additionally, I aim to refine the cabinet design for easier maintenance and potential upgrades, ensuring the arcade machine remains a central piece of entertainment in the basement.</p>
 
 <p>For a build video of the arcade machine, please watch the video below:</p>
-<a href="https://youtu.be/-udzqNwuBpM">YouTube</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-udzqNwuBpM?si=5rkCSUkarcK7diiB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
