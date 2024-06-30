@@ -1,16 +1,15 @@
-<p>This project technically started during the first couple of week of my Freshman year at WPI where myself and my two roommates came up with a very simple controller. This controller however was very limited and when moving into my second year, I started the project from the ground up.</p>
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 My goal was to create a customizable LED controller that offers enhanced ambiance and control for home environments. This project aimed to improve upon existing LED solutions by integrating a user-friendly interface and advanced customization options.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Teensy 3.2<br>
 - WS2812B/WS2815 LED strips<br>
 - 5v and 12v power supplies</p>
 <p>This project represented a blend of creativity and technical skill, leveraging my education and passion for electronics to create a functional and aesthetically pleasing LED controller.</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Enhanced Ambiance: The LED controller offers a wide range of color options and lighting effects to create personalized ambiance.<br>
 - User-Friendly Interface: Designed with a intuitive UI, allowing users to easily adjust settings and create custom lighting profiles.<br>
 - Integration and Control: Enables remote access and integration with smart home systems for enhanced convenience and functionality.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the design process, challenges included optimizing software for smooth color transitions, ensuring compatibility with various LED configurations, and refining the UI for intuitive user experience. By iterating on designs and conducting thorough testing, I successfully addressed these challenges to deliver a robust LED controller.</p>
-<p>Future Improvements:<br>
+<p><b style="font-size: 18px;">Future Improvements:</b><br>
 Looking forward, I have been expanding the capabilities of the controller by moving from Processing 4 to Android Studio in order to develop an application and communicate with the controller through a wall mounted tablet. Furthermore, I plan on integrating more advanced lighting effects, and enhancing energy efficiency through sensor-based automation. These enhancements aim to further elevate the user experience and adaptability of the LED controller in diverse home environments.</p>

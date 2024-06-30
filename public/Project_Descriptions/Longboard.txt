@@ -1,7 +1,6 @@
-<p>Objective:<br>
-My primary goal was to design and build a personalized electric longboard that not only reflects my passion for the sport but also integrates new features to enhance performance, comfort, and aesthetics.<br>
-<br>
-Original Components:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
+My primary goal was to design and build a personalized electric longboard that not only reflects my passion for the sport but also integrates new features to enhance performance, comfort, and aesthetics.</p>
+<p><b style="font-size: 18px;">Original Components:</b><br>
 - Retrospec Longboard Deck<br>
 - Flipsky Motor<br>
 - Flipsky Esc<br>
@@ -11,9 +10,9 @@ Original Components:<br>
 - Tupperware Container<br>
 - Torque Wheels<br>
 - Motor Mounting Bracket<br>
-- Caliber 2 Trucks<br>
-<br>
-Most Recent Components:<br>
+- Caliber 2 Trucks</p>
+
+<p><b style="font-size: 18px;">Most Recent Components:</b><br>
 - Loaded Vanguard Flex 2 Deck<br>
 - 2 Flipsky Motors<br>
 - Dual Flipsky Esc<br>
@@ -24,17 +23,15 @@ Most Recent Components:<br>
 - Torque Wheels<br>
 - Motor Mounting Brackets<br>
 - 3D Printed Enclosure<br>
-- Torqueboard Trucks<br>
-<br>
-This project has been a long journey of exploration and creativity, blending practicality with artistic expression. Iterative adjustments and refinements have been key to achieving a longboard that meets my vision of performance and style.<br>
-<br>
-Goals:<br>
+- Torqueboard Trucks</p>
+
+<p>This project has been a long journey of exploration and creativity, blending practicality with artistic expression. Iterative adjustments and refinements have been key to achieving a longboard that meets my vision of performance and style.</p>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Innovative Design: The longboard features a unique design that combines functionality with aesthetic appeal.<br>
 - Enhanced Performance: Incorporates new features such as improved bearings, ergonomic deck shapes, and customizable grip tape designs to optimize control and comfort.<br>
-- Easy Transportation: Allows to easily charge and use the device without taking apart parts of the board.<br>
-<br>
-Challenges and Solutions:<br>
-Throughout the development process, challenges included balancing weight and durability, optimizing wheel performance for various terrains, strengh of the plastic parts when subjected to board flex, and refining ergonomic aspects for rider comfort. Through meticulous testing and adjustments, these challenges were overcome to create a longboard that excels.<br>
-<br>
-Future Improvements:<br>
+- Easy Transportation: Allows to easily charge and use the device without taking apart parts of the board.</p>
+
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
+Throughout the development process, challenges included balancing weight and durability, optimizing wheel performance for various terrains, strengh of the plastic parts when subjected to board flex, and refining ergonomic aspects for rider comfort. Through meticulous testing and adjustments, these challenges were overcome to create a longboard that excels.</p>
+<p><b style="font-size: 18px;">Future Improvements:</b><br>
 Looking ahead, I plan to further refine the longboard's components based on continued testing. Future iterations may explore advanced materials, such as carbon fiber, and incorporate smart technology for real-time performance monitoring and enhanced safety features.</p>

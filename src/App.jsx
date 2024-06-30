@@ -11,7 +11,7 @@ import ProjectModal from './ProjectModal';
 import Nav from './Nav.jsx';
 import Copyright from './Copyright';
 import cover from './Assets/misc/cover.svg';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 const Home = () => <p></p>;
 const Skill = () => <h1>Skill</h1>;
@@ -70,17 +70,14 @@ const App = () => {
       { id: "#contact", ref: contactRef },
     ];
 
-    ReactGA.initialize('G-97WGDQPF85');
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    // ReactGA.initialize('G-97WGDQPF85');
+    // ReactGA.pageview(window.location.pathname + window.location.search);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          //  console.log(`Entry: ${entry.target.id}`);
           if (entry.isIntersecting) {
             setActiveLink(`#${entry.target.id}`);
-          } else {
-            //  console.log(`Not intersecting: ${entry.target.id}, ratio: ${entry.intersectionRatio}`);
           }
         });
       },
@@ -93,8 +90,6 @@ const App = () => {
     sections.forEach(({ id, ref }) => {
       if (ref.current) {
         observer.observe(ref.current);
-      } else {
-        // console.log(`Ref not set for: ${id}`);
       }
     });
 
@@ -112,8 +107,6 @@ const App = () => {
       sections.forEach(({ id, ref }) => {
         if (ref.current) {
           observer.unobserve(ref.current);
-        } else {
-          // console.log("Ref not set for:", id);
         }
       });
       window.removeEventListener("scroll", handleScroll);
@@ -482,7 +475,7 @@ const App = () => {
             <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
               <div className={`sksoftware`}>
-                <h2>Software</h2>
+                <h2 style={{ pointerEvents: "none" }}>Software</h2>
                 <div className="icons-column">
                   <div className="icon" title="Solidworks">
                     <svg
@@ -1127,7 +1120,7 @@ z"/>
                 </div>
               </div>
               <div className={`sktraining`}>
-                <h2>Training</h2>
+                <h2 style={{ pointerEvents: "none" }}>Training</h2>
                 <div className="icons-column">
                   <div className="icon" title="FDM/SLA 3D Printing">
                     <svg fill="#FFF" id="Layer_1" viewBox="0 0 490 490">
@@ -1588,7 +1581,7 @@ z"/>
                 </div>
               </div>
               <div className={`sklanguages`}>
-                <h2>Languages</h2>
+                <h2 style={{ pointerEvents: "none" }}>Languages</h2>
                 <div className="icons-column">
                   <div className="icon" title="Matlab">
                     <svg

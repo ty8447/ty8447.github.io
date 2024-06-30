@@ -1,8 +1,8 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 Back in high school, I undertook the challenge of designing and building a miniature CNC machine as part of an assignment to follow the engineering design process. This project aimed to explore CNC technology and develop a functional desktop machine using readily available materials and open-source software like OpenGRBL.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 Inspired by the opportunity to apply engineering principles in a practical project, I brainstormed various ideas before settling on the concept of a miniature CNC machine. Recognizing the educational value and potential applications of CNC technology, I embarked on creating a compact and versatile machine using 1/4" MDF wood, leveraging OpenGRBL for control and operation.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - 1/4" MDF wood for structural components and housing<br>
 - NEMA 17 stepper motors for precise movement control<br>
 - Lead screws and linear motion components for accurate positioning<br>
@@ -11,9 +11,9 @@ Inspired by the opportunity to apply engineering principles in a practical proje
 - Arduino Mega<br>
 - Stepper Motor Shield
 - Variable DC Voltage Supply
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Educational Experience: The desktop CNC machine aimed to provide a hands-on learning experience in mechanical design, electronics, and CNC programming.<br>
 - Affordability and Accessibility: Designed with cost-effective materials and open-source software, making CNC technology accessible to students and hobbyists.<br>
 - Functional Performance: Aimed to achieve precise cutting and engraving capabilities, demonstrating the practical application of CNC technology in small-scale projects.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the project, challenges included optimizing the CNC machine's rigidity and stability using MDF wood, fine-tuning stepper motor performance for smooth operation, and debugging software integration with OpenGRBL for reliable CNC control. By leveraging iterative testing and peer feedback, I successfully overcame these challenges to create a functional desktop CNC machine.</p>

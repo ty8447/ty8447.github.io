@@ -1,8 +1,8 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 My objective was to design and build a custom Onewheel from scratch, using a custom battery and 3D-printed enclosures. This project aimed to create a personalized and cost-effective alternative to commercial Onewheel products, leveraging my skills in engineering and design.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 After successfully building an electric longboard, I became interested in exploring other personal electric vehicles. Upon seeing someone riding a Onewheel, I was inspired to create my own instead of purchasing one from the company. This project allowed me to push the boundaries of DIY engineering and create a unique PEV tailored to my preferences.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Custom battery pack designed for optimal performance and integration<br>
 - High-torque electric motor for smooth and powerful propulsion<br>
 - Custom 3D-printed enclosures for housing electronics and providing structural integrity<br>
@@ -10,13 +10,13 @@ After successfully building an electric longboard, I became interested in explor
 - Pressure Sensors<br>
 - Custom Wire Harness
 - Battery Management System</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Customization and Performance: The custom Onewheel is designed to meet specific performance criteria and personal preferences, offering a tailored riding experience.<br>
 - Cost-Effective Solution: Aims to provide a more affordable alternative to commercial Onewheel products by utilizing custom-built components and DIY techniques.<br>
 - Innovation and Engineering: Demonstrates innovative thinking and advanced engineering skills in designing and building a complex PEV from scratch.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the development process, challenges included designing a robust battery pack that fits within the tight constraints of the Onewheel, ensuring reliable balance and control through sensor integration, and fabricating durable and precise 3D-printed enclosures. By iterating on design prototypes and conducting thorough testing, I successfully overcame these challenges to build a functional and reliable custom Onewheel.</p>
-<p>Future Improvements:<br>
+<p><b style="font-size: 18px;">Future Improvements:</b><br>
 Looking ahead, I plan to enhance the custom Onewheel by integrating the lightbar that I am designing and a better cable management for a cleaner system. These improvements aim to further refine the riding experience and expand the capabilities of the custom-built Onewheel.</p>
 
 <p>For a motor test video of the onewheel, please watch the video below:</p>

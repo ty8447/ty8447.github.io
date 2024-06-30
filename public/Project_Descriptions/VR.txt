@@ -1,18 +1,18 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 Inspired by the Oculus Rift and Google Cardboard, I set out to create a prototype VR headset that enables easy tracking in a 3D environment using low-cost electronics and household items. This project aimed to explore DIY VR technology and develop a functional prototype with readily available materials.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 Motivated by the accessibility and potential of VR technology showcased by devices like the Oculus Rift and Google Cardboard, I embarked on a personal challenge to build my own VR headset prototype. Utilizing spare electronics and materials around the house, I sought to push the boundaries of DIY innovation and create a cost-effective solution for immersive virtual experiences.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Smartphone display for visual output and screen integration<br>
 - Windows Computer to interpret the positional data and to send data to the headset<br>
 - PS Move Controllers<br>
 - PS Move Cameras<br>
 - Cheap Phone VR Housing</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Affordability and Accessibility: The DIY VR headset aims to provide an affordable alternative to commercial VR devices, utilizing inexpensive components and household items.<br>
 - Functionality and Performance: Designed to offer basic motion tracking capabilities in a 3D environment, enhancing user interaction and immersion in virtual worlds.<br>
 - Innovation and Experimentation: By integrating available resources creatively, I aimed to explore the potential of DIY VR technology and inspire further innovation in the VR community.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the development process, challenges included calibrating sensors for accurate motion tracking, optimizing software for compatibility with different VR applications, and achieving comfortable ergonomics without specialized manufacturing tools. By iterating on design iterations and leveraging online resources, I successfully addressed these challenges to create a functional and ergonomic VR headset prototype.</p>
 
 <p>For a demonstration of one of the prototypes where hand tracking was used, please watch the video below:</p>

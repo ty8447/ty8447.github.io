@@ -1,17 +1,17 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 The objective of this project was to develop a multiplayer game within Unreal Engine 4 that allows four players to locally battle each other. This project aimed to provide hands-on experience in game development, including creating digital assets, coding gameplay mechanics, and integrating multiplayer functionality.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 Inspired by a game developer convention where I witnessed impressive game releases and received encouragement from developers, I embarked on creating my own game. The goal was to learn the entire process of game development—from conceptualization and asset creation to programming and multiplayer implementation.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Unreal Engine 4 for game development and rendering<br>
 - 3D modeling software for creating digital assets and environments<br>
 - Programming languages (e.g., C++) for coding gameplay mechanics and interactions<br>
 - Multiplayer networking tools for enabling local multiplayer battles<br>
 - Audio editing software for sound effects and music integration</p>
 <p>This project demonstrates my passion for gaming and my commitment to mastering the technical skills required for game development.</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Hands-On Learning: Gain practical experience in all aspects of game development, including design, asset creation, coding, and multiplayer integration.<br>
 - Multiplayer Gameplay: Develop a game that supports local multiplayer battles, enhancing the social and competitive aspects of gameplay.<br>
 - Creative Expression: Create digital assets, environments, and gameplay mechanics that reflect my creative vision and design principles.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the project, challenges included mastering Unreal Engine 4’s tools and features, optimizing game performance for multiplayer environments, and debugging network synchronization issues. By leveraging online resources, community forums, and iterative testing, I successfully overcame these challenges to create a polished and engaging multiplayer game.</p>

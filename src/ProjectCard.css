@@ -48,17 +48,20 @@
     font-size: 1.6em;
     margin-top: 3px;
     color: #333;
+    pointer-events: none;
 }
 
 .project-date {
     font-size: 1em;
     color: #999;
     margin-top: 0;
+    pointer-events: none;
 }
 
 .project-summary {
     flex: 1;
     font-size: 1.2em;
+    pointer-events: none;
     margin: 0;
   }
 
@@ -92,6 +95,7 @@
     z-index: 1;
     transition-duration: 1s ease;
     border: 2px solid ;
+    pointer-events: none;
     background-color: rgba(63, 63, 63, 0.85);
 }
 

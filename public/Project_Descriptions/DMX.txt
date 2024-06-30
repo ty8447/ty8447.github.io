@@ -1,19 +1,19 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 The objective of this project was to design and build a controller that interfaces with DMX data from a lighting console to control a rotary phone and a school bell in a theatrical performance. This project served as an opportunity to integrate mSLA printing for the first time, and to incorporate components such as a USB-C breakout board, Arduino Pro Micro, MAX485 board for DMX input, and relays for device control.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 During preparation for a theatrical performance, I was tasked with creating a solution to make a real rotary phone ring on command, instead of using a sound effect as traditionally done. This challenge inspired me to design a controller that not only triggers the rotary phone but also manages the timing of a school bell, synchronized with the performance cues from a DMX lighting control system.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Arduino Pro Micro for microcontroller-based logic and DMX communication<br>
 - MAX485 board for receiving DMX data from the lighting console<br>
 - USB-C breakout board for power and data connectivity<br>
 - Relays for switching and controlling the rotary phone and school bell mechanisms<br>
 - mSLA printed components for custom enclosures and structural elements</p>
 <p>This project demonstrates my interdisciplinary approach, combining electronics, 3D printing, and theatrical technology to meet specific performance requirements.</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Integration with DMX Control: Develop a controller that interprets DMX signals to trigger specific actions on the rotary phone and school bell, synchronized with theatrical cues.<br>
 - Device Control Mechanism: Implement relay-based control mechanisms to ring the rotary phone and activate the school bell in response to DMX commands.<br>
 - Introduction to mSLA Printing: Utilize mSLA printing technology for creating custom enclosures and structural components tailored to the project's requirements.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the project, challenges included integrating DMX communication protocols with Arduino programming, ensuring reliable operation of the relay-based switching for the phone and bell mechanisms, and optimizing the design of 3D printed parts for durability and functionality. By conducting thorough testing, refining code logic, and iteratively improving the mechanical design, I successfully achieved synchronized control of both devices according to the performance cues.</p>
-<p>Future Improvements:<br>
+<p><b style="font-size: 18px;">Future Improvements:</b><br>
 Looking ahead, I plan to enhance the controller by adding alternative method to control the controller (such as ethernet), implementing feedback mechanisms for performance monitoring, adding ease of use for adjusting the parameters of the controller without modifying the code, and using alternative components to reduce the size of the device and increase its reliability. Additionally, I aim to continue exploring mSLA printing applications in creating bespoke solutions for performing arts and technical theater.</p>

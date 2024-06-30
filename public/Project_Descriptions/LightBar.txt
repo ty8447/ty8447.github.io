@@ -1,20 +1,20 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 My objective was to create a compact and reliable lightbar specifically designed for Personal Electric Vehicles (PEVs) such as Onewheel and Longboards. This project aimed to fill the gap in available lighting solutions by providing a tailored, high-performance option for enhancing visibility and safety.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 Driven by my experience building electric boards and the lack of suitable lighting solutions, I set out to develop a smarter lightbar for PEVs. Recognizing the importance of visibility and safety, especially during low-light conditions, I aimed to design a versatile lightbar that integrates seamlessly with different PEV models.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - High-intensity LEDs for powerful illumination and visibility<br>
-- Custom PCB
-- 2020 RGB LEDs
-- LED Driver
-- Capacitors
-- Resistors
-- SH Connector
+- Custom PCB<br>
+- 2020 RGB LEDs<br>
+- LED Driver<br>
+- Capacitors<br>
+- Resistors<br>
+- SH Connector<br>
 
 <p>This project has been a culmination of my passion for electric vehicles and practical engineering, combining innovative design with functionality to meet the specific needs of PEV enthusiasts.</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Enhanced Visibility: The lightbar offers bright, reliable illumination for improved visibility during night rides or in low-light conditions.<br>
 - Universal Compatibility: Designed to be compatible with a range of PEVs, ensuring versatility and ease of installation.<br>
 - Long-lasting Performance: Focuses on energy efficiency and durability, providing long-term reliability without compromising on performance.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 The original idea for this light was to detect if the RGB leds are receiving a signal and if they are not, the high lumen leds would turn on. This proved to not work in reality as with most code the instructions get sent to the leds and then the leds hold the data, allowing for the code to not constantly send data. The current progress of this project is to pivot from this finding and find an alternative solution that allows for full functionality.</p>

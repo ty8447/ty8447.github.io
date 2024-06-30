@@ -1,16 +1,16 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 The objective of our Major Qualifying Project (MQP) was to design a mechanism that would reduce the forces experienced by ice deformation on fixed docks. This project aimed to provide a practical solution for the winterization of docks, leveraging our engineering knowledge and skills acquired at WPI.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 Our senior capstone project was initiated after one of my partners became frustrated with the winterization process for fixed docks. Recognizing the need for a better solution, we formed a team and worked with an advisor to ensure the accuracy and effectiveness of our design. Our goal was to create a mechanism that would mitigate the deformation caused by ice, improving the durability and longevity of fixed docks.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Mechanical components designed to absorb and distribute ice deformation forces<br>
 - Simulation software for modeling and testing the mechanism's performance<br>
 - Prototyping materials for building and validating the design<br>
 - Patent application for protecting the intellectual property of our innovative solution</p>
 <p>This project showcases our ability to apply theoretical knowledge to practical problems, working collaboratively to create an innovative and impactful solution.</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Reduce Ice Deformation Forces: The mechanism is designed to minimize the forces exerted by ice on fixed docks, preventing damage and extending the dock's lifespan.<br>
 - Practical Application: Aims to provide a cost-effective and easily implementable solution for dock owners facing winterization challenges.<br>
 - Innovation and Patenting: Successfully patented the design, demonstrating the novelty and potential impact of our solution.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the 21-week project, challenges included accurately simulating the forces of ice deformation, designing a mechanism that could withstand harsh conditions, and ensuring the feasibility of the prototype. By leveraging our advisor's expertise and conducting rigorous testing, we successfully addressed these challenges and developed a robust and reliable solution.</p>

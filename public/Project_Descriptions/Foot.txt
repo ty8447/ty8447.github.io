@@ -1,16 +1,16 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 The objective of this project was to replace broken feet on a desktop computer case by reverse engineering and 3D printing replicas using Solidworks. This project aimed to provide a practical solution for restoring functionality and aesthetics to the computer case.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 After several feet on my desktop computer case broke, I faced the challenge of finding a replacement solution. Turning to CAD software and 3D printing, I decided to reverse engineer the intact foot, model it in Solidworks, and fabricate new feet using a 3D printer. This approach allowed me to create close-to-perfect replicas that could effectively support and stabilize the computer case.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Desktop computer case with broken feet<br>
 - CAD software (Solidworks) for reverse engineering and modeling<br>
 - 3D printer for fabricating replacement feet<br>
 - Calipers and measurement tools for accurate replication<br>
 - PLA filament for 3D printing the feet</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Functional Replacement: Create 3D printed replicas of broken computer case feet to restore stability and usability.<br>
 - Aesthetic Integration: Ensure the replacement feet closely match the original design and dimensions for seamless integration.<br>
 - DIY Repair Solution: Develop a cost-effective and efficient method for replacing broken components using accessible tools and technologies.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the project, challenges included accurately measuring and modeling the original foot dimensions, ensuring structural integrity and durability of the 3D printed parts, and achieving a precise fit with the computer case. By refining the CAD models iteratively and optimizing printing parameters, I successfully addressed these challenges and produced functional replacement feet.</p>

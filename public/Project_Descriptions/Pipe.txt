@@ -1,16 +1,16 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 The objective of this project was to restore a broken Sonoray 301 Flaw and Thickness Tester, an older electronic device, to learn about repairing vintage electronics and bring it back to functional use. This project aimed to gain hands-on experience in electronics repair and restoration.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 The project began when I was given a broken Sonoray 301 Flaw and Thickness Tester by someone who didn't have time to repair it themselves. Intrigued by the opportunity to work on a vintage electronic device and learn about its inner workings, I enthusiastically accepted the challenge to restore it to working condition.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Sonoray 301 Flaw and Thickness Tester unit<br>
 - Electronic repair tools including soldering iron, multimeter, thermal camera, and oscilloscope<br>
 - Replacement components as needed for repairing circuitry and components<br>
 - Technical manual booklet for troubleshooting and restoration guidance</p>
 <p>This project showcases my interest in vintage electronics and my dedication to learning and mastering electronics repair skills.</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Learn Electronics Repair: Gain practical skills in diagnosing, repairing, and restoring vintage electronic equipment.<br>
 - Restore Functionality: Bring the Sonoray 301 Flaw and Thickness Tester back to operational use, preserving its historical and technical value.<br>
 - Hands-On Experience: Apply theoretical knowledge in electronics to real-world repair challenges and gain insights into older electronic technologies.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the project, challenges included identifying broken components, troubleshooting complex circuitry issues, and breaking the project into smmaller manageable pieces.</p>

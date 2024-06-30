@@ -1,19 +1,19 @@
-<p>Objective:<br>
+<p><b style="font-size: 18px;">Objective:</b><br>
 The objective of this project was to create an interactive program using Max 8 and Wii remotes, transforming them into air drums that users can play. This project aimed to explore creative applications of Max MSP in music programming and interactive technology.</p>
-<p>Backstory:<br>
+<p><b style="font-size: 18px;">Backstory:</b><br>
 As the final project for a music programming class utilizing Max MSP, I embarked on developing a program that transforms Wii remotes into virtual air drums. Over a two-week period, I planned, developed, and refined the program to provide an engaging and interactive musical experience.</p>
-<p>Components Used:<br>
+<p><b style="font-size: 18px;">Components Used:</b><br>
 - Max 8 (Max MSP) for programming interactive audio and visual components<br>
 - Wii remotes for motion sensing and user input<br>
 - Sound synthesis algorithms for generating drum sounds based on user gestures<br>
 - MIDI or OSC protocols for communication between Wii remotes and Max 8<br>
 - User interface design for visual feedback and intuitive interaction</p>
 <p>This project showcases my creativity in merging music, technology, and interactive programming to create a novel and enjoyable user experience.</p>
-<p>Goals:<br>
+<p><b style="font-size: 18px;">Goals:</b><br>
 - Interactive Drumming Experience: Develop a program that translates motion from Wii remotes into playable drum sounds in real-time.<br>
 - Creative Use of Motion Sensing: Utilize Wii remotes' accelerometer and infrared sensors to detect and respond to user gestures accurately.<br>
 - Educational and Fun: Provide a platform for users to explore music through a playful and interactive interface, encouraging creativity and engagement.</p>
-<p>Challenges and Solutions:<br>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
 Throughout the project, challenges included optimizing motion detection algorithms for responsiveness and accuracy, integrating sound synthesis with real-time user input, and designing an intuitive user interface for seamless interaction. By experimenting with different Max MSP objects, refining motion tracking techniques, and conducting iterative testing, I successfully created a functional and enjoyable air drumming experience.</p>
 
 <p>For a demonstration of the drums, please watch the video below:</p>
