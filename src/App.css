@@ -1,11 +1,8 @@
 ::-webkit-scrollbar {
   width: 12px;
-  position: fixed;
-  right: 0;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(14,43,82);
   background: linear-gradient(180deg, rgba(14,43,82,1) 10%, rgba(37,111,137,1) 15%, rgba(136,173,164,1) 25%, rgba(136,173,164,1) 88%, rgba(227,216,173,1) 97%);
 }
 
@@ -26,7 +23,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* overflow-x: hidden; */
   background-color: #e3d8ad;
   color: #FFF;
   box-sizing: border-box;
@@ -38,6 +34,7 @@ body {
 .body-container {
   position: relative;
   z-index: 1;
+  overflow-x: clip;
   justify-content: center;
   align-items: center;
 }
