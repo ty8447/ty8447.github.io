@@ -59,7 +59,7 @@ const Nav = ({ activeLink, onLinkClick }) => {
             } else if (links[index].path === "#contact") {
                 backgroundColor = "#378baf";
             }
-            
+
             setPillStyle({
                 display: 'block',
                 width: `${linkRef.offsetWidth}px`,
@@ -72,6 +72,15 @@ const Nav = ({ activeLink, onLinkClick }) => {
     useEffect(() => {
         const activeIndex = links.findIndex((link) => link.path === activeLink);
         updatePillStyle(activeIndex);
+
+        const handleResize = () => {
+            updatePillStyle(activeIndex);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, [activeLink]);
 
     return (
@@ -79,17 +88,17 @@ const Nav = ({ activeLink, onLinkClick }) => {
             <ul className="nav-list">
                 {links.map(({ path, label }, index) => (
                     <li key={label}>
-                            <a
-                                href={path}
-                                className={activeLink === path ? "active" : ""}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    handleNavClick(path, index);
-                                }}
-                                ref={(el) => (linkRefs.current[index] = el)}
-                            >
-                                {label}
-                            </a>
+                        <a
+                            href={path}
+                            className={activeLink === path ? "active" : ""}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleNavClick(path, index);
+                            }}
+                            ref={(el) => (linkRefs.current[index] = el)}
+                        >
+                            {label}
+                        </a>
                     </li>
                 ))}
             </ul>
