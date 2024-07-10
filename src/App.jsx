@@ -144,7 +144,7 @@ const App = () => {
     {
       folder: 'DispoLens',
       thumbnail: 'Proj_Images/DispoLens/Proj_Dispo.jpg',
-      title: 'Repurposing an old disposable camera lens',
+      title: 'Repurposing an Old Disposable Camera Lens',
       summary: 'After purchasing a disposable camera for a trip and getting it developed, I wondered if I could repurpose it instead of it going to the landfill.',
       link: '',
       tools: ['Onshape', 'SLA Printing'],
