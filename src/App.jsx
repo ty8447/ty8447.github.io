@@ -143,7 +143,7 @@ const App = () => {
     },
     {
       folder: 'DispoLens',
-      thumbnail: 'Proj_Images/MacDeck/Proj_Dispo.jpg',
+      thumbnail: 'Proj_Images/DispoLens/Proj_Dispo.jpg',
       title: 'Repurposing an old disposable camera lens',
       summary: 'After purchasing a disposable camera for a trip and getting it developed, I wondered if I could repurpose it instead of it going to the landfill.',
       link: '',
