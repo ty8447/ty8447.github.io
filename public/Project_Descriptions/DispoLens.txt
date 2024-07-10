@@ -1,0 +1,19 @@
+<p><b style="font-size: 18px;">Objective:</b><br>
+My primary goal was to repurpose a disposable camera lens, which was originally destined for the landfill, and adapt it for use with a higher-end camera, specifically my Sony A7RV. This project aimed to combine sustainability with high-quality photography by giving new life to an otherwise discarded component.</p>
+<p><b style="font-size: 18px;">Backstory:</b><br>
+After getting my film developed at a local camera store, I asked them what they do with the cameras and they mentioned that they throw them away. Curious as to what I could do with it, I asked them if I could take the empty camera home and they happily agreed. Realizing the potential of its lens, I decided to find a way to integrate it into my Sony A7RV. The project required reverse engineering the disposable camera and creating custom components to ensure compatibility with the high-end camera. The process involved using Onshape for design and SLA printing for fabrication, taking about two days to complete.</p>
+<p><b style="font-size: 18px;">Components Used:</b><br>
+- Disposable Camera Lens<br>
+- Onshape (for 3D design)<br>
+- SLA 3D Printer<br>
+- Custom Mounting Adapter (designed and printed)<br>
+- Sony A7RV Camera</p>
+<p>This project was conducted during my free time and required multiple iterations to achieve the correct fit and functionality. The main objective was to create a durable and reliable adapter that allowed the disposable camera lens to be securely mounted on the Sony A7RV, thereby expanding its photographic capabilities with a unique lens option.</p>
+<p><b style="font-size: 18px;">Goals:</b><br>
+- Sustainable Design: Repurposing an old lens to reduce waste and promote sustainability.<br>
+- High-Quality Integration: Ensuring the adapted lens maintains the high standards of the Sony A7RV's performance.<br>
+- Efficient Process: Completing the project efficiently within two days using advanced design and printing technologies.</p>
+<p><b style="font-size: 18px;">Challenges and Solutions:</b><br>
+Throughout the development process, I encountered challenges related to the precise fitting of the lens and the custom adapter, as well as optimizing the performance of the lens. To overcome these, I used detailed measurements and iterative prototyping in Onshape, followed by SLA printing to achieve a perfect fit. This approach led to a robust and functional final product.</p>
+<p><b style="font-size: 18px;">Future Improvements:</b><br>
+Looking ahead, I plan to explore further enhancements, such as improving the adapter's ergonomics and experimenting with different lenses from various disposable cameras. Additionally, I aim to refine the design process to reduce the time and resources required for future projects.</p>

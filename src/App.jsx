@@ -142,6 +142,17 @@ const App = () => {
       objectPosition: 'center center',
     },
     {
+      folder: 'DispoLens',
+      thumbnail: 'Proj_Images/MacDeck/Proj_Dispo.jpg',
+      title: 'Repurposing an old disposable camera lens',
+      summary: 'After purchasing a disposable camera for a trip and getting it developed, I wondered if I could repurpose it instead of it going to the landfill.',
+      link: '',
+      tools: ['Onshape', 'SLA Printing'],
+      date: 'July 2024',
+      status: 'Completed',
+      objectPosition: 'center center',
+    },
+    {
       folder: 'Flashlight',
       thumbnail: 'Proj_Images/Flashlight/Proj_Flashlight.jpg',
       title: 'FWG Flashlight',
