@@ -1,3 +1,15 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure HTML and Body Take Full Height */
+html, body {
+  height: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -42,6 +54,7 @@ body {
 .contact-text {
   font-weight: bold;
   size: 1.5rem;
+  z-index: 3;
 }
 
 .projdiv {
@@ -52,7 +65,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1003;
 }
 
 .name-profession-container {
@@ -417,6 +430,7 @@ section {
 #project {
   padding-bottom: 20px;
   padding-top: 30px;
+  z-index: 3;
 }
 
 .skill-container {
@@ -431,6 +445,8 @@ section {
 .project-container {
   text-align: center;
   background-color: #88ada4;
+  position: relative;
+  z-index: 3;
 }
 
 .projects-grid {
@@ -469,6 +485,8 @@ section {
 .contact-container {
   background-color: #e3d8ad;
   height: auto;
+  position: relative;
+  z-index: 10;
 }
 
 .copyright {
@@ -478,8 +496,9 @@ section {
 
 #contact {
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 20vh;
   padding-bottom: 10vh;
+  z-index: 3;
 }
 
 .contact-items {
@@ -489,6 +508,7 @@ section {
   align-items: center;
   flex-direction: row;
   padding: 0px;
+  z-index: 3;
 }
 
 .contact-items li {
@@ -520,6 +540,8 @@ section {
 
 .footer {
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 .return-arrow {

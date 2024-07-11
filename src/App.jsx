@@ -13,7 +13,7 @@ import Copyright from './Copyright';
 import cover from './Assets/misc/cover.svg';
 // import ReactGA from 'react-ga';
 
-const Home = () => <p></p>;
+const Home = () => <div style={{ height: 0 }}></div>;
 const Skill = () => <h1>Skill</h1>;
 const Project = () => <h1>Project</h1>;
 const Contact = () => <h1>Contact</h1>;
@@ -459,7 +459,7 @@ const App = () => {
         <ScrollToSection />
         <div className="title-container" ref={titleContainerRef}>
           <section id="home" ref={homeRef}>
-            <div className="cover-box"><img src={cover} alt="Cover Background" className="cover-background" /></div>
+            <div className="cover-box" style={{position: "fixed"}}><img src={cover} alt="Cover Background" className="cover-background" /></div>
             <div className="name-profession-container">
               <h1 style={{ pointerEvents: "none" }}>Cole Rabe</h1>
               <p style={{ pointerEvents: "none" }}>Mechanical Engineer | Electrical Engineer</p>
