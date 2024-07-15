@@ -11,7 +11,6 @@ import ProjectModal from './ProjectModal';
 import Nav from './Nav.jsx';
 import Copyright from './Copyright';
 import cover from './Assets/misc/cover.svg';
-// import ReactGA from 'react-ga';
 
 const Home = () => <div style={{ height: 0 }}></div>;
 const Skill = () => <h1>Skill</h1>;
@@ -36,7 +35,6 @@ const ScrollToSection = () => {
 const fetchDescription = async (folder) => {
   try {
     const response = await fetch(`/Project_Descriptions/${folder}.txt`);
-    // console.log('Checking for Description!');
     if (!response.ok) {
       throw new Error(`Failed to fetch description for ${folder}`);
     }
@@ -64,14 +62,11 @@ const App = () => {
 
   useEffect(() => {
     const sections = [
-      { id: "#", ref: homeRef },
-      { id: "#skill", ref: skillRef },
-      { id: "#project", ref: projectRef },
-      { id: "#contact", ref: contactRef },
+      { id: "home", ref: homeRef },
+      { id: "skill", ref: skillRef },
+      { id: "project", ref: projectRef },
+      { id: "contact", ref: contactRef },
     ];
-
-    // ReactGA.initialize('G-97WGDQPF85');
-    // ReactGA.pageview(window.location.pathname + window.location.search);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -103,7 +98,6 @@ const App = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => {
-
       sections.forEach(({ id, ref }) => {
         if (ref.current) {
           observer.unobserve(ref.current);
@@ -128,7 +122,7 @@ const App = () => {
 
     loadDescriptions();
   }, []);
-  
+
   const projectData = [
     {
       folder: 'MacDeck',
@@ -459,7 +453,7 @@ const App = () => {
         <ScrollToSection />
         <div className="title-container" ref={titleContainerRef}>
           <section id="home" ref={homeRef}>
-            <div className="cover-box" style={{position: "fixed"}}><img src={cover} alt="Cover Background" className="cover-background" /></div>
+            <div className="cover-box"><img src={cover} alt="Cover Background" className="cover-background" /></div>
             <div className="name-profession-container">
               <h1 style={{ pointerEvents: "none" }}>Cole Rabe</h1>
               <p style={{ pointerEvents: "none" }}>Mechanical Engineer | Electrical Engineer</p>

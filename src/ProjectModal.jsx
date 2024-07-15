@@ -1,51 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './ProjectModal.css'; // Import CSS for styling the modal
+import './ProjectModal.css';
 
-// Import all images and videos at build time
 const allImages = import.meta.glob('/public/Proj_Images/**/*.{jpg,png}', { eager: true });
-const allVideos = import.meta.glob('/public/Proj_Images/**/*.mp4', { eager: true }); // Update pattern to match your structure
+const allVideos = import.meta.glob('/public/Proj_Images/**/*.mp4', { eager: true });
 
 const ProjectModal = ({ project, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [media, setMedia] = useState([]);
 
   useEffect(() => {
+    const body = document.body;
     if (project) {
       setIsOpen(true);
-      document.body.classList.add('no-scroll');
-      // console.log(`Project Description: ${project.description}`);
+      //document.body.classList.add('no-scroll');
+      document.body.style.overflow = 'hidden';
 
       const projectfolder = project.folder;
 
-      // Filter images based on project folder
       const projectImages = Object.keys(allImages)
         .filter(path => path.includes(`/Proj_Images/${projectfolder}/`))
         .map(path => {
           const newPath = new URL(path.replace('/public', ''), import.meta.url).pathname;
-          // console.log(`Image Path: ${newPath}`); // Debug: Log image paths
           return newPath;
         });
 
-      // Filter videos based on project folder
       const projectVideos = Object.keys(allVideos)
-        .filter(path => path.includes(`/Proj_Images/${projectfolder}/`)) // Updated pattern
+        .filter(path => path.includes(`/Proj_Images/${projectfolder}/`))
         .map(path => {
           const newPath = new URL(path.replace('/public', ''), import.meta.url).pathname;
-          // console.log(`Video Path: ${newPath}`); // Debug: Log video paths
           return newPath;
         });
 
-      // console.log(`Project Videos:`, projectVideos); // Debug: Log all project video paths
-      // console.log(`Project Images:`, projectImages); // Debug: Log all project image paths
-
-      // Combine images and videos
       setMedia([...projectImages, ...projectVideos]);
     } else {
       setIsOpen(false);
-      document.body.classList.remove('no-scroll');
+      // document.body.classList.remove('no-scroll');
+      document.body.style.overflow = 'auto';
     }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+  };
   }, [project]);
 
   if (!project) return null;
@@ -82,7 +79,7 @@ const ProjectModal = ({ project, onClose }) => {
               showArrows={true}
               infiniteLoop={true}
               showIndicators={false}
-              showThumbs={false} // Hide the dots
+              showThumbs={false}
             >
               {media.map((src, index) => (
                 <div key={index}>
