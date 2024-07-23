@@ -51,6 +51,7 @@ const App = () => {
   const [activeLink, setActiveLink] = useState("#");
   const [isSticky, setIsSticky] = useState(false);
   const [descriptions, setDescriptions] = useState({});
+  const [visibleProjects, setVisibleProjects] = useState(3);
 
   const linksContainerRef = useRef(null);
   const titleContainerRef = useRef(null);
@@ -445,6 +446,20 @@ const App = () => {
   const handleCloseModal = () => {
     setSelectedProject(null);
     setSelectedCardRef(null);
+  };
+
+  const handleLoadMore = () => {
+    setVisibleProjects(prevVisible => {
+      const newVisible = Math.min(prevVisible + 3, projectData.length);
+  
+      for (let i = prevVisible; i < newVisible; i++) {
+        setTimeout(() => {
+          document.querySelector(`.project-card:nth-child(${i - prevVisible + 1})`).classList.add('fade-in');
+        }, (i - prevVisible) * 100);
+      }
+  
+      return newVisible;
+    });
   };
 
   return (
@@ -1667,20 +1682,28 @@ z"/>
           <section id="project" ref={projectRef}>
             <h1 className="section-title">Projects</h1>
             <div className="projects-grid">
-              {projectData.map((project, index) => (
+              {projectData.slice(0, visibleProjects).map((project, index) => (
                 <ProjectCard
                   key={index}
+                  className="project-card"
                   thumbnail={project.thumbnail}
                   title={project.title}
                   summary={project.summary}
                   date={project.date}
                   status={project.status}
-                  onLearnMore={(cardRef) => handleLearnMore(project, cardRef)}
-                  objectPosition={project.objectPosition}
-                  objectScale={project.objectScale}
+                  tools={project.tools}
+                  link={project.link}
+                  onLearnMore={() => handleLearnMore(project)}
                 />
               ))}
             </div>
+            {visibleProjects < projectData.length && (
+              <div className="load-more-button-container">
+                <button onClick={handleLoadMore} className="load-more-button">
+                  Load More
+                </button>
+              </div>
+            )}
           </section>
           <ProjectModal project={selectedProject} onClose={handleCloseModal} cardRef={selectedCardRef} />
         </div>
