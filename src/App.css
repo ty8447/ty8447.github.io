@@ -650,6 +650,10 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+    }
 }
 
 @media (max-width: 768px) {
@@ -716,6 +720,17 @@ section {
   
   .name-profession-container p {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 460px) {
+
+  .name-profession-container h1 {
+    font-size: 18vw;
+  }
+  
+  .name-profession-container p {
+    font-size: 5vw;
   }
 }
 
