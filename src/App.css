@@ -87,7 +87,7 @@ body {
 
 .cover-background {
   position: absolute;
-  top: 0;
+  top: calc(50% - 30vw);
   margin: auto 0;
   width: 100%;
   height: auto;
@@ -98,6 +98,8 @@ body {
 .cover-box{
   position: fixed;
   display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: none;
   top: 0;
   left: 0;
