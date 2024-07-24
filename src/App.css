@@ -715,22 +715,11 @@ section {
   }
 
   .name-profession-container h1 {
-    font-size: 3.5rem;
+    font-size: 11vw;
   }
   
   .name-profession-container p {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 460px) {
-
-  .name-profession-container h1 {
-    font-size: 18vw;
-  }
-  
-  .name-profession-container p {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 
