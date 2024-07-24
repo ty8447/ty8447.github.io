@@ -1,3 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 100" preserveAspectRatio="none">
-  <path d="M0,50 Q500,20 1000,50 Q1500,80 2000,50 V100 H0 Z" fill="#0e2b52"/>
+  <path d="M0,50 Q500,20 1000,50 Q1500,80 2000,50 V100 H0 Z" fill="#256f89" filter="url(#shadow)"/>
+  <filter id='shadow' color-interpolation-filters="sRGB">
+    <feComposite operator='in' in='color' in2='inverse' result='shadow' dx="6" dy="6" stdDeviation="3" flood-opacity="0.5"/>
+  </filter>
 </svg>

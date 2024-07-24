@@ -209,7 +209,7 @@ body {
   background-position: center 50%;
   background-repeat: no-repeat;
   width: auto;
-  height: 100vh;
+  height: 120vh;
   background-color: #0e2b52;
   display: flex;
   flex-direction: column;
@@ -234,13 +234,13 @@ body {
 
 
 .wave1-background {
-  position: sticky;
-  top: 0;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 150px;
   background-image: url('/src/Assets/Waves/wave1.svg');
   background-size: cover;
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
   z-index: 1000;
 }
 
@@ -329,8 +329,7 @@ section {
   text-align: center;
   flex-direction: row;
   z-index: 3;
-  padding-top: 10vh;
-  padding-bottom: 20px;
+  padding-top: 3vh;
 }
 
 @media(prefers-reduced-motion: no-preference) {
@@ -430,7 +429,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   font-size: 2rem;
-  padding: 30px 5vw;
+  padding: 150px 5vw;
   position: relative;
   justify-content: center;
 }

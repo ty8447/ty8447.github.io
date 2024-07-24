@@ -2,7 +2,11 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: 'Arial', sans-serif;
+    background-color: rgba(40,40,40,0.6);
+    padding: 8px 0;
+    border-radius: 25px;
 }
 
 .nav-container ul {
@@ -49,7 +53,6 @@
 
 .active-pill {
     position: absolute;
-    bottom: 0;
     left: 0;
     height: 30px;
     transition: all 0.3s ease;

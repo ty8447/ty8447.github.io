@@ -489,6 +489,7 @@ const App = () => {
               />
             </a>
           </section>
+          <div className="wave1-background"></div>
         </div>
         <div className={`links-container ${isSticky ? "sticky" : ""}`}
           ref={linksContainerRef}>
@@ -497,7 +498,6 @@ const App = () => {
           </nav>
         </div>
         <div className="skill-container">
-          <div className="wave1-background"></div>
           <section id="skill" ref={skillRef}>
             <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
