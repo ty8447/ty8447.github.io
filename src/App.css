@@ -240,7 +240,6 @@ body {
   height: 150px;
   background-image: url('/src/Assets/Waves/wave1.svg');
   background-size: cover;
-  /* transform: rotate(180deg); */
   z-index: 1000;
 }
 

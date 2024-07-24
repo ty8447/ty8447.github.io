@@ -1,3 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 100" preserveAspectRatio="none">
-  <path d="M0,50 Q500,20 1000,50 Q1500,80 2000,50 V100 H0 Z" fill="#88ada4"/>
+  <defs>
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="1 0"/>
+      </feComponentTransfer>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feOffset dx="0" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="rgba(0, 0, 0, 0.5)" result="color"/>
+      <feComposite in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path d="M0,50 Q500,20 1000,50 Q1500,80 2000,50 V100 H0 Z" fill="#88ada4" filter="url(#innerShadow)"/>
 </svg>
