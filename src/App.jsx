@@ -72,7 +72,6 @@ const App = () => {
     ];
 
     if (activeSection === 'skill' && !skillsAnimated) {
-      console.log('Animating skills section');
       setSkillsAnimated(true);
     }
 
@@ -81,7 +80,6 @@ const App = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveLink(`#${entry.target.id}`);
-            console.log('entry', entry.target.id);
             setActiveSection(entry.target.id);
           }
         });
