@@ -49,6 +49,8 @@ const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCardRef, setSelectedCardRef] = useState(null);
   const [activeLink, setActiveLink] = useState("#");
+  const [skillsAnimated, setSkillsAnimated] = useState(false);
+  const [activeSection, setActiveSection] = useState();
   const [isSticky, setIsSticky] = useState(false);
   const [descriptions, setDescriptions] = useState({});
   const [visibleProjects, setVisibleProjects] = useState(3);
@@ -69,17 +71,24 @@ const App = () => {
       { id: "contact", ref: contactRef },
     ];
 
+    if (activeSection === 'skill' && !skillsAnimated) {
+      console.log('Animating skills section');
+      setSkillsAnimated(true);
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveLink(`#${entry.target.id}`);
+            console.log('entry', entry.target.id);
+            setActiveSection(entry.target.id);
           }
         });
       },
       {
-        threshold: [0],
-        rootMargin: '0px 0px -50% 0px',
+        threshold: 0,
+        rootMargin: '-40% 0px -50% 0px',
       }
     );
 
@@ -106,7 +115,7 @@ const App = () => {
       });
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeSection, skillsAnimated]);
 
   useEffect(() => {
     const loadDescriptions = async () => {
@@ -451,13 +460,13 @@ const App = () => {
   const handleLoadMore = () => {
     setVisibleProjects(prevVisible => {
       const newVisible = Math.min(prevVisible + 3, projectData.length);
-  
+
       for (let i = prevVisible; i < newVisible; i++) {
         setTimeout(() => {
           document.querySelector(`.project-card:nth-child(${i - prevVisible + 1})`).classList.add('fade-in');
         }, (i - prevVisible) * 100);
       }
-  
+
       return newVisible;
     });
   };
@@ -494,7 +503,7 @@ const App = () => {
           <section id="skill" ref={skillRef}>
             <h1 className="section-title skill-title">Skills</h1>
             <div className="skill-categories">
-              <div className={`sksoftware`}>
+              <div className={`sksoftware ${skillsAnimated ? 'animatesoftware' : ''}`}>
                 <h2 style={{ pointerEvents: "none" }}>Software</h2>
                 <div className="icons-column">
                   <div className="icon" title="Solidworks">
@@ -1139,7 +1148,7 @@ z"/>
                   </div>
                 </div>
               </div>
-              <div className={`sktraining`}>
+              <div className={`sktraining ${skillsAnimated ? 'animatetraining' : ''}`}>
                 <h2 style={{ pointerEvents: "none" }}>Training</h2>
                 <div className="icons-column">
                   <div className="icon" title="FDM/SLA 3D Printing">
@@ -1600,7 +1609,7 @@ z"/>
                   </div>
                 </div>
               </div>
-              <div className={`sklanguages`}>
+              <div className={`sklanguages ${skillsAnimated ? 'animatelanguages' : ''}`}>
                 <h2 style={{ pointerEvents: "none" }}>Languages</h2>
                 <div className="icons-column">
                   <div className="icon" title="Matlab">
@@ -1673,7 +1682,6 @@ z"/>
                   </div>
                 </div>
               </div>
-
             </div>
           </section>
         </div>

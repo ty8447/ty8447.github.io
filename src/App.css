@@ -438,31 +438,33 @@ section {
   padding-bottom: 20px;
   align-items: center;
   flex-direction: column;
-  animation: opacity 0.5s 0.3s ease-in forwards;
   opacity: 0;
-
-
 }
-
-.sklanguages {
-  display: flex;
-  padding-bottom: 20px;
-  align-items: center;
-  flex-direction: column;
-  animation: opacity 0.5s 1.3s ease-in forwards;
-  opacity: 0;
-
-}
-
 .sktraining {
   display: flex;
   padding-bottom: 20px;
   align-items: center;
   flex-direction: column;
-  animation: opacity 0.5s 0.8s ease-in forwards;
   opacity: 0;
-
 }
+.sklanguages {
+  display: flex;
+  padding-bottom: 20px;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.animatesoftware {
+animation: opacity 0.5s 0.3s ease-in forwards;
+}
+.animatetraining {
+  animation: opacity 0.5s 0.8s ease-in forwards;
+  }
+.animatelanguages {
+animation: opacity 0.5s 1.3s ease-in forwards;
+}
+
 
 #project {
   font-family: Arial, sans-serif;
