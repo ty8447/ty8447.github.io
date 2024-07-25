@@ -79,9 +79,15 @@ body {
   z-index: 1003;
 }
 
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .name-profession-container {
-  position: relative;
-  z-index: 1002;
+  position: fixed;
+  z-index: 2;
   text-align: center;
 }
 
@@ -109,7 +115,7 @@ body {
 }
 
 .name-profession-container h1 {
-  z-index: 3;
+  z-index: 2;
   font-size: 4.5rem;
   margin: 0;
 }
@@ -120,15 +126,15 @@ body {
 }
 
 .scroll-arrow {
-  z-index: 1003;
+  z-index: 2;
 }
 
 .shrink-arrow {
   width: 4vw;
-  position: absolute;
+  position: fixed;
+  bottom: 5px;
   height: auto;
-  bottom: 0;
-  z-index: 30;
+  z-index: 2;
   left: var(--arrow-left, 50%);
   transform: translateX(-50%);
   transition: transform 0.3s 0.1s;
@@ -240,7 +246,7 @@ body {
   height: 150px;
   background-image: url('/src/Assets/Waves/wave1.svg');
   background-size: cover;
-  z-index: 1000;
+  z-index: 3;
 }
 
 .wave2-background {
