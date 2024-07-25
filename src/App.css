@@ -284,20 +284,28 @@ nav ul li a {
 }
 
 .resume-button {
-  background-color: #444;
-  color: white;
+  background-color: rgb(42, 97, 165);
+  display: inline-flex;
+  padding: 14px 16px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border-radius: 5px;
   width: auto;
-  padding: 12px 16px;
   height: auto;
   z-index: 30;
-  font-size: 1.2rem;
-  text-decoration: none;
+  font-size: 1.4rem;
+  transition: 0.2s ease-in-out;
+}
+
+.resume-text{
+  color: #fff;
+  margin-right: 10px;
+  font-family: Arial, sans-serif;
 }
 
 .resume-button:hover {
-  background-color: #555;
-  color: #b88a7d;
+  transform: scale(1.05);
 }
 
 header {
@@ -489,7 +497,7 @@ animation: opacity 0.5s 1.3s ease-in forwards;
   min-height: 80vh;
   z-index: 3;
   position: relative;
-  background-color: #256f89;
+  background-color: #266e89;
 }
 
 .project-container {

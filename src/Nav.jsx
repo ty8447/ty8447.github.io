@@ -57,7 +57,7 @@ const Nav = ({ activeLink, onLinkClick }) => {
             if (links[index].path === "#project") {
                 backgroundColor = "#378baf";
             } else if (links[index].path === "#contact") {
-                backgroundColor = "#73918a";
+                backgroundColor = "#9d9678";
             }
 
             setPillStyle({

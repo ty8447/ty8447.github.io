@@ -14,5 +14,5 @@
       </feMerge>
     </filter>
   </defs>
-  <path d="M0,50 Q500,80 1000,50 Q1500,20 2000,50 V100 H0 Z" fill="#256f89" filter="url(#innerShadow)"/>
+  <path d="M0,50 Q500,80 1000,50 Q1500,20 2000,50 V100 H0 Z" fill="#256e89" filter="url(#innerShadow)"/>
 </svg>
