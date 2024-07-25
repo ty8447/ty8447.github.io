@@ -63,6 +63,11 @@ const App = () => {
   const skillRef = useRef(null);
   const contactRef = useRef(null);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  
+
   useEffect(() => {
     const sections = [
       { id: "home", ref: homeRef },
@@ -473,6 +478,7 @@ const App = () => {
     <Router>
       <div className="body-container">
         <ScrollToSection />
+        <section id="top"></section>
         <div className="title-container" ref={titleContainerRef}>
           <section id="home" ref={homeRef}>
             <div className="cover-box"><img src={cover} alt="Cover Background" className="cover-background" /></div>
@@ -1722,7 +1728,7 @@ z"/>
         <div className="contact-container">
           <div className="wave3-background"></div>
           <section id="contact" ref={contactRef}>
-            <a href="#" className="scroll-arrow">
+            <a href="#top" className="scroll-arrow" onClick={scrollToTop}>
               <img
                 src="Icons/return_arrow.png"
                 alt="Return Arrow"

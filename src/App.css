@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Ensure HTML and Body Take Full Height */
@@ -60,6 +61,12 @@ body {
   overflow-x: clip;
   justify-content: center;
   align-items: center;
+}
+
+#top{
+  background-color:#0e2b52;
+  width: 100%;
+  margin: 0 0;
 }
 
 .contact-text {
