@@ -4,7 +4,7 @@
       <feComponentTransfer>
         <feFuncA type="table" tableValues="1 0"/>
       </feComponentTransfer>
-      <feGaussianBlur in="SourceAlpha" stdDeviation="18" result="blur"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14" result="blur"/>
       <feOffset dx="0" dy="2" result="offsetBlur"/>
       <feFlood flood-color="rgba(0, 0, 0, 0.5)" result="color"/>
       <feComposite in2="offsetBlur" operator="in" result="shadow"/>
