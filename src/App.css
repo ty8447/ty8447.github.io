@@ -299,15 +299,15 @@ nav ul li a {
 .resume-button {
   background-color: rgb(42, 97, 165);
   display: inline-flex;
-  padding: 14px 16px;
+  padding: 2vh 1vw;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 1vw;
   width: auto;
   height: auto;
   z-index: 30;
-  font-size: 1.4rem;
+  font-size: 1.2vw;
   transition: 0.2s ease-in-out;
 }
 
@@ -315,6 +315,10 @@ nav ul li a {
   color: #fff;
   margin-right: 10px;
   font-family: Arial, sans-serif;
+}
+
+.resume-arrow {
+  width: 2vw; 
 }
 
 .resume-button:hover {
@@ -707,6 +711,15 @@ animation: opacity 0.5s 1.3s ease-in forwards;
   .name-profession-container p {
     font-size: 1.5rem;
   }
+
+  .resume-button {
+    font-size: 3vw;
+    padding: 2vh 2vw;
+  }
+
+  .resume-arrow {
+    width: 4vw;
+  }
 }
 
 @media (max-width: 576px) {
@@ -743,6 +756,15 @@ animation: opacity 0.5s 1.3s ease-in forwards;
   
   .name-profession-container p {
     font-size: 4vw;
+  }
+
+  .resume-button {
+    font-size: 4vw;
+    padding: 2vh 4vw;
+  }
+
+  .resume-arrow {
+    width: 5vw;
   }
 }
 
