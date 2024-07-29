@@ -92,14 +92,12 @@ body {
   align-items: center;
 }
 
-.name-profession-container {
-  /* transform: translateY(-60px); */
-  margin-top: -250px;
+ .name-profession-container {
   position: fixed;
+  margin-top:-250px;
   z-index: 2;
   text-align: center;
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .cover-background {
