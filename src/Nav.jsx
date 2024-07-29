@@ -24,7 +24,7 @@ const Nav = ({ activeLink, onLinkClick }) => {
     const linkRefs = useRef([]);
 
     const setActiveLink = (path) => {
-        console.log("Setting active link to:", path);
+        // console.log("Setting active link to:", path);
         onLinkClick(path);
     };
 

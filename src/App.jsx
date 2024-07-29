@@ -54,9 +54,11 @@ const App = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [descriptions, setDescriptions] = useState({});
   const [visibleProjects, setVisibleProjects] = useState(3);
+  const [opacity, setOpacity] = useState(1);
 
   const linksContainerRef = useRef(null);
   const titleContainerRef = useRef(null);
+  const nameProfessionContainerRef = useRef(null);
 
   const homeRef = useRef(null);
   const projectRef = useRef(null);
@@ -66,9 +68,47 @@ const App = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const handleScroll = () => {
+    requestAnimationFrame(() => {
+      console.log("Scroll event triggered");
+      console.log("Scroll position:", window.scrollY);
+  
+      if (linksContainerRef.current && titleContainerRef.current) {
+        console.log("Title container bottom:", titleContainerRef.current.getBoundingClientRect().bottom);
+        console.log("Links container top:", linksContainerRef.current.getBoundingClientRect().top);
+        setIsSticky(titleContainerRef.current.getBoundingClientRect().bottom <= 0 && linksContainerRef.current.getBoundingClientRect().top <= 0);
+      }
+  
+      if (nameProfessionContainerRef.current) {
+        const fadeStart = 100;
+        const fadeEnd = 300;
+        const scrollPosition = window.scrollY;
+  
+        let newOpacity = 1;
+        if (scrollPosition >= fadeStart) {
+          newOpacity = Math.max(0, 1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart));
+        }
+  
+        console.log("New opacity:", newOpacity);
+        setOpacity(newOpacity);
+      }
+    });
+  };
   
 
   useEffect(() => {
+    console.log("Setting up scroll event listener");
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      console.log("Removing scroll event listener");
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    // console.log("useEffect: setting up intersection observer");
     const sections = [
       { id: "home", ref: homeRef },
       { id: "skill", ref: skillRef },
@@ -84,6 +124,7 @@ const App = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // console.log(`Section ${entry.target.id} is intersecting`);
             setActiveLink(`#${entry.target.id}`);
             setActiveSection(entry.target.id);
           }
@@ -101,22 +142,14 @@ const App = () => {
       }
     });
 
-    const handleScroll = () => {
-      if (linksContainerRef.current && titleContainerRef.current) {
-        const titleContainerBottom = titleContainerRef.current.getBoundingClientRect().bottom;
-        const linksContainerTop = linksContainerRef.current.getBoundingClientRect().top;
-        setIsSticky(titleContainerBottom <= 0 && linksContainerTop <= 0);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
     return () => {
+      // console.log("Cleaning up event listeners and observers");
       sections.forEach(({ id, ref }) => {
         if (ref.current) {
           observer.unobserve(ref.current);
         }
       });
-      window.removeEventListener("scroll", handleScroll);
+      // window.removeEventListener("scroll", handleScroll);
     };
   }, [activeSection, skillsAnimated]);
 
@@ -482,15 +515,15 @@ const App = () => {
         <div className="title-container" ref={titleContainerRef}>
           <section id="home" ref={homeRef}>
             <div className="cover-box"><img src={cover} alt="Cover Background" className="cover-background" /></div>
-            <div className="name-profession-container">
+            <div className="name-profession-container" style={{ opacity: opacity }} ref={nameProfessionContainerRef}>
               <h1 style={{ pointerEvents: "none" }}>Cole Rabe</h1>
               <p style={{ pointerEvents: "none" }}>Mechanical Engineer | Electrical Engineer</p>
-                <a href="Resume_Cole_Rabe.pdf" download="Resume_Cole_Rabe.pdf" className="resume-button">
-                  <span className="resume-text">Download Resume</span>
-                  <svg class="resume-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="#FFF" />
-                  </svg>
-                </a>
+              <a href="Resume_Cole_Rabe.pdf" download="Resume_Cole_Rabe.pdf" className="resume-button">
+                <span className="resume-text">Download Resume</span>
+                <svg className="resume-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="#FFF" />
+                </svg>
+              </a>
             </div>
             <a href="#contact" className="scroll-arrow">
               <img
