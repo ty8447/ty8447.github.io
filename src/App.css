@@ -160,7 +160,7 @@ body {
   height: auto;
   z-index: 3;
   animation: fadeIn 1s ease-out forwards;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 
 
