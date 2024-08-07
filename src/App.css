@@ -774,6 +774,14 @@ animation: opacity 0.5s 1.3s ease-in forwards;
   .resume-arrow {
     width: 5vw;
   }
+
+  .contact-items .contact-text {
+    display: none !important;
+  }
+
+  .contact-container svg {
+    cursor: pointer;
+  }
 }
 
 @keyframes opacity {
