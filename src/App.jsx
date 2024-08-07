@@ -535,13 +535,15 @@ const App = () => {
                 </svg>
               </a>
             </div>
-            <a href="#contact" className="scroll-arrow">
+            <div className="scroll-arrow-container">
+              <a href="#contact">
               <img
                 src="Icons/scroll_arrow.png"
                 alt="Scroll Arrow"
                 className="shrink-arrow"
               />
             </a>
+            </div>
           </section>
           <div className="wave1-background"></div>
         </div>

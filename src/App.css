@@ -140,27 +140,30 @@ body {
   pointer-events: none;
 }
 
-.scroll-arrow {
+.scroll-arrow-container {
+  display: flex;
+  position: fixed;
+  bottom: 5px;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
+  transition: transform 0.3s, opacity 1s ease-out;
+}
+
+.scroll-arrow-container:hover {
+  transform: translateY(20%);
 }
 
 .shrink-arrow {
   opacity: 0;
   width: 4vw;
-  position: fixed;
-  bottom: 5px;
   height: auto;
-  z-index: 2;
-  transform: translateX(-50%);
-  transition: transform 0.3s 0.1s;
+  z-index: 3;
   animation: fadeIn 1s ease-out forwards;
   animation-delay: 0.5s;
 }
 
-.shrink-arrow:hover {
 
-  transform: translate(-50%, 20%);
-}
 
 .links-container {
   opacity: 0;
