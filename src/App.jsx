@@ -40,7 +40,7 @@ const fetchDescription = async (folder) => {
     }
     return await response.text();
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     return 'Description Coming Soon';
   }
 };
@@ -81,12 +81,12 @@ const App = () => {
 
   const handleScroll = () => {
     requestAnimationFrame(() => {
-      console.log("Scroll event triggered");
-      console.log("Scroll position:", window.scrollY);
+      // console.log("Scroll event triggered");
+      // console.log("Scroll position:", window.scrollY);
   
       if (linksContainerRef.current && titleContainerRef.current) {
-        console.log("Title container bottom:", titleContainerRef.current.getBoundingClientRect().bottom);
-        console.log("Links container top:", linksContainerRef.current.getBoundingClientRect().top);
+        // console.log("Title container bottom:", titleContainerRef.current.getBoundingClientRect().bottom);
+        // console.log("Links container top:", linksContainerRef.current.getBoundingClientRect().top);
         setIsSticky(titleContainerRef.current.getBoundingClientRect().bottom <= 0 && linksContainerRef.current.getBoundingClientRect().top <= 0);
       }
   
@@ -100,7 +100,7 @@ const App = () => {
           newOpacity = Math.max(0, 1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart));
         }
   
-        console.log("New opacity:", newOpacity);
+        // console.log("New opacity:", newOpacity);
         setOpacity(newOpacity);
       }
     });
@@ -108,11 +108,11 @@ const App = () => {
   
 
   useEffect(() => {
-    console.log("Setting up scroll event listener");
+    // console.log("Setting up scroll event listener");
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      console.log("Removing scroll event listener");
+      // console.log("Removing scroll event listener");
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);

@@ -145,18 +145,20 @@ body {
 }
 
 .shrink-arrow {
+  /* opacity: 0; */
   width: 4vw;
   position: fixed;
   bottom: 5px;
   height: auto;
   z-index: 2;
-  left: var(--arrow-left, 50%);
   transform: translateX(-50%);
   transition: transform 0.3s 0.1s;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
 .shrink-arrow:hover {
-  left: var(--arrow-left, 50%);
+
   transform: translate(-50%, 20%);
 }
 
