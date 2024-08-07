@@ -145,7 +145,7 @@ body {
 }
 
 .shrink-arrow {
-  /* opacity: 0; */
+  opacity: 0;
   width: 4vw;
   position: fixed;
   bottom: 5px;
