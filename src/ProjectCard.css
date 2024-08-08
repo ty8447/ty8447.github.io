@@ -98,20 +98,23 @@
     transition-duration: 1s ease;
     border: 2px solid ;
     pointer-events: none;
-    background-color: rgba(63, 63, 63, 0.85);
+    border: none;
 }
 
 .status-pill.in-progress {
-    color: #ffbc63;
-    border: 2px solid #ffbc63;
+    color: #b87e32;
+    background-color: rgba(255, 186, 97, 0.9);
+    border: 2px solid #b87e32;
 }
 
 .status-pill.completed {
-    color: #1ce726;
-    border: 2px solid #1ce726;
+    color: #597a35;
+    background-color: rgba(114, 187, 98, 0.9);
+    border: 2px solid #597a35;
 }
 
 .status-pill.paused {
-    color: #7bc3ec;
-    border: 2px solid #7bc3ec;
+    color: #337094;
+    background-color: #7bc3ec;
+    border: 2px solid rgba(51, 112, 148, 0.9);
 }
